@@ -17,7 +17,7 @@ export default function Home() {
       <InsuranceAssociated />
       <ClinicRatings />
       <AssociatedDentist />
-      <FAQ />/
+      <FAQ />
       <RegisterNowBanner />
     </main>
   );
