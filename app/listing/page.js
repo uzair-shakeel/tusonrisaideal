@@ -170,13 +170,13 @@ const page = () => {
         </div>
 
         <div className="px-[44px] my-12 py-[52px] flex items-center gap-[30px] justify-center shadow-xl border border-[#D0D0D0] rounded-[20px]">
-          <div className="relative">
+          <div className="relative h-[125px] w-[125px] ">
             <img
               src="/assets/Doctor2.png"
-              className="rounded-full h-[125px] w-[125px]"
+              className="rounded-full h-full w-full object-cover"
             />
             <img
-              src="/assets/Bronze (2).svg"
+              src="/assets/Diamond.svg"
               className="absolute bottom-0 -right-4 rounded-full h-[55px] w-[55px]"
             />
           </div>
@@ -219,13 +219,13 @@ const page = () => {
         </div>
 
         <div className="px-[44px] my-12 py-[52px] flex items-center gap-[30px] justify-center shadow-xl border border-[#D0D0D0] rounded-[20px]">
-          <div className="relative">
+          <div className="relative h-[125px] w-[125px] ">
             <img
               src="/assets/Doctor3.png"
-              className="rounded-full h-[125px] w-[125px]"
+              className="rounded-full h-full w-full object-cover"
             />
             <img
-              src="/assets/Bronze (2).svg"
+              src="/assets/Gold.svg"
               className="absolute bottom-0 -right-4 rounded-full h-[55px] w-[55px]"
             />
           </div>
@@ -268,13 +268,13 @@ const page = () => {
         </div>
 
         <div className="px-[44px] my-12 py-[52px] flex items-center gap-[30px] justify-center shadow-xl border border-[#D0D0D0] rounded-[20px]">
-          <div className="relative">
+          <div className="relative h-[125px] w-[125px]">
             <img
               src="/assets/Doctor4.png"
-              className="rounded-full h-[125px] w-[125px]"
+              className="rounded-full h-full w-full object-cover"
             />
             <img
-              src="/assets/Bronze (2).svg"
+              src="/assets/Platinum.svg"
               className="absolute bottom-0 -right-4 rounded-full h-[55px] w-[55px]"
             />
           </div>
@@ -313,6 +313,89 @@ const page = () => {
             <button className="border border-[#000000] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[10px]">
               View Profile
             </button>
+          </div>
+        </div>
+
+        <div className="px-[44px] my-12 py-[52px] border border-[#D0D0D0] shadow-xl  rounded-[20px]">
+          <div className=" flex items-center gap-[30px] justify-center border-b pb-5 border-[#D0D0D0]">
+            <div className="relative h-[125px] w-[125px]">
+              <img
+                src="/assets/Doctor5.png"
+                className="rounded-full h-full w-full object-cover border border-[#CFCFCF]"
+              />
+            </div>
+            <div className="space-y-[10px]">
+              <h5 className="text-[22px] font-[500]">Stroll Health Clinic</h5>
+              <div className="flex gap-7">
+                <p className="text-[16px]">Opens : 09:00 - 22:00 </p>
+                <p className="text-[16px] border-l pl-3 border-[#CDCDCD]">
+                  8 Dentists
+                </p>
+              </div>
+              <p className="text-[16px]">111 NE 32nd St, Spain, FL</p>
+              {/* <p className="text-[16px]">Works at : Centro de Salud El Sol</p> */}
+            </div>
+
+            <div className="bg-[#F1F1F1] max-w-[40%] rounded-[20px] flex items-center gap-[25px] px-[17px] py-[14px] ">
+              <div className="w-[20%]">
+                <p className="text-[34px] font-[500]">5.00</p>
+                <img src="/assets/5 stars.svg" />
+                <p className="text-[16px] text-[#6B777D]">(52 reviews)</p>
+              </div>
+
+              <div>
+                <p className="text-[#6B777D] text-[14px]">
+                  Very friendly , polite and professional staff ; nice and clean
+                  facility ; the only downside is that , I{" "}
+                </p>
+                <p className="text-[#2C64D8] text-[16px]">Read More</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col">
+              <button className="bg-[#FEF14B] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[18px]">
+                Book Appointment
+              </button>
+              <button className="border border-[#000000] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[10px]">
+                View Profile
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-[22px] font-[600]">Associated dentist</h4>
+            <div className="flex gap-5">
+              <div className="rounded-[10px] p-9 shadow-xl block my-5">
+                <img
+                  src="/assets/Doctor1.png"
+                  className="h-[82px] w-[82px] rounded-full"
+                />
+                <h3 className="text-[20px]">Dr. Alejandro López</h3>
+                <p className="text-[16px] text-[#263238]">Dentista</p>
+
+                <div className="flex items-center gap-3">
+                  <img src="/assets/5 stars.svg" />
+                  <p className="text-[18px] font-[700]">5.00</p>
+                </div>
+              </div>
+              <div className="rounded-[10px] p-9 shadow-xl block my-5">
+                <img
+                  src="/assets/Doctor1.png"
+                  className="h-[82px] w-[82px] rounded-full"
+                />
+                <h3 className="text-[20px]">Dr. Alejandro López</h3>
+                <p className="text-[16px] text-[#263238]">Dentista</p>
+
+                <div className="flex items-center gap-3">
+                  <img src="/assets/5 stars.svg" />
+                  <p className="text-[18px] font-[700]">5.00</p>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-[16px] text-[#2C64D8]">
+              Ver todos los Dentistas
+            </p>
           </div>
         </div>
       </div>
