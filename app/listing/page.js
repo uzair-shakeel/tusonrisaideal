@@ -52,6 +52,271 @@ const page = () => {
         </div>
       </div>
 
+      <div className="px-2 md:px-5">
+        <h4 className="text-[14px] my-4">Filter By</h4>
+
+        <div className="flex justify-between">
+          <div className="flex gap-4">
+            <select
+              placeholder="Consulta Online"
+              className="px-4 py-2 border border-black outline-none rounded-lg"
+            >
+              <option>Consulta Online</option>
+              <option>hii</option>
+              <option>hii</option>
+              <option>hii</option>
+              <option>hii</option>
+            </select>
+            <select
+              placeholder="Aseguradora"
+              className="px-4 py-2 border border-black outline-none rounded-lg"
+            >
+              <option>Aseguradora</option>
+              <option>hii</option>
+              <option>hii</option>
+              <option>hii</option>
+              <option>hii</option>
+            </select>
+            <select
+              placeholder="Fechas Disponibles"
+              className="px-4 py-2 border border-black outline-none rounded-lg"
+            >
+              <option>Fechas Disponibles</option>
+              <option>hii</option>
+              <option>hii</option>
+              <option>hii</option>
+              <option>hii</option>
+            </select>
+            <select
+              placeholder="Mas Filtros"
+              className="px-4 py-2 border border-black outline-none rounded-lg"
+            >
+              <option>Mas Filtros</option>
+              <option>hii</option>
+              <option>hii</option>
+              <option>hii</option>
+              <option>hii</option>
+            </select>
+          </div>
+          <select
+            placeholder="All"
+            className="px-20 py-2 border border-black outline-none rounded-lg"
+          >
+            <option>All</option>
+            <option>hii</option>
+            <option>hii</option>
+            <option>hii</option>
+            <option>hii</option>
+          </select>
+        </div>
+
+        <div className="flex items-center gap-3 mt-6">
+          <img src="/assets/BlueCheck.svg" />
+          <h3 className="text-[22px] font-[600]">52 Dentists Verified</h3>
+        </div>
+        <p className="text-[16px] my-3">
+          TSI Verifies all providers before they can appear to serve you, You
+          are in right hands be assured!
+        </p>
+        <h3 className="font-[700] text-[26px] my-4">All Providers</h3>
+
+        <div className="px-[44px] my-12 py-[52px] flex items-center gap-[30px] justify-center shadow-xl border border-[#D0D0D0] rounded-[20px]">
+          <div className="relative">
+            <img
+              src="/assets/Doctor1.png"
+              className="rounded-full h-[125px] w-[125px]"
+            />
+            <img
+              src="/assets/Bronze (2).svg"
+              className="absolute bottom-0 -right-4 rounded-full h-[55px] w-[55px]"
+            />
+          </div>
+          <div className="space-y-[10px]">
+            <h5 className="text-[22px] font-[500]">Dr. Carlos Fernández</h5>
+            <div className="flex gap-7">
+              <p className="text-[16px]">Dentista</p>
+              <p className="text-[16px] border-l pl-3 border-[#CDCDCD]">
+                25 years of experience
+              </p>
+            </div>
+            <p className="text-[16px]">111 NE 32nd St, Spain, FL</p>
+            <p className="text-[16px]">Works at : Centro de Salud El Sol</p>
+          </div>
+
+          <div className="bg-[#F1F1F1] max-w-[40%] rounded-[20px] flex items-center gap-[25px] px-[17px] py-[14px] ">
+            <div className="w-[20%]">
+              <p className="text-[34px] font-[500]">5.00</p>
+              <img src="/assets/5 stars.svg" />
+              <p className="text-[16px] text-[#6B777D]">(52 reviews)</p>
+            </div>
+
+            <div>
+              <p className="text-[#6B777D] text-[14px]">
+                Very friendly , polite and professional staff ; nice and clean
+                facility ; the only downside is that , I{" "}
+              </p>
+              <p className="text-[#2C64D8] text-[16px]">Read More</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col">
+            <button className="bg-[#FEF14B] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[18px]">
+              Book Appointment
+            </button>
+            <button className="border border-[#000000] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[10px]">
+              View Profile
+            </button>
+          </div>
+        </div>
+
+        <div className="px-[44px] my-12 py-[52px] flex items-center gap-[30px] justify-center shadow-xl border border-[#D0D0D0] rounded-[20px]">
+          <div className="relative">
+            <img
+              src="/assets/Doctor2.png"
+              className="rounded-full h-[125px] w-[125px]"
+            />
+            <img
+              src="/assets/Bronze (2).svg"
+              className="absolute bottom-0 -right-4 rounded-full h-[55px] w-[55px]"
+            />
+          </div>
+          <div className="space-y-[10px]">
+            <h5 className="text-[22px] font-[500]">Dr. Alejandro López</h5>
+            <div className="flex gap-7">
+              <p className="text-[16px]">Dentista</p>
+              <p className="text-[16px] border-l pl-3 border-[#CDCDCD]">
+                25 years of experience
+              </p>
+            </div>
+            <p className="text-[16px]">111 NE 32nd St, Spain, FL</p>
+            <p className="text-[16px]">Works at : Centro de Salud El Sol</p>
+          </div>
+
+          <div className="bg-[#F1F1F1] max-w-[40%] rounded-[20px] flex items-center gap-[25px] px-[17px] py-[14px] ">
+            <div className="w-[20%]">
+              <p className="text-[34px] font-[500]">5.00</p>
+              <img src="/assets/5 stars.svg" />
+              <p className="text-[16px] text-[#6B777D]">(52 reviews)</p>
+            </div>
+
+            <div>
+              <p className="text-[#6B777D] text-[14px]">
+                Very friendly , polite and professional staff ; nice and clean
+                facility ; the only downside is that , I{" "}
+              </p>
+              <p className="text-[#2C64D8] text-[16px]">Read More</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col">
+            <button className="bg-[#FEF14B] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[18px]">
+              Book Appointment
+            </button>
+            <button className="border border-[#000000] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[10px]">
+              View Profile
+            </button>
+          </div>
+        </div>
+
+        <div className="px-[44px] my-12 py-[52px] flex items-center gap-[30px] justify-center shadow-xl border border-[#D0D0D0] rounded-[20px]">
+          <div className="relative">
+            <img
+              src="/assets/Doctor3.png"
+              className="rounded-full h-[125px] w-[125px]"
+            />
+            <img
+              src="/assets/Bronze (2).svg"
+              className="absolute bottom-0 -right-4 rounded-full h-[55px] w-[55px]"
+            />
+          </div>
+          <div className="space-y-[10px]">
+            <h5 className="text-[22px] font-[500]">Dr. Ana Sánchez</h5>
+            <div className="flex gap-7">
+              <p className="text-[16px]">Dentista</p>
+              <p className="text-[16px] border-l pl-3 border-[#CDCDCD]">
+                25 years of experience
+              </p>
+            </div>
+            <p className="text-[16px]">111 NE 32nd St, Spain, FL</p>
+            <p className="text-[16px]">Works at : Centro de Salud El Sol</p>
+          </div>
+
+          <div className="bg-[#F1F1F1] max-w-[40%] rounded-[20px] flex items-center gap-[25px] px-[17px] py-[14px] ">
+            <div className="w-[20%]">
+              <p className="text-[34px] font-[500]">5.00</p>
+              <img src="/assets/5 stars.svg" />
+              <p className="text-[16px] text-[#6B777D]">(52 reviews)</p>
+            </div>
+
+            <div>
+              <p className="text-[#6B777D] text-[14px]">
+                Very friendly , polite and professional staff ; nice and clean
+                facility ; the only downside is that , I{" "}
+              </p>
+              <p className="text-[#2C64D8] text-[16px]">Read More</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col">
+            <button className="bg-[#FEF14B] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[18px]">
+              Book Appointment
+            </button>
+            <button className="border border-[#000000] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[10px]">
+              View Profile
+            </button>
+          </div>
+        </div>
+
+        <div className="px-[44px] my-12 py-[52px] flex items-center gap-[30px] justify-center shadow-xl border border-[#D0D0D0] rounded-[20px]">
+          <div className="relative">
+            <img
+              src="/assets/Doctor4.png"
+              className="rounded-full h-[125px] w-[125px]"
+            />
+            <img
+              src="/assets/Bronze (2).svg"
+              className="absolute bottom-0 -right-4 rounded-full h-[55px] w-[55px]"
+            />
+          </div>
+          <div className="space-y-[10px]">
+            <h5 className="text-[22px] font-[500]">Dr. Laura Martínez</h5>
+            <div className="flex gap-7">
+              <p className="text-[16px]">Dentista</p>
+              <p className="text-[16px] border-l pl-3 border-[#CDCDCD]">
+                25 years of experience
+              </p>
+            </div>
+            <p className="text-[16px]">111 NE 32nd St, Spain, FL</p>
+            <p className="text-[16px]">Works at : Centro de Salud El Sol</p>
+          </div>
+
+          <div className="bg-[#F1F1F1] max-w-[40%] rounded-[20px] flex items-center gap-[25px] px-[17px] py-[14px] ">
+            <div className="w-[20%]">
+              <p className="text-[34px] font-[500]">5.00</p>
+              <img src="/assets/5 stars.svg" />
+              <p className="text-[16px] text-[#6B777D]">(52 reviews)</p>
+            </div>
+
+            <div>
+              <p className="text-[#6B777D] text-[14px]">
+                Very friendly , polite and professional staff ; nice and clean
+                facility ; the only downside is that , I{" "}
+              </p>
+              <p className="text-[#2C64D8] text-[16px]">Read More</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col">
+            <button className="bg-[#FEF14B] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[18px]">
+              Book Appointment
+            </button>
+            <button className="border border-[#000000] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[10px]">
+              View Profile
+            </button>
+          </div>
+        </div>
+      </div>
+
       <div className=" py-10">
         <div className="flex overflow-x-auto w-full no-scrollbar gap-8 pb-10">
           <div className="rounded-2xl max-w-[500px] min-w-[300px] py-6 px-12 shadow-2xl bg-white flex-shrink-0">
