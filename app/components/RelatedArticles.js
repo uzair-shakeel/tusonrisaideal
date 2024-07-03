@@ -5,7 +5,7 @@ const RelatedArticles = () => {
     <div className="px-2 md:px-5">
       <h4 className="text-[22px] font-[600] my-6 ">Related Articles</h4>
       <div className="space-y-[40px]">
-        <div className="shadow-lg p-4 rounded-[20px] border border-[#DADADA] flex gap-[20px]">
+        <div className="shadow-lg p-4 rounded-[20px] border border-[#DADADA] flex flex-col md:flex-row gap-[20px]">
           <div className="w-full rounded-[20px] h-full flex items-center justify-center overflow-hidden">
             <img
               src="/assets/Article1.png"
@@ -31,8 +31,8 @@ const RelatedArticles = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-[40px]">
-          <div className="rounded-[20px] shadow-lg overflow-hidden">
+        <div className="md:grid md:grid-cols-3 md:gap-[40px] overflow-x-auto md:overflow-hidden flex md:flex-none space-x-4 md:space-x-0">
+          <div className="rounded-[20px] w-[300px] md:w-auto shadow-lg flex-shrink-0 md:flex-shrink">
             <div className="h-[196px] w-full overflow-hidden">
               <img
                 src="/assets/Article2.png"
@@ -47,7 +47,7 @@ const RelatedArticles = () => {
             </div>
           </div>
 
-          <div className="rounded-[20px] shadow-lg overflow-hidden">
+          <div className="rounded-[20px] w-[300px] md:w-auto shadow-lg flex-shrink-0 md:flex-shrink">
             <div className="h-[196px] w-full overflow-hidden">
               <img
                 src="/assets/Article3.png"
@@ -56,13 +56,13 @@ const RelatedArticles = () => {
             </div>
             <div className="p-3">
               <p className="text-[18px] font-[500]">
-                Top Tips for Preventing Tooth Decay{" "}
+                Top Tips for Preventing Tooth Decay
               </p>
               <p className="text-[14px] mt-5">Dr Alex Carry</p>
             </div>
           </div>
 
-          <div className="rounded-[20px] shadow-lg overflow-hidden">
+          <div className="rounded-[20px] w-[300px] md:w-auto shadow-lg flex-shrink-0 md:flex-shrink">
             <div className="h-[196px] w-full overflow-hidden">
               <img
                 src="/assets/Article4.png"
@@ -71,7 +71,7 @@ const RelatedArticles = () => {
             </div>
             <div className="p-3">
               <p className="text-[18px] font-[500]">
-                Rool Canel can make you life better{" "}
+                Root Canal Can Make Your Life Better
               </p>
               <p className="text-[14px] mt-5">Dr Alex Carry</p>
             </div>

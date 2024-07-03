@@ -9,10 +9,10 @@ const page = () => {
     <div>
       <div className="px-[44px] py-[52px] bg-[#FCFAEE] flex">
         <div className="w-[70%]">
-          <h3 className="text-[28px] font-[500]">
+          <h3 className="hidden md:block text-[28px] font-[500]">
             Book from 100’s of the best Dentists near you
           </h3>
-          <p className="text-[16px] my-2">
+          <p className="hidden md:block text-[16px] my-2">
             Need to make a dentist appointment this week? Use TSI to find
             dentists near you who take your insurance. It’s simple, secure and
             free.
@@ -47,7 +47,7 @@ const page = () => {
             </button>
           </div>
         </div>
-        <div className="w-[25%] h-full flex items-center justify-center ">
+        <div className="hidden w-[25%] h-full md:flex items-center justify-center ">
           <img src="/assets/TeethLogo2024.svg" className=" w-auto h-auto" />
         </div>
       </div>
@@ -55,7 +55,7 @@ const page = () => {
       <div className="px-2 md:px-5">
         <h4 className="text-[14px] my-4">Filter By</h4>
 
-        <div className="flex justify-between">
+        <div className="overflow-x-scroll md:overflow-hidden flex justify-between">
           <div className="flex gap-4">
             <select
               placeholder="Consulta Online"
@@ -120,7 +120,7 @@ const page = () => {
         </p>
         <h3 className="font-[700] text-[26px] my-4">All Providers</h3>
 
-        <div className="px-[44px] my-12 py-[52px] flex items-center gap-[30px] justify-center shadow-xl border border-[#D0D0D0] rounded-[20px]">
+        <div className="p-2 md:px-[44px] my-12 md:py-[52px] flex flex-col md:flex-row items-center gap-[30px] justify-center shadow-xl border border-[#D0D0D0] rounded-[20px]">
           <div className="relative">
             <img
               src="/assets/Doctor1.png"
@@ -143,7 +143,7 @@ const page = () => {
             <p className="text-[16px]">Works at : Centro de Salud El Sol</p>
           </div>
 
-          <div className="bg-[#F1F1F1] max-w-[40%] rounded-[20px] flex items-center gap-[25px] px-[17px] py-[14px] ">
+          <div className="bg-[#F1F1F1] md:max-w-[40%] rounded-[20px] flex items-center gap-[25px] px-[17px] py-[14px] ">
             <div className="w-[20%]">
               <p className="text-[34px] font-[500]">5.00</p>
               <img src="/assets/5 stars.svg" />
@@ -169,7 +169,7 @@ const page = () => {
           </div>
         </div>
 
-        <div className="px-[44px] my-12 py-[52px] flex items-center gap-[30px] justify-center shadow-xl border border-[#D0D0D0] rounded-[20px]">
+        <div className="p-2 md:px-[44px] my-12 md:py-[52px] flex flex-col md:flex-row items-center gap-[30px] justify-center shadow-xl border border-[#D0D0D0] rounded-[20px]">
           <div className="relative h-[125px] w-[125px] ">
             <img
               src="/assets/Doctor2.png"
@@ -192,7 +192,7 @@ const page = () => {
             <p className="text-[16px]">Works at : Centro de Salud El Sol</p>
           </div>
 
-          <div className="bg-[#F1F1F1] max-w-[40%] rounded-[20px] flex items-center gap-[25px] px-[17px] py-[14px] ">
+          <div className="bg-[#F1F1F1] md:max-w-[40%] rounded-[20px] flex items-center gap-[25px] px-[17px] py-[14px] ">
             <div className="w-[20%]">
               <p className="text-[34px] font-[500]">5.00</p>
               <img src="/assets/5 stars.svg" />
@@ -218,7 +218,7 @@ const page = () => {
           </div>
         </div>
 
-        <div className="px-[44px] my-12 py-[52px] flex items-center gap-[30px] justify-center shadow-xl border border-[#D0D0D0] rounded-[20px]">
+        <div className="p-2 md:px-[44px] my-12 md:py-[52px] flex flex-col md:flex-row items-center gap-[30px] justify-center shadow-xl border border-[#D0D0D0] rounded-[20px]">
           <div className="relative h-[125px] w-[125px] ">
             <img
               src="/assets/Doctor3.png"
@@ -241,7 +241,7 @@ const page = () => {
             <p className="text-[16px]">Works at : Centro de Salud El Sol</p>
           </div>
 
-          <div className="bg-[#F1F1F1] max-w-[40%] rounded-[20px] flex items-center gap-[25px] px-[17px] py-[14px] ">
+          <div className="bg-[#F1F1F1] md:max-w-[40%] rounded-[20px] flex items-center gap-[25px] px-[17px] py-[14px] ">
             <div className="w-[20%]">
               <p className="text-[34px] font-[500]">5.00</p>
               <img src="/assets/5 stars.svg" />
@@ -267,7 +267,7 @@ const page = () => {
           </div>
         </div>
 
-        <div className="px-[44px] my-12 py-[52px] flex items-center gap-[30px] justify-center shadow-xl border border-[#D0D0D0] rounded-[20px]">
+        <div className="p-2 md:px-[44px] my-12 md:py-[52px] flex flex-col md:flex-row items-center gap-[30px] justify-center shadow-xl border border-[#D0D0D0] rounded-[20px]">
           <div className="relative h-[125px] w-[125px]">
             <img
               src="/assets/Doctor4.png"
@@ -290,7 +290,7 @@ const page = () => {
             <p className="text-[16px]">Works at : Centro de Salud El Sol</p>
           </div>
 
-          <div className="bg-[#F1F1F1] max-w-[40%] rounded-[20px] flex items-center gap-[25px] px-[17px] py-[14px] ">
+          <div className="bg-[#F1F1F1] md:max-w-[40%] rounded-[20px] flex items-center gap-[25px] px-[17px] py-[14px] ">
             <div className="w-[20%]">
               <p className="text-[34px] font-[500]">5.00</p>
               <img src="/assets/5 stars.svg" />
@@ -316,8 +316,8 @@ const page = () => {
           </div>
         </div>
 
-        <div className="px-[44px] my-12 py-[52px] border border-[#D0D0D0] shadow-xl  rounded-[20px]">
-          <div className=" flex items-center gap-[30px] justify-center border-b pb-5 border-[#D0D0D0]">
+        <div className="p-2 md:px-[44px] my-12 md:py-[52px] border border-[#D0D0D0] shadow-xl  rounded-[20px]">
+          <div className=" flex flex-col md:flex-row items-center gap-[30px] justify-center border-b pb-5 border-[#D0D0D0]">
             <div className="relative h-[125px] w-[125px]">
               <img
                 src="/assets/Doctor5.png"
@@ -336,7 +336,7 @@ const page = () => {
               {/* <p className="text-[16px]">Works at : Centro de Salud El Sol</p> */}
             </div>
 
-            <div className="bg-[#F1F1F1] max-w-[40%] rounded-[20px] flex items-center gap-[25px] px-[17px] py-[14px] ">
+            <div className="bg-[#F1F1F1] md:max-w-[40%] rounded-[20px] flex items-center gap-[25px] px-[17px] py-[14px] ">
               <div className="w-[20%]">
                 <p className="text-[34px] font-[500]">5.00</p>
                 <img src="/assets/5 stars.svg" />
