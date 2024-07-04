@@ -15,7 +15,7 @@ import Hero from './Hero';
 const Dentist = () => {
   return (
     <div>
-        <Hero/>
+        <Hero/>/
         <Qualifications/>
         <Expertise/>
         <ServicesDentalClinic/>

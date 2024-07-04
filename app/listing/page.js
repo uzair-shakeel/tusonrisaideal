@@ -3,12 +3,13 @@ import RegisterNowBanner from "../components/RegisterNowBanner";
 import FAQ from "../components/FAQ";
 import { MdOutlineSearch } from "react-icons/md";
 import RelatedArticles from "../components/RelatedArticles";
+import { BiSearch } from "react-icons/bi";
 
 const page = () => {
   return (
     <div>
-      <div className="px-[44px] py-[52px] bg-[#FCFAEE] flex">
-        <div className="w-[70%]">
+      <div className="px-5 md:px-[44px] py-[52px] bg-[#FCFAEE] flex">
+        <div className="w-full">
           <h3 className="hidden md:block text-[28px] font-[500]">
             Book from 100’s of the best Dentists near you
           </h3>
@@ -17,35 +18,46 @@ const page = () => {
             dentists near you who take your insurance. It’s simple, secure and
             free.
           </p>
-          <div className="bg-white my-9 rounded-full flex justify-between border border-[#DDDDDD] p-2 shadow-md">
-            <div className="ml-6">
-              <p className="font-[600] text-[14px]">Condition</p>
-              <input
-                type="text"
-                placeholder="Eg., Headache"
-                className="outline-none text-[14px]"
-              />
+
+
+          {/* Desktop */}
+          <div className='md:flex hidden justify-between items-center gap-5 w-full bg-white border border-[#DDDDDD] shadow-custom h-[66px] rounded-[33px] mt-[36px] px-[33px]'>
+            <div className='flex flex-col max-w-[240px] w-full'>
+              <label className='text-[#222222] text-[12px] leading-[16px] font-semibold'>Condition</label>
+              <input type='text' placeholder='Eg., Headache' className='text-[14px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none' />
             </div>
-            <div className="pl-3 border-l border-[#DEDEDE]">
-              <p className="font-[600] text-[14px]">Insurance</p>
-              <input
-                type="text"
-                placeholder="Select yours"
-                className="outline-none text-[14px]"
-              />
+            <div className='flex flex-col max-w-[240px] w-full'>
+              <label className='text-[#222222] text-[12px] leading-[16px] font-semibold'>Insurance</label>
+              <input type='text' placeholder='Select yours' className='text-[14px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none' />
             </div>
-            <div className="pl-3 border-l border-[#DEDEDE]">
-              <p className="font-[600] text-[14px]">Location</p>
-              <input
-                type="text"
-                placeholder="eg., New Building"
-                className="outline-none text-[14px]"
-              />
+            <div className='flex flex-col max-w-[240px] w-full border-l border-[#BABABA] pl-2.5'>
+              <label className='text-[#222222] text-[12px] leading-[16px] font-semibold'>Location</label>
+              <input type='text' placeholder='eg., New Building' className='text-[14px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none' />
             </div>
-            <button className="bg-[#FFF04B] rounded-full p-3 text-black">
-              <MdOutlineSearch className="h-[24px] w-[24px]" />
-            </button>
+            <div>
+              <button className='bg-[#FFF04B] min-w-[48px] min-h-[48px] rounded-[24px] flex items-center justify-center'><BiSearch className='min-w-[20px] min-h-[20px] text-[#5B5252]' /></button>
+            </div>
           </div>
+          
+          {/* Mobile */}
+          <div className="bg-white border border-[#DDDDDD] justify-between shadow-custom max-w-[392px] h-[66px] rounded-[32px] flex items-center px-5">
+            <div className='flex flex-col w-full'>
+              <label className='text-[#222222] text-[12px] leading-[16px] font-semibold'>Condition</label>
+              <input type='text' placeholder='Eg., Headache' className='text-[12px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none max-w-[70px]' />
+            </div>
+            <div className='flex flex-col w-full'>
+              <label className='text-[#222222] text-[12px] leading-[16px] font-semibold'>Insurance</label>
+              <input type='text' placeholder='Select yours' className='text-[12px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none  max-w-[70px]' />
+            </div>
+            <div className='flex flex-col w-full'>
+              <label className='text-[#222222] text-[12px] leading-[16px] font-semibold'>Location</label>
+              <input type='text' placeholder='eg., New Building' className='text-[12px] leading-[18px] font-normal text-[#6A6A6A] outline-none max-w-[70px]' />
+            </div>
+            <button className='bg-[#FFF04B] min-w-[40px] min-h-[40px] rounded-[24px] flex items-center justify-center'><BiSearch className='min-w-[20px] min-h-[20px] text-[#5B5252]' /></button>
+          </div>
+
+
+
         </div>
         <div className="hidden w-[25%] h-full md:flex items-center justify-center ">
           <img src="/assets/TeethLogo2024.svg" className=" w-auto h-auto" />

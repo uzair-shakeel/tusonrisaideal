@@ -48,7 +48,7 @@ const insuranceItems = [
 ];
 
   return (
-    <div className='w-full py-[40px] px-2 sm:px-6 max-w-[927px] ml-[110px]'>
+    <div className='w-full py-[40px] sm:px-6 max-w-[927px] 2xl:ml-[110px] px-4 lg:ml-[40px]'>
             <h2 className='text-[#181515] text-[22px] leading-[19px] font-semibold'>Check if this Doctor covers your insurance.</h2>
             <p className='text-[#263238] text-[16px] leading-[19px] font-normal mt-2.5'>Protecting What Matters Most.</p>
             <div className=' w-full pt-10 grid grid-cols-2 md:grid-cols-3 gap-10'>
@@ -60,7 +60,7 @@ const insuranceItems = [
                 ))}
                 <button className='md:flex hidden text-left text-[#2C64D8] text-[16px] leading-[19px] font-normal items-center gap-2'>25 More <IoArrowForward className='' /></button>
             </div>
-            <div className='mt-[30px] flex items-center justify-center'>
+            <div className='md:flex hidden mt-[30px]  items-center justify-center'>
                 <button className='flex md:hidden w-[157px] justify-center h-[41px] rounded-[10px] text-[#263238] text-[14px] leading-[14px] font-normal items-center gap-2 border border-[#263238]'>See All</button>
             </div>
         </div>

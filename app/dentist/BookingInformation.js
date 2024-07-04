@@ -5,11 +5,11 @@ import React from 'react'
 const BookingInformation = () => {
 
   const bookinginformation = [
-    { name: 'Online Booking', price: '€1,500' },
-    { name: 'Walk-Ins', price: '€1,300' },
-    { name: 'Emergency Appointments', price: '€1,500' },
-    { name: 'Cancellation and Rescheduling', price: '€800' },
-    { name: 'Cash & Online Payment Options', price: '€300' },
+    { imge: '/assets/online-booking.svg', name: 'Online Booking', price: '€1,500' },
+    {imge: '/assets/walk-ins.svg', name: 'Walk-Ins', price: '€1,300' },
+    {imge: '/assets/emergency-appointments.svg', name: 'Emergency Appointments', price: '€1,500' },
+    {imge: '/assets/cancellation-and-rescheduling.svg', name: 'Cancellation and Rescheduling', price: '€800' },
+    {imge: '/assets/cash-payment-options.svg', name: 'Cash & Online Payment Options', price: '€300' },
       ];
 
 
@@ -20,7 +20,7 @@ const BookingInformation = () => {
             <div className='flex flex-col gap-4'>
                 {bookinginformation.map((service, index) => (
                     <div key={index} className='flex items-center gap-2'>
-                        <Image src='/assets/check.svg' alt='Logo' width={16} height={16} className='-mt-0.5' />
+                        <Image src={service.imge} alt='Logo' width={20} height={20} className='-mt-0.5' />
                         <h3 className='text-[#263238] text-[14px] leading-[19px] font-normal'>{service.name} - <span className='font-bold'>{service.price}</span></h3>
                     </div>
                 ))}
