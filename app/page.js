@@ -1,3 +1,5 @@
+"use client"
+import { useEffect } from 'react';
 import Hero from "./components/Hero";
 import ServicesDentalClinic from "./components/ServicesDentalClinic";
 import InsuranceAssociated from "./components/InsuranceAssociated";
@@ -9,6 +11,8 @@ import Footer from "./components/Footer";
 import ClinicOverview from "./components/ClinicOverview";
 
 export default function Home() {
+ 
+
   return (
     <main>
       <Hero />

@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className='w-full mx-auto flex items-center justify-between py-5 px-4 lg:pl-[61px] lg:pr-[36px]'>
         <div className='flex items-center gap-2'>
           <button className='block lg:hidden' onClick={() => setMenuOpen(!menuOpen)}><HiOutlineMenu /></button>
-          <Image src='/assets/logo.svg' alt='Logo' width={91.02} height={43} className='min-w-[91.02px] min-h-[43px]' />
+          <Image src='/assets/Logo.svg' alt='Logo' width={91.02} height={43} className='min-w-[91.02px] min-h-[43px]' />
         </div>
         <div className='hidden lg:block'>
           <ul className='flex items-center gap-6 lg:gap-10 text-[#6A6A6A] text-[14px] lg:text-[16px] leading-[24px] font-normal'>

@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useEffect } from 'react';
 import RegisterNowBanner from "../components/RegisterNowBanner";
 import FAQ from "../components/FAQ";
 import { MdOutlineSearch } from "react-icons/md";
@@ -6,6 +7,7 @@ import RelatedArticles from "../components/RelatedArticles";
 import { BiSearch } from "react-icons/bi";
 
 const page = () => {
+
   return (
     <div>
       <div className="px-5 md:px-[44px] py-[52px] bg-[#FCFAEE] flex">
