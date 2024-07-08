@@ -42,7 +42,7 @@ const page = () => {
           </div>
           
           {/* Mobile */}
-          <div className="bg-white border border-[#DDDDDD] justify-between shadow-custom max-w-[392px] h-[66px] rounded-[32px] flex items-center px-5">
+          <div className="bg-white border border-[#DDDDDD] justify-between shadow-custom max-w-[392px] h-[66px] rounded-[32px] flex md:hidden items-center px-5">
             <div className='flex flex-col w-full'>
               <label className='text-[#222222] text-[12px] leading-[16px] font-semibold'>Condition</label>
               <input type='text' placeholder='Eg., Headache' className='text-[12px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none max-w-[70px]' />

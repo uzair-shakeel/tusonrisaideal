@@ -9,7 +9,9 @@ const FindDoctor = () => {
   };
 
   return (
-    <div className='px-3 w-full max-w-[927px] 2xl:ml-[110px] pl-2 lg:ml-[40px]'>
+    <div className='w-full max-w-[1440px] mx-auto'>
+
+    <div className='px-3 w-full max-w-[927px] xl:pl-[60px]'>
       <div className='w-full overflow-scrol0 mx-auto border border-[#D0D0D0] my-[60px] rounded-[10px] p-[25px] '>
         <h2 className='text-[#181515] text-[22px] leading-[19px] font-semibold'>Find Doctors</h2>
         <div>
@@ -93,6 +95,8 @@ const FindDoctor = () => {
           </div>
         </div>
       </div>
+    </div>
+         
     </div>
   );
 };

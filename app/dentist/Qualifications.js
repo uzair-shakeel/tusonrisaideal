@@ -3,7 +3,8 @@ import React from 'react'
 
 const Qualifications = () => {
   return (
-    <div className='border-y border-[#D0D0D0] max-w-[929px] 2xl:ml-[110px] pl-2 lg:ml-[40px] py-5 my-10'>
+    <div className='max-w-[1440px] mx-auto'>
+    <div className='border-y border-[#D0D0D0] max-w-[929px] 2xl:ml-[50px] pl-2 lg:ml-[40px] py-5 my-10'>
         <h2 className='text-[#181515] text-[22px] leading-[19px] font-semibold mb-5'>Qualifications</h2>
         <div className='flex flex-wrap justify-between items-start gap-[20px] max-w-[749px] '>
             <div className='border border-[#0000000F] bg-[#FCFAEE] rounded-[100px] min-w-[235px] h-[39px] flex items-center justify-center gap-2'>
@@ -23,6 +24,7 @@ const Qualifications = () => {
                 <h3 className='text-[#263238] text-[16px] leading-[19px] font-normal'>Over 15 years of professional experience</h3>
             </div> 
         </div>
+    </div>
     </div>
   )
 }

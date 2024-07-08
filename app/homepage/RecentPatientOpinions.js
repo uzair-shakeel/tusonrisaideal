@@ -121,9 +121,9 @@ const RecentPatientOpinions = () => {
         <h2 className='text-center text-3xl font-bold text-gray-800 mb-10'>Opiniones recientes de pacientes</h2>
         <Slider {...sliderSettings}>
           {patientOpinions.map((opinion, index) => (
-            <div key={index} className='sm:px-4'>
-              <div className='bg-white rounded-lg shadow-lg  p-4 sm:p-6'>
-                <div className='flex items-center justify-between mb-4'>
+            <div key={index} className='sm:px-4 '>
+              <div className='bg-white shadow-lg  rounded-[20px]'>
+                <div className='flex items-center justify-between mb-4  p-4 sm:p-6'>
                   <Image src='/assets/comma.svg' alt='comma' width={52} height={84} />
                   <div className='flex items-center gap-2'>
                     <h3 className='font-bold text-xl text-gray-800'>{opinion.rating}</h3>
@@ -134,8 +134,9 @@ const RecentPatientOpinions = () => {
                     </div>
                   </div>
                 </div>
-                <p className='text-gray-700 mb-6'>{opinion.opinion}</p>
-                <div className='flex items-center gap-4'>
+                <p className='text-gray-700 mb-6  px-4 sm:px-6'>{opinion.opinion}</p>
+
+                <div className='flex items-center gap-4 bg-[#FFFEEC] rounded-b-[20px]  p-4 sm:p-6'>
                   <div className='relative w-12 h-12'>
                     <Image src={opinion.user.avatar} alt='user avatar' layout='fill' className='rounded-full' />
                     <Image src={opinion.user.verified} alt='verified' width={24} height={24} className='absolute bottom-0 right-0' />
@@ -155,8 +156,8 @@ const RecentPatientOpinions = () => {
         <Slider {...sliderSettings} className='mt-[40px]'>
           {patientOpinions.map((opinion, index) => (
             <div key={index} className='sm:px-4'>
-              <div className='bg-white rounded-lg shadow-lg p-4 sm:p-6'>
-                <div className='flex items-center justify-between mb-4'>
+              <div className='bg-white  rounded-[20px] shadow-lg '>
+                <div className='flex items-center justify-between mb-4 p-4 sm:p-6'>
                   <Image src='/assets/comma.svg' alt='comma' width={52} height={84} />
                   <div className='flex items-center gap-2'>
                     <h3 className='font-bold text-xl text-gray-800'>{opinion.rating}</h3>
@@ -167,8 +168,8 @@ const RecentPatientOpinions = () => {
                     </div>
                   </div>
                 </div>
-                <p className='text-gray-700 mb-6'>{opinion.opinion}</p>
-                <div className='flex items-center gap-4'>
+                <p className='text-gray-700 mb-6 px-4 sm:px-6'>{opinion.opinion}</p>
+                <div className='flex items-center gap-4 rounded-b-[20px]  bg-[#FFFEEC] md:p-6 p-4'>
                   <div className='relative w-12 h-12'>
                     <Image src={opinion.user.avatar} alt='user avatar' layout='fill' className='rounded-full' />
                     <Image src={opinion.user.verified} alt='verified' width={24} height={24} className='absolute bottom-0 right-0' />

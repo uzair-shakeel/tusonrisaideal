@@ -46,7 +46,10 @@ const ClinicRatings = () => {
 
   return (
     <div className='max-w-[1360px] w-full mx-auto py-10 md:pb-[70px] px-3 sm:px-5'>
-      <h2 className='text-[#181515] text-[22px] leading-[19px] font-semibold  mb-7'>Clinic Ratings</h2>
+      <div className='flex items-center justify-between w-full'>
+          <h2 className='text-[#181515] text-[22px] leading-[19px] font-semibold '>Clinic Ratings</h2>
+          <button className='flex md:hidden items-center justify-center text-[14px] leading-[14.45px] font-bold w-[155px] h-[41px] rounded-[10px] bg-[#FEF14B]'>Escribir la Reseña</button>
+      </div>
       {/* Content */}
       <div className='my-[40px] pb-[25px] mdl:py-[25px] border-b border-[#D0D0D0] max-w-[926px] flex flex-col mdl:flex-row mdl:items-center items-start gap-5 mdl:gap-[83px]'>
         <div className='flex mdl:flex-col flex-row'>
@@ -85,22 +88,27 @@ const ClinicRatings = () => {
             </div>
         </div>
         {/* Rating */}
-        <div className='flex mdl:mt-[150px] '>
-            <div className='mdl:w-[140px] mdl:h-[135px] sm:pr-[25px] sm:border-r border-[#E8E8E8]'>
-                <h3 className='text-[#263238] text-[16px] leading-[19px] font-normal'>3.7</h3>
-                <p className='text-[#263238] text-[16px] leading-[19px] font-normal pt-[10px]'>Doctor’s treatment</p>
-            </div>
-            <div className='mdl:w-[145px] mdl:h-[135px] px-[21px] sm:border-r border-[#E8E8E8]'>
-                <h3 className='text-[#263238] text-[16px] leading-[19px] font-normal'>4.0</h3>
-                <p className='text-[#263238] text-[16px] leading-[19px] font-normal pt-[10px]'>Clinic Workers' Treatment</p>
-            </div>
-            <div className='mdl:w-[150px] mdl:h-[135px] sm:pl-[21px] pr-[40px] sm:border-r border-[#E8E8E8]'>
-                <h3 className='text-[#263238] text-[16px] leading-[19px] font-normal'>4.6</h3>
-                <p className='text-[#263238] text-[16px] leading-[19px] font-normal pt-[10px]'>Waiting Time</p>
-            </div>
-            <div className='mdl:w-[122px] mdl:h-[135px] sm:px-[21px]'>
-                <h3 className='text-[#263238] text-[16px] leading-[19px] font-normal'>5.0</h3>
-                <p className='text-[#263238] text-[16px] leading-[19px] font-normal pt-[10px]'>Clinic Status</p>
+        <div className='flex mdl:mt-[110px] flex-col'>
+          <div className='hidden md:flex items-end justify-end'>
+            <button className='text-[14px] leading-[14.45px] font-bold w-[155px] h-[41px] rounded-[10px] bg-[#FEF14B]'>Escribir la Reseña</button>
+          </div>
+            <div className='flex mt-[20px]'>
+              <div className='mdl:w-[140px] mdl:h-[135px] sm:pr-[25px] sm:border-r border-[#E8E8E8]'>
+                  <h3 className='text-[#263238] text-[16px] leading-[19px] font-normal'>3.7</h3>
+                  <p className='text-[#263238] text-[16px] leading-[19px] font-normal pt-[10px]'>Doctor’s treatment</p>
+              </div>
+              <div className='mdl:w-[145px] mdl:h-[135px] px-[21px] sm:border-r border-[#E8E8E8]'>
+                  <h3 className='text-[#263238] text-[16px] leading-[19px] font-normal'>4.0</h3>
+                  <p className='text-[#263238] text-[16px] leading-[19px] font-normal pt-[10px]'>Clinic Workers' Treatment</p>
+              </div>
+              <div className='mdl:w-[150px] mdl:h-[135px] sm:pl-[21px] pr-[40px] sm:border-r border-[#E8E8E8]'>
+                  <h3 className='text-[#263238] text-[16px] leading-[19px] font-normal'>4.6</h3>
+                  <p className='text-[#263238] text-[16px] leading-[19px] font-normal pt-[10px]'>Waiting Time</p>
+              </div>
+              <div className='mdl:w-[122px] mdl:h-[135px] sm:px-[21px]'>
+                  <h3 className='text-[#263238] text-[16px] leading-[19px] font-normal'>5.0</h3>
+                  <p className='text-[#263238] text-[16px] leading-[19px] font-normal pt-[10px]'>Clinic Status</p>
+              </div>
             </div>
         </div>
       </div>
