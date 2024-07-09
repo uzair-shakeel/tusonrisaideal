@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
+import WriteAReview from './WriteAReview';
 
 const reviews = [
   {
@@ -44,11 +45,20 @@ const ClinicRatings = () => {
   const initialReviews = reviews.slice(0, 4);
   const displayedReviews = showAllReviews ? reviews : initialReviews;
 
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
+
   return (
     <div className='max-w-[1360px] w-full mx-auto py-10 md:pb-[70px] px-3 sm:px-5'>
       <div className='flex items-center justify-between w-full'>
           <h2 className='text-[#181515] text-[22px] leading-[19px] font-semibold '>Clinic Ratings</h2>
-          <button className='flex md:hidden items-center justify-center text-[14px] leading-[14.45px] font-bold w-[155px] h-[41px] rounded-[10px] bg-[#FEF14B]'>Escribir la Reseña</button>
+          <div className='md:hidden flex items-end justify-end'>
+            <button className='text-[14px] leading-[14.45px] font-bold w-[155px] h-[41px] rounded-[10px] bg-[#FEF14B]' onClick={togglePopup}>Escribir la Reseña</button>
+            {isPopupOpen && <WriteAReview onClose={togglePopup} />}
+          </div>
       </div>
       {/* Content */}
       <div className='my-[40px] pb-[25px] mdl:py-[25px] border-b border-[#D0D0D0] max-w-[926px] flex flex-col mdl:flex-row mdl:items-center items-start gap-5 mdl:gap-[83px]'>
@@ -90,7 +100,8 @@ const ClinicRatings = () => {
         {/* Rating */}
         <div className='flex mdl:mt-[110px] flex-col'>
           <div className='hidden md:flex items-end justify-end'>
-            <button className='text-[14px] leading-[14.45px] font-bold w-[155px] h-[41px] rounded-[10px] bg-[#FEF14B]'>Escribir la Reseña</button>
+            <button className='text-[14px] leading-[14.45px] font-bold w-[155px] h-[41px] rounded-[10px] bg-[#FEF14B]' onClick={togglePopup}>Escribir la Reseña</button>
+            {isPopupOpen && <WriteAReview onClose={togglePopup} />}
           </div>
             <div className='flex mt-[20px]'>
               <div className='mdl:w-[140px] mdl:h-[135px] sm:pr-[25px] sm:border-r border-[#E8E8E8]'>
