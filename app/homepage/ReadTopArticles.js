@@ -7,7 +7,6 @@ import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import Image from "next/image";
 
-// Custom arrow components
 const NextArrow = (props) => {
   const { onClick } = props;
   return (
@@ -24,7 +23,7 @@ const PrevArrow = (props) => {
   const { onClick } = props;
   return (
     <div
-      className="absolute top-1/2 transform -translate-y-1/2 -left-14 cursor-pointer z-10 lg:block hidden"
+      className="absolute top-1/2 transform -translate-y-1/2 -left-14 cursor-pointer z-10 xl:block hidden"
       onClick={onClick}
     >
       <IoIosArrowBack className="text-2xl lg:text-4xl" />
@@ -79,13 +78,14 @@ const ReadTopArticles = () => {
         Read top articles from health experts
       </h2>
       <p className="text-[#263238] text-sm lg:text-[14px] leading-5 lg:leading-[19px] font-normal max-w-[390px] mb-8">
-        Health articles that keep you informed about good health practices and achieve your goals.
+        Health articles that keep you informed about good health practices and
+        achieve your goals.
       </p>
-      <div className="relative mt-8">
+      <div className="relative mt-8 w-[95%]">
         <Slider {...settings}>
           {slides.map((slide, index) => (
             <div key={index} className="px-4">
-              <div className="shadow-custom border border-[#DADADA] bg-white rounded-[20px] overflow-hidden min-h-[306px]">
+              <div className="shadow-lg border border-[#DADADA] bg-white rounded-[20px] overflow-hidden min-h-[306px]">
                 <Image
                   src={slide.image}
                   alt={slide.title}

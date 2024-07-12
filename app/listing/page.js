@@ -19,45 +19,81 @@ const page = () => {
             free.
           </p>
 
-
           {/* Desktop */}
-          <div className='md:flex hidden justify-between items-center gap-5 w-full bg-white border border-[#DDDDDD] shadow-custom h-[66px] rounded-[33px] mt-[36px] px-[33px]'>
-            <div className='flex flex-col max-w-[240px] w-full'>
-              <label className='text-[#222222] text-[12px] leading-[16px] font-semibold'>Condition</label>
-              <input type='text' placeholder='Eg., Headache' className='text-[14px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none' />
+          <div className="md:flex hidden justify-between items-center gap-5 w-full bg-white border border-[#DDDDDD] shadow-custom h-[66px] rounded-[33px] mt-[36px] px-[33px]">
+            <div className="flex flex-col max-w-[240px] w-full">
+              <label className="text-[#222222] text-[12px] leading-[16px] font-semibold">
+                Condition
+              </label>
+              <input
+                type="text"
+                placeholder="Eg., Headache"
+                className="text-[14px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none"
+              />
             </div>
-            <div className='flex flex-col max-w-[240px] w-full'>
-              <label className='text-[#222222] text-[12px] leading-[16px] font-semibold'>Insurance</label>
-              <input type='text' placeholder='Select yours' className='text-[14px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none' />
+            <div className="flex flex-col max-w-[240px] w-full">
+              <label className="text-[#222222] text-[12px] leading-[16px] font-semibold">
+                Insurance
+              </label>
+              <input
+                type="text"
+                placeholder="Select yours"
+                className="text-[14px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none"
+              />
             </div>
-            <div className='flex flex-col max-w-[240px] w-full border-l border-[#BABABA] pl-2.5'>
-              <label className='text-[#222222] text-[12px] leading-[16px] font-semibold'>Location</label>
-              <input type='text' placeholder='eg., New Building' className='text-[14px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none' />
+            <div className="flex flex-col max-w-[240px] w-full border-l border-[#BABABA] pl-2.5">
+              <label className="text-[#222222] text-[12px] leading-[16px] font-semibold">
+                Location
+              </label>
+              <input
+                type="text"
+                placeholder="eg., New Building"
+                className="text-[14px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none"
+              />
             </div>
             <div>
-              <button className='bg-[#FFF04B] min-w-[48px] min-h-[48px] rounded-[24px] flex items-center justify-center'><BiSearch className='min-w-[20px] min-h-[20px] text-[#5B5252]' /></button>
+              <button className="bg-[#FFF04B] min-w-[48px] min-h-[48px] rounded-[24px] flex items-center justify-center">
+                <BiSearch className="min-w-[20px] min-h-[20px] text-[#5B5252]" />
+              </button>
             </div>
           </div>
-          
+
           {/* Mobile */}
           <div className="bg-white border border-[#DDDDDD] justify-between shadow-custom max-w-[392px] h-[66px] rounded-[32px] flex items-center px-5">
-            <div className='flex flex-col w-full'>
-              <label className='text-[#222222] text-[12px] leading-[16px] font-semibold'>Condition</label>
-              <input type='text' placeholder='Eg., Headache' className='text-[12px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none max-w-[70px]' />
+            <div className="flex flex-col w-full">
+              <label className="text-[#222222] text-[12px] leading-[16px] font-semibold">
+                Condition
+              </label>
+              <input
+                type="text"
+                placeholder="Eg., Headache"
+                className="text-[12px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none max-w-[70px]"
+              />
             </div>
-            <div className='flex flex-col w-full'>
-              <label className='text-[#222222] text-[12px] leading-[16px] font-semibold'>Insurance</label>
-              <input type='text' placeholder='Select yours' className='text-[12px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none  max-w-[70px]' />
+            <div className="flex flex-col w-full">
+              <label className="text-[#222222] text-[12px] leading-[16px] font-semibold">
+                Insurance
+              </label>
+              <input
+                type="text"
+                placeholder="Select yours"
+                className="text-[12px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none  max-w-[70px]"
+              />
             </div>
-            <div className='flex flex-col w-full'>
-              <label className='text-[#222222] text-[12px] leading-[16px] font-semibold'>Location</label>
-              <input type='text' placeholder='eg., New Building' className='text-[12px] leading-[18px] font-normal text-[#6A6A6A] outline-none max-w-[70px]' />
+            <div className="flex flex-col w-full">
+              <label className="text-[#222222] text-[12px] leading-[16px] font-semibold">
+                Location
+              </label>
+              <input
+                type="text"
+                placeholder="eg., New Building"
+                className="text-[12px] leading-[18px] font-normal text-[#6A6A6A] outline-none max-w-[70px]"
+              />
             </div>
-            <button className='bg-[#FFF04B] min-w-[40px] min-h-[40px] rounded-[24px] flex items-center justify-center'><BiSearch className='min-w-[20px] min-h-[20px] text-[#5B5252]' /></button>
+            <button className="bg-[#FFF04B] min-w-[40px] min-h-[40px] rounded-[24px] flex items-center justify-center">
+              <BiSearch className="min-w-[20px] min-h-[20px] text-[#5B5252]" />
+            </button>
           </div>
-
-
-
         </div>
         <div className="hidden w-[25%] h-full md:flex items-center justify-center ">
           <img src="/assets/TeethLogo2024.svg" className=" w-auto h-auto" />
@@ -131,8 +167,11 @@ const page = () => {
           are in right hands be assured!
         </p>
         <h3 className="font-[700] text-[26px] my-4">All Providers</h3>
+        <div className="text-end mr-4 text-[14px] text-[#263238]">
+          <p>Última actualización: 12/06/2024</p>
+        </div>
 
-        <div className="p-2 md:px-[44px] my-12 md:py-[52px] flex flex-col md:flex-row items-center gap-[30px] justify-center shadow-xl border border-[#D0D0D0] rounded-[20px]">
+        <div className="p-2 md:px-[44px] my-4 md:py-[52px] flex flex-col md:flex-row items-center gap-[30px] justify-center shadow-xl border border-[#D0D0D0] rounded-[20px]">
           <div className="relative">
             <img
               src="/assets/Doctor1.png"
