@@ -1,10 +1,11 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const AssociatedClinics = () => {
   return (
-    <div className='bg-[#FCFAEE] 2xl:pl-[110px] pl-2 lg:pl-[40px] mt-[40px] py-[44px]'>
-        <div>
+    <div className='bg-[#FCFAEE] 2xl:pl-[90px] px-3 xl:pl-[84px] mt-[40px] py-[44px]'>
+        <div className='max-w-[1440px] mx-auto'>
             <h2 className='text-[#181515] text-[22px] leading-[19px] font-semibold pb-3'>Associated Clinics</h2>
             <p className='text-[#263238] text-[16px] leading-[19px] font-normal'>Doctor is associated with these clinis</p>
             <div className='mt-[25px] flex flex-col gap-4'>
@@ -12,7 +13,7 @@ const AssociatedClinics = () => {
                 <div className='md:bg-white rounded-[16.66px] max-w-[749px] p-5 flex md:flex-row flex-col items-center justify-between gap-5'>
                     <div>
                         <div className='flex items-center gap-2.5'>
-                            <h2 className='text-[#2B59E0] sm:text-[#263238] text-[14px] sm:text-[15px] leading-[15.83px] font-semibold'>Clinica Dental Dr. Ferrer</h2>
+                            <Link href='/' className='text-[#2B59E0] sm:text-[#263238] text-[14px] sm:text-[15px] leading-[15.83px] font-semibold'>Clinica Dental Dr. Ferrer</Link>
                             <div className='flex items-center gap-2'>
                                 <Image src='/assets/red-star.svg' alt='Star' width={13} height={13} />
                                 <h2 className='text-[#263238] font-medium'>4.8 <span className='text-[#797E81] text-[14px] sm:text-[16px] leading-[19px]'>(33 evaluaciones)</span></h2>
@@ -66,7 +67,7 @@ const AssociatedClinics = () => {
                 <div className='md:bg-white rounded-[16.66px] max-w-[749px] p-5 flex md:flex-row flex-col items-center justify-between gap-5'>
                     <div>
                         <div className='flex items-center gap-2.5'>
-                            <h2 className='text-[#2B59E0] sm:text-[#263238]  text-[14px] sm:text-[15px] leading-[15.83px] font-semibold'>Clinica Dental Blanc</h2>
+                            <Link href='/' className='text-[#2B59E0] sm:text-[#263238]  text-[14px] sm:text-[15px] leading-[15.83px] font-semibold'>Clinica Dental Blanc</Link>
                             <div className='flex items-center gap-2'>
                                 <Image src='/assets/red-star.svg' alt='Star' width={13} height={13} />
                                 <h2 className='text-[#263238] font-medium'>4.8 <span className='text-[#797E81] text-[14px] sm:text-[16px] leading-[19px]'>(33 evaluaciones)</span></h2>

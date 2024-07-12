@@ -36,7 +36,8 @@ const Expertise = () => {
  
 
   return (
-    <div className='2xl:pl-[110px] pl-5 lg:pl-[40px] flex md:flex-row flex-col gap-5 md:items-center justify-between max-w-[927px]'>
+    <div className='w-full max-w-[1440px] mx-auto'>
+    <div className='2xl:pl-[50px] pl-5 lg:pl-[40px] flex md:flex-row flex-col gap-5 md:items-center justify-between max-w-[927px]'>
       <div>
         <h2 className='text-[#181515] text-[22px] leading-[19px] font-semibold'>Expertise</h2>
         <p className='text-[#3C4659] text-[13.3px] leading-[19px] font-normal mt-2'>Based on patient reviews & endorsements by other professionals</p>
@@ -67,6 +68,7 @@ const Expertise = () => {
       <div className='max-w-[215px] max-h-[215px]' >
       <Doughnut data={data} options={options} />
       </div>
+    </div>
     </div>
   )
 }

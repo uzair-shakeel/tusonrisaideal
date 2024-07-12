@@ -55,28 +55,28 @@ const HeroHomePage = () => {
                 </div>
             </div>
             <div className='flex items-center gap-[45px] max-w-[1295px] mx-auto overflow-scroll mt-10 lg:mt-0'>
-                <div className='text-white shadow-custom flex items-start justify-center flex-col px-5 bg-[#333333] min-w-[290px] rounded-[17px]'>
+                <div className='text-white  flex items-start justify-center flex-col px-5 bg-[#333333] min-w-[290px] rounded-[17px]'>
                     <div className='flex items-center gap-1 mt-[16px] mb-[10px]'>
                         <Image src='/assets/frame1.svg' alt='Image' width={26} height={26} />
                         <h2 className='text-[20px] leading-[19px] font-semibold'>Calidad Asegurada</h2>
                     </div>
                     <p className='mb-[24px] text-[14px] leading-[19px] font-normal'>Seleccionamos y Verificamos a los mejores dentistas para ti</p>
                 </div>
-                <div className='shadow-custom flex items-start justify-center flex-col px-5 bg-white min-w-[290px] rounded-[17px]'>
+                <div className=' flex items-start justify-center flex-col px-5 bg-white min-w-[290px] rounded-[17px]'>
                     <div className='flex items-center gap-1 mt-[16px] mb-[10px]'>
                         <Image src='/assets/frame2.svg' alt='Image' width={26} height={26} />
                         <h2 className='text-[20px] leading-[19px] font-semibold'>Disponibilidad y Precios</h2>
                     </div>
                     <p className='mb-[24px] text-[14px] leading-[19px] font-normal'>Somos los Únicos 100% Especializados en el Sector Dental</p>
                 </div>
-                <div className='shadow-custom flex items-start justify-center flex-col px-5 bg-white min-w-[290px] rounded-[17px]'>
+                <div className=' flex items-start justify-center flex-col px-5 bg-white min-w-[290px] rounded-[17px]'>
                     <div className='flex items-center gap-1 mt-[16px] mb-[10px]'>
                         <Image src='/assets/frame3.svg' alt='Image' width={26} height={26} />
                         <h2 className='text-[20px] leading-[19px] font-semibold'>Calidad Asegurada</h2>
                     </div>
                     <p className='mb-[24px] text-[14px] leading-[19px] font-normal'>Pide Cita de Forma Fácil y Rápida y Totalmente Gratuita</p>
                 </div>
-                <div className='shadow-custom flex items-start justify-center flex-col px-5 bg-white min-w-[290px] rounded-[17px]'>
+                <div className=' flex items-start justify-center flex-col px-5 bg-white min-w-[290px] rounded-[17px]'>
                     <div className='flex items-center gap-1 mt-[16px] mb-[10px]'>
                         <Image src='/assets/frame4.svg' alt='Image' width={26} height={26} />
                         <h2 className='text-[20px] leading-[19px] font-semibold'>Todos los Dentistas</h2>

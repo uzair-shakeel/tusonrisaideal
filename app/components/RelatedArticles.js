@@ -2,7 +2,7 @@ import React from "react";
 
 const RelatedArticles = () => {
   return (
-    <div className="px-2 md:px-5">
+    <div className="px-2 md:px-5 max-w-[1440px] mx-auto">
       <h4 className="text-[22px] font-[600] my-6 ">Related Articles</h4>
       <div className="space-y-[40px]">
         <div className="shadow-lg p-4 rounded-[20px] border border-[#DADADA] flex flex-col md:flex-row gap-[20px]">
@@ -31,7 +31,7 @@ const RelatedArticles = () => {
           </div>
         </div>
 
-        <div className="md:grid md:grid-cols-3 md:gap-[40px] overflow-x-auto md:overflow-hidden flex md:flex-none space-x-4 md:space-x-0">
+        <div className="md:grid md:grid-cols-3 md:gap-[40px] overflow-x-auto py-10 md:overflow-hidden flex md:flex-none space-x-4 md:space-x-0">
           <div className="rounded-[20px] w-[300px] md:w-auto shadow-lg flex-shrink-0 md:flex-shrink">
             <div className="h-[196px] w-full overflow-hidden">
               <img

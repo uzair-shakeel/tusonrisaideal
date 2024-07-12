@@ -1,7 +1,6 @@
-"use client"
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaArrowRight, FaStar, FaStarHalfAlt } from "react-icons/fa";
 
 const dentistData = [
@@ -98,6 +97,21 @@ const DentistCard = ({ dentist }) => {
 const AssociatedDentist = () => {
   const [expanded, setExpanded] = useState(false);
 
+  // UseEffect to dynamically set expanded state based on window size
+  useEffect(() => {
+    const handleResize = () => {
+      setExpanded(window.innerWidth > 768 && window.innerWidth < 1024 ? false : expanded);
+    };
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [expanded]);
+
   const toggleExpand = () => {
     setExpanded(!expanded);
   };
@@ -107,7 +121,7 @@ const AssociatedDentist = () => {
       <div className='max-w-[927px] flex flex-col gap-[22px] bg-[#FFFDEA59] border border-[#D0D0D05C] p-2 md:p-5 rounded-[10px]'>
         <h2 className='text-[#181515] text-[22px] leading-[19px] font-semibold mb-5'>Associated dentist</h2>
         <div className='grid md:grid-cols-2 grid-cols-1 gap-5'>
-          {dentistData.slice(0, expanded ? dentistData.length : (window.innerWidth > 768 && window.innerWidth < 1024) ? 4 : 2).map(dentist => (
+          {dentistData.slice(0, expanded ? dentistData.length : 2).map(dentist => (
             <DentistCard key={dentist.id} dentist={dentist} />
           ))}
         </div>

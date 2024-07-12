@@ -40,6 +40,12 @@ body{
   background-size: cover;
 }
 
+.bg-image-h{
+  background-image: url(/assets/lines.svg);
+  /* background-position: center; */
+  background-repeat: no-repeat;
+}
+
 /* @media screen and (min-width: 768px) {
   .hero-img{
     background-image: url(/assets/mobile-hero.svg);

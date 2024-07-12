@@ -16,8 +16,12 @@ module.exports = {
         mdl: '880px',
         lg: '976px',
         xl: '1280px',
+        '1xl': '1400px',
         xxl: '1440px',
       },
+      backgroundImage:{
+        'bg-image': '/assets/lines.svg',
+      }
     },
   },
   plugins: [],

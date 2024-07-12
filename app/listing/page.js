@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useEffect } from 'react';
 import RegisterNowBanner from "../components/RegisterNowBanner";
 import FAQ from "../components/FAQ";
 import { MdOutlineSearch } from "react-icons/md";
@@ -6,9 +7,10 @@ import RelatedArticles from "../components/RelatedArticles";
 import { BiSearch } from "react-icons/bi";
 
 const page = () => {
+
   return (
     <div>
-      <div className="px-5 md:px-[44px] py-[52px] bg-[#FCFAEE] flex">
+      <div className="px-5 md:px-[44px] py-[52px] bg-[#FCFAEE] max-w-[1440px] mx-auto flex">
         <div className="w-full">
           <h3 className="hidden md:block text-[28px] font-[500]">
             Book from 100’s of the best Dentists near you
@@ -59,16 +61,10 @@ const page = () => {
           </div>
 
           {/* Mobile */}
-          <div className="bg-white border border-[#DDDDDD] justify-between shadow-custom max-w-[392px] h-[66px] rounded-[32px] flex items-center px-5">
-            <div className="flex flex-col w-full">
-              <label className="text-[#222222] text-[12px] leading-[16px] font-semibold">
-                Condition
-              </label>
-              <input
-                type="text"
-                placeholder="Eg., Headache"
-                className="text-[12px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none max-w-[70px]"
-              />
+          <div className="bg-white border border-[#DDDDDD] justify-between shadow-custom max-w-[392px] h-[66px] rounded-[32px] flex md:hidden items-center px-5">
+            <div className='flex flex-col w-full'>
+              <label className='text-[#222222] text-[12px] leading-[16px] font-semibold'>Condition</label>
+              <input type='text' placeholder='Eg., Headache' className='text-[12px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none max-w-[70px]' />
             </div>
             <div className="flex flex-col w-full">
               <label className="text-[#222222] text-[12px] leading-[16px] font-semibold">
@@ -100,7 +96,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="px-2 md:px-5">
+      <div className="px-2 md:px-5 max-w-[1440px] mx-auto">
         <h4 className="text-[14px] my-4">Filter By</h4>
 
         <div className="overflow-x-scroll md:overflow-hidden flex justify-between">
@@ -451,9 +447,9 @@ const page = () => {
         </div>
       </div>
 
-      <div className=" py-10">
+      <div className=" py-10 max-w-[1440px] mx-auto">
         <div className="flex overflow-x-auto w-full no-scrollbar gap-8 pb-10">
-          <div className="rounded-2xl max-w-[500px] min-w-[300px] py-6 px-12 shadow-2xl bg-white flex-shrink-0">
+          <div className="rounded-2xl max-w-[500px] min-w-[300px] py-6 px-12 shadow-lg bg-white flex-shrink-0">
             <div className="flex justify-between items-center">
               <p className="text-[130px] leading-10 text-[#2B59E0]/20 font-[900]">
                 "
@@ -481,7 +477,7 @@ const page = () => {
               </p>
             </div>
           </div>
-          <div className="rounded-2xl max-w-[500px] min-w-[300px] py-6 px-12 shadow-2xl bg-white flex-shrink-0">
+          <div className="rounded-2xl max-w-[500px] min-w-[300px] py-6 px-12 shadow-lg bg-white flex-shrink-0">
             <div className="flex justify-between items-center">
               <p className="text-[130px] leading-10 text-[#2B59E0]/20 font-[900]">
                 "
@@ -509,7 +505,7 @@ const page = () => {
               </p>
             </div>
           </div>
-          <div className="rounded-2xl max-w-[500px] min-w-[300px] py-6 px-12 shadow-2xl bg-white flex-shrink-0">
+          <div className="rounded-2xl max-w-[500px] min-w-[300px] py-6 px-12 shadow-lg bg-white flex-shrink-0">
             <div className="flex justify-between items-center">
               <p className="text-[130px] leading-10 text-[#2B59E0]/20 font-[900]">
                 "
@@ -537,7 +533,7 @@ const page = () => {
               </p>
             </div>
           </div>
-          <div className="rounded-2xl max-w-[500px] min-w-[300px] py-6 px-12 shadow-2xl bg-white flex-shrink-0">
+          <div className="rounded-2xl max-w-[500px] min-w-[300px] py-6 px-12 shadow-lg bg-white flex-shrink-0">
             <div className="flex justify-between items-center">
               <p className="text-[130px] leading-10 text-[#2B59E0]/20 font-[900]">
                 "
@@ -565,7 +561,7 @@ const page = () => {
               </p>
             </div>
           </div>
-          <div className="rounded-2xl max-w-[500px] min-w-[300px] py-6 px-12 shadow-2xl bg-white flex-shrink-0">
+          <div className="rounded-2xl max-w-[500px] min-w-[300px] py-6 px-12 shadow-lg bg-white flex-shrink-0">
             <div className="flex justify-between items-center">
               <p className="text-[130px] leading-10 text-[#2B59E0]/20 font-[900]">
                 "
@@ -595,6 +591,7 @@ const page = () => {
           </div>
         </div>
       </div>
+
       <RelatedArticles />
       <FAQ />
       <RegisterNowBanner />
