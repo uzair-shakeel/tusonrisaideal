@@ -132,7 +132,6 @@ const FindDoctor = () => {
       </div>
     </div>
          
-    </div>
   );
 };
 
