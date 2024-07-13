@@ -33,42 +33,42 @@ const options = {
 
 
 const Expertise = () => {
- 
+
 
   return (
     <div className='w-full max-w-[1440px] mx-auto'>
-    <div className='2xl:pl-[50px] pl-5 lg:pl-[40px] flex md:flex-row flex-col gap-5 md:items-center justify-between max-w-[927px]'>
-      <div>
-        <h2 className='text-[#181515] text-[22px] leading-[19px] font-semibold'>Expertise</h2>
-        <p className='text-[#3C4659] text-[13.3px] leading-[19px] font-normal mt-2'>Based on patient reviews & endorsements by other professionals</p>
-        <div className='mt-4 flex flex-col gap-3'>
-          <div className='flex items-center gap-2'>
-            <span className='min-w-[8px] min-h-[8px] rounded-full bg-[#FFF04B]'></span>
-            <h2 className='text-[#3C4659] text-[14px] leading-[19px] font-normal'>Periodontics (41%)</h2>
-          </div>
-          <div className='flex items-center gap-2'>
-            <span className='min-w-[8px] min-h-[8px] rounded-full bg-[#F84141]'></span>
-            <h2 className='text-[#3C4659] text-[14px] leading-[19px] font-normal'>Periodontitis (27%)</h2>
-          </div>
-          <div className='flex items-center gap-2'>
-            <span className='min-w-[8px] min-h-[8px] rounded-full bg-[#333333]'></span>
-            <h2 className='text-[#3C4659] text-[14px] leading-[19px] font-normal'>Gingivitis (14%)</h2>
-          </div>
-          <div className='flex items-center gap-2'>
-            <span className='min-w-[8px] min-h-[8px] rounded-full bg-[#2C64D8]'></span>
-            <h2 className='text-[#3C4659] text-[14px] leading-[19px] font-normal'>Teeth Cleaning (11%)</h2>
-          </div>
-          <div className='flex items-center gap-2'>
-            <span className='min-w-[8px] min-h-[8px] rounded-full bg-[#FCFAEE] shadow-custom'></span>
-            <h2 className='text-[#3C4659] text-[14px] leading-[19px] font-normal'>Others (2%)</h2>
+      <div className='2xl:pl-[50px] pl-5 lg:pl-[40px] flex md:flex-row flex-col gap-5 md:items-center justify-between max-w-[927px]'>
+        <div>
+          <h2 className='text-[#181515] text-[22px] leading-[19px] font-semibold'>Expertise</h2>
+          <p className='text-[#3C4659] text-[13.3px] leading-[19px] font-normal mt-2'>Based on patient reviews & endorsements by other professionals</p>
+          <div className='mt-4 flex flex-col gap-3'>
+            <div className='flex items-center gap-2'>
+              <span className='min-w-[8px] min-h-[8px] rounded-full bg-[#FFF04B]'></span>
+              <h2 className='text-[#3C4659] text-[14px] leading-[19px] font-normal'>Periodontics (41%)</h2>
+            </div>
+            <div className='flex items-center gap-2'>
+              <span className='min-w-[8px] min-h-[8px] rounded-full bg-[#F84141]'></span>
+              <h2 className='text-[#3C4659] text-[14px] leading-[19px] font-normal'>Periodontitis (27%)</h2>
+            </div>
+            <div className='flex items-center gap-2'>
+              <span className='min-w-[8px] min-h-[8px] rounded-full bg-[#333333]'></span>
+              <h2 className='text-[#3C4659] text-[14px] leading-[19px] font-normal'>Gingivitis (14%)</h2>
+            </div>
+            <div className='flex items-center gap-2'>
+              <span className='min-w-[8px] min-h-[8px] rounded-full bg-[#2C64D8]'></span>
+              <h2 className='text-[#3C4659] text-[14px] leading-[19px] font-normal'>Teeth Cleaning (11%)</h2>
+            </div>
+            <div className='flex items-center gap-2'>
+              <span className='min-w-[8px] min-h-[8px] rounded-full bg-[#FCFAEE] shadow-custom'></span>
+              <h2 className='text-[#3C4659] text-[14px] leading-[19px] font-normal'>Others (2%)</h2>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className='max-w-[215px] max-h-[215px]' >
-      <Doughnut data={data} options={options} />
+        <div className='max-w-[515px] max-h-[515px]' >
+          <Doughnut data={data} options={options} className='w-[220px] h-[220px]' />
+        </div>
       </div>
-    </div>
     </div>
   )
 }

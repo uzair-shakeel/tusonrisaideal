@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <div className="w-full border-b border-[#D0D0D0]">
-      <div className="w-full mx-auto flex items-center max-w-[1440px] justify-between py-5 px-4 lg:pl-[61px] lg:pr-[36px]">
+      <div className="w-full mx-auto flex items-center max-w-[1440px] justify-between py-5 px-4 lg:px-[36px]">
         <div className="flex items-center gap-2">
           <button
             className="block lg:hidden"

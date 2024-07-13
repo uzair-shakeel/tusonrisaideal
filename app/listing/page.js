@@ -1,453 +1,537 @@
 "use client"
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import RegisterNowBanner from "../components/RegisterNowBanner";
 import FAQ from "../components/FAQ";
 import { MdOutlineSearch } from "react-icons/md";
 import RelatedArticles from "../components/RelatedArticles";
 import { BiSearch } from "react-icons/bi";
+import Image from 'next/image';
 
 const page = () => {
+  // One
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState('Consulta Online');
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleOptionClick = (option) => {
+    setSelectedOption(option);
+    setIsOpen(false);
+  };
+
+  // Two
+  const [isOpen1, setIsOpen1] = useState(false);
+  const [selectedOption1, setSelectedOption1] = useState('Aseguradora');
+
+  const toggleDropdown1 = () => {
+    setIsOpen1(!isOpen1);
+  };
+
+  const handleOptionClick1 = (option) => {
+    setSelectedOption1(option);
+    setIsOpen1(false);
+  };
+
+  // Three
+  const [isOpen2, setIsOpen2] = useState(false);
+  const [selectedOption2, setSelectedOption2] = useState('Fechas Disponibles');
+
+  const toggleDropdown2 = () => {
+    setIsOpen2(!isOpen2);
+  };
+
+  const handleOptionClick2 = (option) => {
+    setSelectedOption2(option);
+    setIsOpen2(false);
+  };
+
+  // Four
+  const [isOpen3, setIsOpen3] = useState(false);
+  const [selectedOption3, setSelectedOption3] = useState('Mas Filtros');
+
+  const toggleDropdown3 = () => {
+    setIsOpen3(!isOpen3);
+  };
+
+  const handleOptionClick3 = (option) => {
+    setSelectedOption3(option);
+    setIsOpen3(false);
+  };
+
+  // Five
+  const [isOpen4, setIsOpen4] = useState(false);
+  const [selectedOption4, setSelectedOption4] = useState('All');
+
+  const toggleDropdown4 = () => {
+    setIsOpen4(!isOpen4);
+  };
+
+  const handleOptionClick4 = (option) => {
+    setSelectedOption4(option);
+    setIsOpen4(false);
+  };
+
+  const doctors = [
+    {
+      name: "Dr. Carlos Fernández",
+      specialization: "Dentista",
+      experience: "25 años de experiencia",
+      address: "111 NE 32nd St, Spain, FL",
+      workplace: "Centro de Salud El Sol",
+      rating: 3.45,
+      reviews: 52,
+      reviewText: "Very friendly, polite and professional staff; nice and clean facility; the only downside is that, I",
+      profileImg: "/assets/Doctor1.png",
+      badgeImg: "/assets/Bronze (2).svg"
+    },
+    {
+      name: "Dr. Alejandro López",
+      specialization: "Dentista",
+      experience: "16 años de experiencia",
+      address: "111 NE 32nd St, Spain, FL",
+      workplace: "Centro de Salud El Sol",
+      rating: 3.45,
+      reviews: 52,
+      reviewText: "Very friendly, polite and professional staff; nice and clean facility; the only downside is that, I",
+      profileImg: "/assets/Doctor2.png",
+      badgeImg: "/assets/Diamond.svg"
+    },
+    {
+      name: "Dr. Ana Sánchez",
+      specialization: "Dentista",
+      experience: "16 años de experiencia",
+      address: "111 NE 32nd St, Spain, FL",
+      workplace: "Centro de Salud El Sol",
+      rating: 3.45,
+      reviews: 52,
+      reviewText: "Very friendly, polite and professional staff; nice and clean facility; the only downside is that, I",
+      profileImg: "/assets/Doctor3.png",
+      badgeImg: "/assets/Gold.svg"
+    },
+    {
+      name: "Dr. Laura Martínez",
+      specialization: "Dentista",
+      experience: "16 años de experiencia",
+      address: "111 NE 32nd St, Spain, FL",
+      workplace: "Centro de Salud El Sol",
+      rating: 3.45,
+      reviews: 52,
+      reviewText: "Very friendly, polite and professional staff; nice and clean facility; the only downside is that, I",
+      profileImg: "/assets/Doctor4.png",
+      badgeImg: "/assets/Platinum.svg"
+    }
+  ];
+
+  // DoctorBox
+  const DoctorCard = ({ doctor }) => (
+    <div className="p-2 md:px-[55px] mb-10 py-[44px] flex flex-col md:flex-row gap-[30px] items-center md:items-start md:justify-center md:shadow-xl border border-[#D0D0D0] md:rounded-[20px]">
+      <div className='flex gap-5'>
+        <div className="relative md:h-[125px] md:w-[125px]">
+          <img
+            src={doctor.profileImg}
+            className="rounded-full w-[100px] h-[100px] md:h-[124px] md:w-[124px] object-cover"
+          />
+          <img
+            src={doctor.badgeImg}
+            className="absolute bottom-0 -right-4 rounded-full md:h-[62px] md:w-[62px] h-[50px] w-[50px]"
+          />
+        </div>
+        <div className="">
+          <h5 className="text-[18px] md:text-[22px] font-500 text-[#263238] leading-[19px] pb-2">{doctor.name}</h5>
+          <div className="flex items-center gap-2 md:gap-5">
+            <p className="text-[14px] md:text-[16px] text-[#263238] leading-[19px] font-normal">{doctor.specialization}</p>
+            <div className='flex items-center gap-1 border-l border-[#CDCDCD]'>
+              <Image src='/assets/m.svg' alt='image' width={10} height={10} className='-mt-[2px] ml-2' />
+              <p className="text-[12px] md:text-[16px] text-[#263238] leading-[18.75px] font-normal">
+                {doctor.experience}
+              </p>
+            </div>
+          </div>
+          <p className="flex items-center gap-1.5 text-[#263238] text-[13px] md:text-[16px] leading-[19px] font-normal my-3.5"><Image src='/assets/l.svg' alt='location' width={18} height={18} />{doctor.address}</p>
+          <p className="text-[13px] md:text-[16px] text-[#263238] leading-[19px] font-normal">Trabaja en : <span className='text-[#2B59E0] underline'> {doctor.workplace}</span></p>
+        </div>
+      </div>
+      <div className="bg-[#F1F1F1] md:max-w-[40%] rounded-[20px] flex items-center gap-[25px] px-[17px] py-[27px]">
+        <div className="w-[150px] flex flex-col items-center gap-2">
+          <p className="text-[34px] font-medium text-[#263238] leading-[19px]">{doctor.rating.toFixed(2)}</p>
+          <img src="/assets/4star-.svg" />
+          <p className="text-[16px] text-[#6B777D] leading-[19px]">({doctor.reviews} reviews)</p>
+        </div>
+        <div>
+          <p className="text-[#6B777D] text-[14px] leading-[19px] font-normal">
+            {doctor.reviewText}
+          </p>
+          <p className="text-[#2C64D8] leading-[19px] text-[16px] mt-1">Read More</p>
+        </div>
+      </div>
+      <div className="flex flex-col">
+        <button className="bg-[#FEF14B] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[18px]">
+          Book Appointment
+        </button>
+        <button className="border border-[#000000] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[10px]">
+          View Profile
+        </button>
+      </div>
+    </div>
+  );
+
+
+  const clinicData = {
+    name: "Stroll Health Clinic",
+    openHours: "09:00  - 22:00  ",
+    dentistsCount: 8,
+    address: "111 NE 32nd St, Spain, FL",
+    rating: 5.0,
+    reviews: 52,
+    reviewText: "Very friendly , polite and professional staff ; nice and clean facility ; the only downside is that , I was confirmed...",
+  };
+
+  const dentists = [
+    {
+      id: 1,
+      name: "Dr. Alejandro López",
+      specialty: "Dentista",
+      rating: 5.0,
+      image: "/assets/Doctor1.png",
+    },
+    {
+      id: 2,
+      name: "Dr. Alejandro López",
+      specialty: "Dentista",
+      rating: 5.0,
+      image: "/assets/Doctor1.png",
+    },
+  ];
 
   return (
     <div>
-      <div className="px-5 md:px-[44px] py-[52px] bg-[#FCFAEE] max-w-[1440px] mx-auto flex">
-        <div className="w-full">
-          <h3 className="hidden md:block text-[28px] font-[500]">
-            Book from 100’s of the best Dentists near you
-          </h3>
-          <p className="hidden md:block text-[16px] my-2">
-            Need to make a dentist appointment this week? Use TSI to find
-            dentists near you who take your insurance. It’s simple, secure and
-            free.
-          </p>
+      <div className=' bg-[#FCFAEE] border-b border-[#D0D0D0] w-full'>
+        <div className="px-5 lg:px-[36px] py-[52px] max-w-[1440px] mx-auto flex">
+          <div className="w-full">
+            <h3 className="hidden md:block text-[28px] leading-[37px] font-medium text-[#263238]">
+              Agenda entre +100 de los mejores Dentistas cerca tuyo
+            </h3>
+            <p className="hidden md:block text-[16px] leading-[21px] my-2 max-w-[670px] text-[#263238]">
+              ¿Necesitas agendar cita en el dentista esta semana? Usa TSI y encuentra dentistas cerca de ti que aceptan tu seguro. Es simple, seguro y gratuito.
+            </p>
 
-          {/* Desktop */}
-          <div className="md:flex hidden justify-between items-center gap-5 w-full bg-white border border-[#DDDDDD] shadow-custom h-[66px] rounded-[33px] mt-[36px] px-[33px]">
-            <div className="flex flex-col max-w-[240px] w-full">
-              <label className="text-[#222222] text-[12px] leading-[16px] font-semibold">
-                Condition
-              </label>
-              <input
-                type="text"
-                placeholder="Eg., Headache"
-                className="text-[14px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none"
-              />
+            {/* Desktop */}
+            <div className="md:flex hidden justify-between items-center gap-5 w-full bg-white border border-[#DDDDDD] shadow-custom h-[66px] rounded-[33px] mt-[36px] px-[33px]">
+              <div className="flex flex-col gap-0.5 max-w-[240px] w-full">
+                <label className="text-[#222222] text-[14px] leading-[16px] font-semibold">
+                  Condición
+                </label>
+                <input
+                  type="text"
+                  placeholder="Ej. Ortodoncia Invisible"
+                  className="text-[12px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none"
+                />
+              </div>
+              <div className="flex flex-col gap-0.5 max-w-[240px] w-full">
+                <label className="text-[#222222] text-[14px] leading-[16px] font-semibold">
+                  Seguro
+                </label>
+                <input
+                  type="text"
+                  placeholder="Selecciona el tuyo"
+                  className="text-[12px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none"
+                />
+              </div>
+              <div className="flex flex-col gap-0.5 max-w-[240px] w-full border-l border-[#BABABA] pl-2.5">
+                <label className="text-[#222222] text-[14px] leading-[16px] font-semibold">
+                  Lugar
+                </label>
+                <input
+                  type="text"
+                  placeholder="Ej. Madrid"
+                  className="text-[12px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none"
+                />
+              </div>
+              <div>
+                <button className="bg-[#FFF04B] min-w-[48px] min-h-[48px] rounded-[24px] flex items-center justify-center">
+                  <BiSearch className="min-w-[20px] min-h-[20px] text-[#5B5252]" />
+                </button>
+              </div>
             </div>
-            <div className="flex flex-col max-w-[240px] w-full">
-              <label className="text-[#222222] text-[12px] leading-[16px] font-semibold">
-                Insurance
-              </label>
-              <input
-                type="text"
-                placeholder="Select yours"
-                className="text-[14px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none"
-              />
-            </div>
-            <div className="flex flex-col max-w-[240px] w-full border-l border-[#BABABA] pl-2.5">
-              <label className="text-[#222222] text-[12px] leading-[16px] font-semibold">
-                Location
-              </label>
-              <input
-                type="text"
-                placeholder="eg., New Building"
-                className="text-[14px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none"
-              />
-            </div>
-            <div>
-              <button className="bg-[#FFF04B] min-w-[48px] min-h-[48px] rounded-[24px] flex items-center justify-center">
+
+            {/* Mobile */}
+            <div className="bg-white border border-[#DDDDDD] justify-between shadow-custom max-w-[392px] h-[66px] rounded-[32px] flex md:hidden items-center px-5">
+              <div className='flex flex-col w-full'>
+                <label className='text-[#222222] text-[12px] leading-[16px] font-semibold'>Condition</label>
+                <input type='text' placeholder='Eg., Headache' className='text-[12px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none max-w-[70px]' />
+              </div>
+              <div className="flex flex-col w-full">
+                <label className="text-[#222222] text-[12px] leading-[16px] font-semibold">
+                  Insurance
+                </label>
+                <input
+                  type="text"
+                  placeholder="Select yours"
+                  className="text-[12px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none  max-w-[70px]"
+                />
+              </div>
+              <div className="flex flex-col w-full">
+                <label className="text-[#222222] text-[12px] leading-[16px] font-semibold">
+                  Location
+                </label>
+                <input
+                  type="text"
+                  placeholder="eg., New Building"
+                  className="text-[12px] leading-[18px] font-normal text-[#6A6A6A] outline-none max-w-[70px]"
+                />
+              </div>
+              <button className="bg-[#FFF04B] min-w-[40px] min-h-[40px] rounded-[24px] flex items-center justify-center">
                 <BiSearch className="min-w-[20px] min-h-[20px] text-[#5B5252]" />
               </button>
             </div>
           </div>
-
-          {/* Mobile */}
-          <div className="bg-white border border-[#DDDDDD] justify-between shadow-custom max-w-[392px] h-[66px] rounded-[32px] flex md:hidden items-center px-5">
-            <div className='flex flex-col w-full'>
-              <label className='text-[#222222] text-[12px] leading-[16px] font-semibold'>Condition</label>
-              <input type='text' placeholder='Eg., Headache' className='text-[12px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none max-w-[70px]' />
-            </div>
-            <div className="flex flex-col w-full">
-              <label className="text-[#222222] text-[12px] leading-[16px] font-semibold">
-                Insurance
-              </label>
-              <input
-                type="text"
-                placeholder="Select yours"
-                className="text-[12px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none  max-w-[70px]"
-              />
-            </div>
-            <div className="flex flex-col w-full">
-              <label className="text-[#222222] text-[12px] leading-[16px] font-semibold">
-                Location
-              </label>
-              <input
-                type="text"
-                placeholder="eg., New Building"
-                className="text-[12px] leading-[18px] font-normal text-[#6A6A6A] outline-none max-w-[70px]"
-              />
-            </div>
-            <button className="bg-[#FFF04B] min-w-[40px] min-h-[40px] rounded-[24px] flex items-center justify-center">
-              <BiSearch className="min-w-[20px] min-h-[20px] text-[#5B5252]" />
-            </button>
+          <div className="hidden w-[25%] h-full md:flex items-center justify-center ">
+            <img src="/assets/TeethLogo2024.svg" className=" w-auto h-auto" />
           </div>
-        </div>
-        <div className="hidden w-[25%] h-full md:flex items-center justify-center ">
-          <img src="/assets/TeethLogo2024.svg" className=" w-auto h-auto" />
         </div>
       </div>
 
-      <div className="px-2 md:px-5 max-w-[1440px] mx-auto">
-        <h4 className="text-[14px] my-4">Filter By</h4>
+      <div className="md:px-5 max-w-[1440px] mx-auto">
+        <h4 className="text-[14px] my-4 text-[#263238] leading-[21px] font-normal px-2">Filter By</h4>
+        <div className=" flex justify-between flex-wrap gap-8">
+          <div className="flex gap-4 flex-wrap px-2 ">
+            {/* Consulta Online */}
+            <div className="relative inline-block">
+              <button
+                onClick={toggleDropdown}
+                className="font-normal text-[14px] leading-[19px]  min-w-[211px] h-[39px]  cursor-pointer text-[#54595C] border border-black outline-none rounded-lg flex items-center justify-center"
+              >
+                <Image src="/assets/vide.svg" alt="icon" width={20} height={20} className='mr-[10px]' />
+                {selectedOption}
+                <span
+                  className={`transform transition-transform duration-200 ml-[10px] ${isOpen ? 'rotate-180' : 'rotate-0'}`}
+                >
+                  <Image src='/assets/d-ar.svg' alt='arrow' width={12} height={15} />
+                </span>
+              </button>
+              {isOpen && (
+                <ul className="absolute left-0 top-full mt-1 w-full bg-white border border-black rounded-lg z-10">
+                  {['Consulta Online', 'Consulta Online', 'Consulta Online', 'Consulta Online', 'Consulta Online'].map((option, index) => (
+                    <li
+                      key={index}
+                      onClick={() => handleOptionClick(option)}
+                      className="font-normal text-[14px] leading-[19px] cursor-pointer px-2 py-1 border-b text-[#54595C]"
+                    >
+                      {option}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
 
-        <div className="overflow-x-scroll md:overflow-hidden flex justify-between">
-          <div className="flex gap-4">
-            <select
-              placeholder="Consulta Online"
-              className="px-4 py-2 border border-black outline-none rounded-lg"
-            >
-              <option>Consulta Online</option>
-              <option>hii</option>
-              <option>hii</option>
-              <option>hii</option>
-              <option>hii</option>
-            </select>
-            <select
-              placeholder="Aseguradora"
-              className="px-4 py-2 border border-black outline-none rounded-lg"
-            >
-              <option>Aseguradora</option>
-              <option>hii</option>
-              <option>hii</option>
-              <option>hii</option>
-              <option>hii</option>
-            </select>
-            <select
-              placeholder="Fechas Disponibles"
-              className="px-4 py-2 border border-black outline-none rounded-lg"
-            >
-              <option>Fechas Disponibles</option>
-              <option>hii</option>
-              <option>hii</option>
-              <option>hii</option>
-              <option>hii</option>
-            </select>
-            <select
-              placeholder="Mas Filtros"
-              className="px-4 py-2 border border-black outline-none rounded-lg"
-            >
-              <option>Mas Filtros</option>
-              <option>hii</option>
-              <option>hii</option>
-              <option>hii</option>
-              <option>hii</option>
-            </select>
+            {/* Aseguradora */}
+            <div className="relative inline-block">
+              <button
+                onClick={toggleDropdown1}
+                className="font-normal text-[14px] leading-[19px]  min-w-[135px] h-[39px]  cursor-pointer text-[#54595C] border border-black outline-none rounded-lg flex items-center justify-center"
+              >
+                {/* <Image src="/assets/vide.svg" alt="icon" width={20} height={20} className='mr-[10px]'/> */}
+                {selectedOption1}
+                <span
+                  className={`transform transition-transform duration-200 ml-[10px] ${isOpen1 ? 'rotate-180' : 'rotate-0'}`}
+                >
+                  <Image src='/assets/d-ar.svg' alt='arrow' width={12} height={15} />
+                </span>
+              </button>
+              {isOpen1 && (
+                <ul className="absolute left-0 top-full mt-1 w-full bg-white border border-black rounded-lg z-10">
+                  {['Aseguradora', 'Aseguradora', 'Aseguradora', 'Aseguradora', 'Aseguradora'].map((option1, index1) => (
+                    <li
+                      key={index1}
+                      onClick={() => handleOptionClick1(option1)}
+                      className="font-normal text-[14px] leading-[19px] cursor-pointer px-2 py-1 border-b text-[#54595C]"
+                    >
+                      {option1}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+
+            {/* Fechas Disponibles */}
+            <div className="relative inline-block">
+              <button
+                onClick={toggleDropdown2}
+                className="font-normal text-[14px] leading-[19px]  min-w-[185px] h-[39px]  cursor-pointer text-[#54595C] border border-black outline-none rounded-lg flex items-center justify-center"
+              >
+                {/* <Image src="/assets/vide.svg" alt="icon" width={20} height={20} className='mr-[10px]'/> */}
+                {selectedOption2}
+                <span
+                  className={`transform transition-transform duration-200 ml-[10px] ${isOpen2 ? 'rotate-180' : 'rotate-0'}`}
+                >
+                  <Image src='/assets/d-ar.svg' alt='arrow' width={12} height={15} />
+                </span>
+              </button>
+              {isOpen2 && (
+                <ul className="absolute left-0 top-full mt-1 w-full bg-white border border-black rounded-lg z-10">
+                  {['Fechas Disponibles', 'Fechas Disponibles', 'Fechas Disponibles', 'Fechas Disponibles', 'Fechas Disponibles'].map((option2, index2) => (
+                    <li
+                      key={index2}
+                      onClick={() => handleOptionClick2(option2)}
+                      className="font-normal text-[14px] leading-[19px] cursor-pointer px-2 py-1 border-b text-[#54595C]"
+                    >
+                      {option2}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+
+            {/* Mas Filtros */}
+            <div className="relative inline-block">
+              <button
+                onClick={toggleDropdown3}
+                className="font-normal text-[14px] leading-[19px]  min-w-[134px] h-[39px]  cursor-pointer text-[#54595C] border border-black outline-none rounded-lg flex items-center justify-center"
+              >
+                {/* <Image src="/assets/vide.svg" alt="icon" width={20} height={20} className='mr-[10px]'/> */}
+                {selectedOption3}
+                <span
+                  className={`transform transition-transform duration-200 ml-[10px] ${isOpen3 ? 'rotate-180' : 'rotate-0'}`}
+                >
+                  <Image src='/assets/d-ar.svg' alt='arrow' width={12} height={15} />
+                </span>
+              </button>
+              {isOpen3 && (
+                <ul className="absolute left-0 top-full mt-1 w-full bg-white border border-black rounded-lg z-10">
+                  {['Mas Filtros', 'Mas Filtros', 'Mas Filtros', 'Mas Filtros', 'Mas Filtros'].map((option3, index3) => (
+                    <li
+                      key={index3}
+                      onClick={() => handleOptionClick3(option3)}
+                      className="font-normal text-[14px] leading-[19px] cursor-pointer px-2 py-1 border-b text-[#54595C]"
+                    >
+                      {option3}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           </div>
-          <select
-            placeholder="All"
-            className="px-20 py-2 border border-black outline-none rounded-lg"
-          >
-            <option>All</option>
-            <option>hii</option>
-            <option>hii</option>
-            <option>hii</option>
-            <option>hii</option>
-          </select>
+          {/* All */}
+          <div className="relative inline-block px-2 ">
+            <button
+              onClick={toggleDropdown4}
+              className="font-normal text-[18px] leading-[14.45px]  min-w-[296px] h-[39px] px-2.5 cursor-pointer text-[#1F272B] border border-[#263238] outline-none rounded-[10px] flex items-center justify-between"
+            >
+              {selectedOption4}
+              <span
+                className={`transform transition-transform duration-200   ${isOpen4 ? 'rotate-180' : 'rotate-0'}`}
+              >
+
+                <Image src='/assets/a.svg' alt='arrow' width={20} height={20} />
+              </span>
+            </button>
+            {isOpen4 && (
+              <ul className="absolute left-0 top-full mt-1 w-full bg-white border border-black rounded-lg z-10">
+                {['All', 'All', 'All'].map((option4, index4) => (
+                  <li
+                    key={index4}
+                    onClick={() => handleOptionClick4(option4)}
+                    className="font-normal text-[14px] leading-[19px] cursor-pointer px-2 py-1 border-b text-[#54595C]"
+                  >
+                    {option4}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
         </div>
 
-        <div className="flex items-center gap-3 mt-6">
+        <div className="px-2 flex items-center gap-3 mt-6">
           <img src="/assets/BlueCheck.svg" />
           <h3 className="text-[22px] font-[600]">52 Dentists Verified</h3>
         </div>
-        <p className="text-[16px] my-3">
-          TSI Verifies all providers before they can appear to serve you, You
-          are in right hands be assured!
+
+        <p className="px-2 text-[16px] my-3 max-w-[845px] text-[#263238] leading-[19px] font-normal">
+          TSI verifica a todos los profesionales antes de que aparezcan en este listado y puedan ofrecerte atención, ¡ Nos aseguramos de que estás en buenas manos!
         </p>
-        <h3 className="font-[700] text-[26px] my-4">All Providers</h3>
+        <h3 className="px-2 font-[700] text-[26px] my-4">All Providers</h3>
         <div className="text-end mr-4 text-[14px] text-[#263238]">
           <p>Última actualización: 12/06/2024</p>
         </div>
 
-        <div className="p-2 md:px-[44px] my-4 md:py-[52px] flex flex-col md:flex-row items-center gap-[30px] justify-center shadow-xl border border-[#D0D0D0] rounded-[20px]">
-          <div className="relative">
-            <img
-              src="/assets/Doctor1.png"
-              className="rounded-full h-[125px] w-[125px]"
-            />
-            <img
-              src="/assets/Bronze (2).svg"
-              className="absolute bottom-0 -right-4 rounded-full h-[55px] w-[55px]"
-            />
-          </div>
-          <div className="space-y-[10px]">
-            <h5 className="text-[22px] font-[500]">Dr. Carlos Fernández</h5>
-            <div className="flex gap-7">
-              <p className="text-[16px]">Dentista</p>
-              <p className="text-[16px] border-l pl-3 border-[#CDCDCD]">
-                25 years of experience
-              </p>
-            </div>
-            <p className="text-[16px]">111 NE 32nd St, Spain, FL</p>
-            <p className="text-[16px]">Works at : Centro de Salud El Sol</p>
-          </div>
-
-          <div className="bg-[#F1F1F1] md:max-w-[40%] rounded-[20px] flex items-center gap-[25px] px-[17px] py-[14px] ">
-            <div className="w-[20%]">
-              <p className="text-[34px] font-[500]">5.00</p>
-              <img src="/assets/5 stars.svg" />
-              <p className="text-[16px] text-[#6B777D]">(52 reviews)</p>
-            </div>
-
-            <div>
-              <p className="text-[#6B777D] text-[14px]">
-                Very friendly , polite and professional staff ; nice and clean
-                facility ; the only downside is that , I{" "}
-              </p>
-              <p className="text-[#2C64D8] text-[16px]">Read More</p>
-            </div>
-          </div>
-
-          <div className="flex flex-col">
-            <button className="bg-[#FEF14B] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[18px]">
-              Book Appointment
-            </button>
-            <button className="border border-[#000000] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[10px]">
-              View Profile
-            </button>
-          </div>
+        {/* Boxes */}
+        <div className='pt-4'>
+          {doctors.map((doctor, index) => (
+            <DoctorCard key={index} doctor={doctor} />
+          ))}
         </div>
 
-        <div className="p-2 md:px-[44px] my-12 md:py-[52px] flex flex-col md:flex-row items-center gap-[30px] justify-center shadow-xl border border-[#D0D0D0] rounded-[20px]">
-          <div className="relative h-[125px] w-[125px] ">
-            <img
-              src="/assets/Doctor2.png"
-              className="rounded-full h-full w-full object-cover"
-            />
-            <img
-              src="/assets/Diamond.svg"
-              className="absolute bottom-0 -right-4 rounded-full h-[55px] w-[55px]"
-            />
-          </div>
-          <div className="space-y-[10px]">
-            <h5 className="text-[22px] font-[500]">Dr. Alejandro López</h5>
-            <div className="flex gap-7">
-              <p className="text-[16px]">Dentista</p>
-              <p className="text-[16px] border-l pl-3 border-[#CDCDCD]">
-                25 years of experience
-              </p>
-            </div>
-            <p className="text-[16px]">111 NE 32nd St, Spain, FL</p>
-            <p className="text-[16px]">Works at : Centro de Salud El Sol</p>
-          </div>
 
-          <div className="bg-[#F1F1F1] md:max-w-[40%] rounded-[20px] flex items-center gap-[25px] px-[17px] py-[14px] ">
-            <div className="w-[20%]">
-              <p className="text-[34px] font-[500]">5.00</p>
-              <img src="/assets/5 stars.svg" />
-              <p className="text-[16px] text-[#6B777D]">(52 reviews)</p>
-            </div>
-
-            <div>
-              <p className="text-[#6B777D] text-[14px]">
-                Very friendly , polite and professional staff ; nice and clean
-                facility ; the only downside is that , I{" "}
-              </p>
-              <p className="text-[#2C64D8] text-[16px]">Read More</p>
-            </div>
-          </div>
-
-          <div className="flex flex-col">
-            <button className="bg-[#FEF14B] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[18px]">
-              Book Appointment
-            </button>
-            <button className="border border-[#000000] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[10px]">
-              View Profile
-            </button>
-          </div>
-        </div>
-
-        <div className="p-2 md:px-[44px] my-12 md:py-[52px] flex flex-col md:flex-row items-center gap-[30px] justify-center shadow-xl border border-[#D0D0D0] rounded-[20px]">
-          <div className="relative h-[125px] w-[125px] ">
-            <img
-              src="/assets/Doctor3.png"
-              className="rounded-full h-full w-full object-cover"
-            />
-            <img
-              src="/assets/Gold.svg"
-              className="absolute bottom-0 -right-4 rounded-full h-[55px] w-[55px]"
-            />
-          </div>
-          <div className="space-y-[10px]">
-            <h5 className="text-[22px] font-[500]">Dr. Ana Sánchez</h5>
-            <div className="flex gap-7">
-              <p className="text-[16px]">Dentista</p>
-              <p className="text-[16px] border-l pl-3 border-[#CDCDCD]">
-                25 years of experience
-              </p>
-            </div>
-            <p className="text-[16px]">111 NE 32nd St, Spain, FL</p>
-            <p className="text-[16px]">Works at : Centro de Salud El Sol</p>
-          </div>
-
-          <div className="bg-[#F1F1F1] md:max-w-[40%] rounded-[20px] flex items-center gap-[25px] px-[17px] py-[14px] ">
-            <div className="w-[20%]">
-              <p className="text-[34px] font-[500]">5.00</p>
-              <img src="/assets/5 stars.svg" />
-              <p className="text-[16px] text-[#6B777D]">(52 reviews)</p>
-            </div>
-
-            <div>
-              <p className="text-[#6B777D] text-[14px]">
-                Very friendly , polite and professional staff ; nice and clean
-                facility ; the only downside is that , I{" "}
-              </p>
-              <p className="text-[#2C64D8] text-[16px]">Read More</p>
-            </div>
-          </div>
-
-          <div className="flex flex-col">
-            <button className="bg-[#FEF14B] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[18px]">
-              Book Appointment
-            </button>
-            <button className="border border-[#000000] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[10px]">
-              View Profile
-            </button>
-          </div>
-        </div>
-
-        <div className="p-2 md:px-[44px] my-12 md:py-[52px] flex flex-col md:flex-row items-center gap-[30px] justify-center shadow-xl border border-[#D0D0D0] rounded-[20px]">
-          <div className="relative h-[125px] w-[125px]">
-            <img
-              src="/assets/Doctor4.png"
-              className="rounded-full h-full w-full object-cover"
-            />
-            <img
-              src="/assets/Platinum.svg"
-              className="absolute bottom-0 -right-4 rounded-full h-[55px] w-[55px]"
-            />
-          </div>
-          <div className="space-y-[10px]">
-            <h5 className="text-[22px] font-[500]">Dr. Laura Martínez</h5>
-            <div className="flex gap-7">
-              <p className="text-[16px]">Dentista</p>
-              <p className="text-[16px] border-l pl-3 border-[#CDCDCD]">
-                25 years of experience
-              </p>
-            </div>
-            <p className="text-[16px]">111 NE 32nd St, Spain, FL</p>
-            <p className="text-[16px]">Works at : Centro de Salud El Sol</p>
-          </div>
-
-          <div className="bg-[#F1F1F1] md:max-w-[40%] rounded-[20px] flex items-center gap-[25px] px-[17px] py-[14px] ">
-            <div className="w-[20%]">
-              <p className="text-[34px] font-[500]">5.00</p>
-              <img src="/assets/5 stars.svg" />
-              <p className="text-[16px] text-[#6B777D]">(52 reviews)</p>
-            </div>
-
-            <div>
-              <p className="text-[#6B777D] text-[14px]">
-                Very friendly , polite and professional staff ; nice and clean
-                facility ; the only downside is that , I{" "}
-              </p>
-              <p className="text-[#2C64D8] text-[16px]">Read More</p>
-            </div>
-          </div>
-
-          <div className="flex flex-col">
-            <button className="bg-[#FEF14B] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[18px]">
-              Book Appointment
-            </button>
-            <button className="border border-[#000000] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[10px]">
-              View Profile
-            </button>
-          </div>
-        </div>
-
-        <div className="p-2 md:px-[44px] my-12 md:py-[52px] border border-[#D0D0D0] shadow-xl  rounded-[20px]">
-          <div className=" flex flex-col md:flex-row items-center gap-[30px] justify-center border-b pb-5 border-[#D0D0D0]">
-            <div className="relative h-[125px] w-[125px]">
-              <img
-                src="/assets/Doctor5.png"
-                className="rounded-full h-full w-full object-cover border border-[#CFCFCF]"
-              />
-            </div>
-            <div className="space-y-[10px]">
-              <h5 className="text-[22px] font-[500]">Stroll Health Clinic</h5>
-              <div className="flex gap-7">
-                <p className="text-[16px]">Opens : 09:00 - 22:00 </p>
-                <p className="text-[16px] border-l pl-3 border-[#CDCDCD]">
-                  8 Dentists
-                </p>
+        {/* Box 2 */}
+        <div className="py-8 px-2 md:px-[44px] my-10 md:pt-[52px] md:pb-[25px] border border-[#D0D0D0] md:shadow-xl md:rounded-[20px]">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-[30px] border-b pb-5 border-[#D0D0D0]">
+            <div className='flex items-center gap-5'>
+              <div className="relative md:h-[125px] md:w-[125px] w-[100px] h-[100px]">
+                <img
+                  src="/assets/Doctor5.png"
+                  className="rounded-full h-full w-full object-cover border border-[#CFCFCF]"
+                />
               </div>
-              <p className="text-[16px]">111 NE 32nd St, Spain, FL</p>
-              {/* <p className="text-[16px]">Works at : Centro de Salud El Sol</p> */}
-            </div>
-
-            <div className="bg-[#F1F1F1] md:max-w-[40%] rounded-[20px] flex items-center gap-[25px] px-[17px] py-[14px] ">
-              <div className="w-[20%]">
-                <p className="text-[34px] font-[500]">5.00</p>
-                <img src="/assets/5 stars.svg" />
-                <p className="text-[16px] text-[#6B777D]">(52 reviews)</p>
+              <div className="space-y-[10px]">
+                <h5 className="text-[18px] md:text-[22px] font-[500]">{clinicData.name}</h5>
+                <div className="flex gap-3 md:gap-7">
+                  <p className="text-[13px] md:text-[16px]">Abre : {clinicData.openHours}</p>
+                  <p className="text-[13px] md:text-[16px] border-l border-[#CDCDCD] flex items-center gap-1">
+                    <Image src='/assets/m.svg' alt='image' width={10} height={10} className='-mt-[2px] ml-2' />
+                    {clinicData.dentistsCount} Dentists
+                  </p>
+                </div>
+                <p className="text-[13px] md:text-[16px] text-[#263238] font-normal leading-[19px] flex items-center gap-1.5"><Image src='/assets/l.svg' alt='img' width={18} height={18} />{clinicData.address}</p>
               </div>
-
+            </div>
+            <div className="bg-[#F1F1F1] md:max-w-[40%] rounded-[20px] flex items-center gap-[26px] px-[26px] py-[21px]">
+              <div className="w-[170px] flex flex-col items-start gap-2">
+                <p className="text-[34px] font-medium text-[#263238] leading-[19px]">{clinicData.rating.toFixed(2)}</p>
+                <img src="/assets/4star-.svg" />
+                <p className="text-[16px] text-[#6B777D]">({clinicData.reviews} reviews)</p>
+              </div>
               <div>
-                <p className="text-[#6B777D] text-[14px]">
-                  Very friendly , polite and professional staff ; nice and clean
-                  facility ; the only downside is that , I{" "}
-                </p>
-                <p className="text-[#2C64D8] text-[16px]">Read More</p>
+                <p className="text-[#6B777D] text-[14px] leading-[19px] font-normal mb-1">{clinicData.reviewText}</p>
+                <p className="text-[#2C64D8] text-[16px] leading-[19px] font-normal">Read More</p>
               </div>
             </div>
-
             <div className="flex flex-col">
               <button className="bg-[#FEF14B] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[18px]">
                 Book Appointment
               </button>
               <button className="border border-[#000000] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[10px]">
-                View Profile
+                View Clinic
               </button>
             </div>
           </div>
 
           <div>
-            <h4 className="text-[22px] font-[600]">Associated dentist</h4>
+            <h4 className="text-[22px] font-[600] pt-5">Associated dentist</h4>
             <div className="flex gap-5">
-              <div className="rounded-[10px] p-9 shadow-xl block my-5">
-                <img
-                  src="/assets/Doctor1.png"
-                  className="h-[82px] w-[82px] rounded-full"
-                />
-                <h3 className="text-[20px]">Dr. Alejandro López</h3>
-                <p className="text-[16px] text-[#263238]">Dentista</p>
-
-                <div className="flex items-center gap-3">
-                  <img src="/assets/5 stars.svg" />
-                  <p className="text-[18px] font-[700]">5.00</p>
+              {dentists.map((dentist) => (
+                <div key={dentist.id} className="rounded-[10px] p-4 shadow-custom1 block my-5">
+                  <img
+                    src={dentist.image}
+                    className="h-[82px] w-[82px] rounded-full"
+                  />
+                  <h3 className="text-[20px] text-[#263238] leading-[19px] font-medium mt-2.5">{dentist.name}</h3>
+                  <p className="text-[16px] leading-[19px] font-normal mt-1 text-[#263238]">{dentist.specialty}</p>
+                  <div className="flex items-center gap-2">
+                    <img src="/assets/4star-.svg" />
+                    <p className="text-[18px] font-[700]">{dentist.rating}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="rounded-[10px] p-9 shadow-xl block my-5">
-                <img
-                  src="/assets/Doctor1.png"
-                  className="h-[82px] w-[82px] rounded-full"
-                />
-                <h3 className="text-[20px]">Dr. Alejandro López</h3>
-                <p className="text-[16px] text-[#263238]">Dentista</p>
-
-                <div className="flex items-center gap-3">
-                  <img src="/assets/5 stars.svg" />
-                  <p className="text-[18px] font-[700]">5.00</p>
-                </div>
-              </div>
+              ))}
             </div>
-
-            <p className="text-[16px] text-[#2C64D8]">
-              Ver todos los Dentistas
-            </p>
+            <p className="text-[16px] leading-[19px] font-normal text-[#2C64D8]">Ver todos los Dentistas</p>
           </div>
         </div>
+
       </div>
 
-      <div className=" py-10 max-w-[1440px] mx-auto">
+      <div className="px-2  py-10 max-w-[1440px] mx-auto">
         <div className="flex overflow-x-auto w-full no-scrollbar gap-8 pb-10">
           <div className="rounded-2xl max-w-[500px] min-w-[300px] py-6 px-12 shadow-lg bg-white flex-shrink-0">
             <div className="flex justify-between items-center">
