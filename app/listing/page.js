@@ -6,6 +6,13 @@ import { MdOutlineSearch } from "react-icons/md";
 import RelatedArticles from "../components/RelatedArticles";
 import { BiSearch } from "react-icons/bi";
 import Image from 'next/image';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
+import { GoStarFill } from "react-icons/go";
+
 
 const page = () => {
   // One
@@ -126,7 +133,7 @@ const page = () => {
 
   // DoctorBox
   const DoctorCard = ({ doctor }) => (
-    <div className="p-2 md:px-[55px] mb-10 py-[44px] flex flex-col md:flex-row gap-[30px] items-center md:items-start md:justify-center md:shadow-xl border border-[#D0D0D0] md:rounded-[20px]">
+    <div className="p-2 md:px-[55px] md:mb-10 py-[44px] flex flex-col items-center md:flex-row gap-[30px] md:justify-center md:shadow-xl border border-[#D0D0D0] md:rounded-[20px]">
       <div className='flex gap-5'>
         <div className="relative md:h-[125px] md:w-[125px]">
           <img
@@ -153,24 +160,24 @@ const page = () => {
           <p className="text-[13px] md:text-[16px] text-[#263238] leading-[19px] font-normal">Trabaja en : <span className='text-[#2B59E0] underline'> {doctor.workplace}</span></p>
         </div>
       </div>
-      <div className="bg-[#F1F1F1] md:max-w-[40%] rounded-[20px] flex items-center gap-[25px] px-[17px] py-[27px]">
+      <div className="bg-[#F1F1F1] md:max-w-[40%] rounded-[20px] flex items-center gap-[15px] sm:gap-[25px] px-[10px] sm:px-[17px] py-[27px]">
         <div className="w-[150px] flex flex-col items-center gap-2">
-          <p className="text-[34px] font-medium text-[#263238] leading-[19px]">{doctor.rating.toFixed(2)}</p>
+          <p className="text-[25px] sm:text-[34px] font-medium text-[#263238] leading-[19px]">{doctor.rating.toFixed(2)}</p>
           <img src="/assets/4star-.svg" />
-          <p className="text-[16px] text-[#6B777D] leading-[19px]">({doctor.reviews} reviews)</p>
+          <p className="text-[12px] sm:text-[16px] text-[#6B777D] leading-[19px]">({doctor.reviews} reviews)</p>
         </div>
         <div>
-          <p className="text-[#6B777D] text-[14px] leading-[19px] font-normal">
+          <p className="text-[#6B777D] text-[12px] sm:text-[14px] leading-[19px] font-normal">
             {doctor.reviewText}
           </p>
-          <p className="text-[#2C64D8] leading-[19px] text-[16px] mt-1">Read More</p>
+          <p className="text-[#2C64D8] leading-[19px] text-[14px] sm:text-[16px] mt-1">Read More</p>
         </div>
       </div>
-      <div className="flex flex-col">
-        <button className="bg-[#FEF14B] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[18px]">
+      <div className="flex md:flex-col flex-row items-center gap-4 md:gap-0">
+        <button className="bg-[#FEF14B] rounded-[10px] h-[41px] w-[150px] sm:w-[231px] text-[14px] leading-[14.45px] font-bold ">
           Book Appointment
         </button>
-        <button className="border border-[#000000] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[10px]">
+        <button className="border border-[#000000] rounded-[10px] h-[41px] w-[150px] md:w-[231px] text-[14px] leading-[14.45px] font-bold md:mt-[10px]">
           View Profile
         </button>
       </div>
@@ -204,6 +211,50 @@ const page = () => {
       image: "/assets/Doctor1.png",
     },
   ];
+
+  const patientOpinions = [
+    {
+      rating: 5.0,
+      opinion:
+        "TSI has revolutionized our procurement process. The ability to directly search through product lists and chat with manufacturers has saved us countless hours. Bulk ordering through the app is seamless and efficient.",
+      user: {
+        name: "Riccy Hjon",
+        designation: "Sr. Dentist",
+        procedure: "Dental Implant",
+        avatar: "/assets/pati1.svg",
+        verified: "/assets/check-pati.svg",
+      },
+    },
+    // Add more opinions as needed
+    {
+      rating: 5.0,
+      opinion:
+        "TSI has revolutionized our procurement process. The ability to directly search through product lists and chat with manufacturers has saved us countless hours. Bulk ordering through the app is seamless and efficient.",
+      user: {
+        name: "Riccy Hjon",
+        designation: "Sr. Dentist",
+        procedure: "Dental Implant",
+        avatar: "/assets/pati1.svg",
+        verified: "/assets/check-pati.svg",
+      },
+    },
+    // Add more opinions as needed
+    {
+      rating: 5.0,
+      opinion:
+        "TSI has revolutionized our procurement process. The ability to directly search through product lists and chat with manufacturers has saved us countless hours. Bulk ordering through the app is seamless and efficient.",
+      user: {
+        name: "Riccy Hjon",
+        designation: "Sr. Dentist",
+        procedure: "Dental Implant",
+        avatar: "/assets/pati1.svg",
+        verified: "/assets/check-pati.svg",
+      },
+    },
+    // Add more opinions as needed
+  ];
+
+
 
   return (
     <div>
@@ -463,10 +514,9 @@ const page = () => {
           ))}
         </div>
 
-
         {/* Box 2 */}
-        <div className="py-8 px-2 md:px-[44px] my-10 md:pt-[52px] md:pb-[25px] border border-[#D0D0D0] md:shadow-xl md:rounded-[20px]">
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-[30px] border-b pb-5 border-[#D0D0D0]">
+        <div className="pb-8 px-2 md:px-[44px] my-10 md:pt-[52px] md:pb-[25px] border-b md:border border-[#D0D0D0] md:shadow-xl md:rounded-[20px]">
+          <div className="flex flex-col md:flex-row items-center gap-[30px] border-b pb-5 border-[#D0D0D0]">
             <div className='flex items-center gap-5'>
               <div className="relative md:h-[125px] md:w-[125px] w-[100px] h-[100px]">
                 <img
@@ -486,22 +536,22 @@ const page = () => {
                 <p className="text-[13px] md:text-[16px] text-[#263238] font-normal leading-[19px] flex items-center gap-1.5"><Image src='/assets/l.svg' alt='img' width={18} height={18} />{clinicData.address}</p>
               </div>
             </div>
-            <div className="bg-[#F1F1F1] md:max-w-[40%] rounded-[20px] flex items-center gap-[26px] px-[26px] py-[21px]">
+            <div className="bg-[#F1F1F1] md:max-w-[40%] rounded-[20px] flex items-center gap-[15px] sm:gap-[26px] px-[10px] sm:px-[26px] py-[21px]">
               <div className="w-[170px] flex flex-col items-start gap-2">
-                <p className="text-[34px] font-medium text-[#263238] leading-[19px]">{clinicData.rating.toFixed(2)}</p>
+                <p className="text-[25px] sm:text-[34px] font-medium text-[#263238] leading-[19px]">{clinicData.rating.toFixed(2)}</p>
                 <img src="/assets/4star-.svg" />
-                <p className="text-[16px] text-[#6B777D]">({clinicData.reviews} reviews)</p>
+                <p className="text-[12px] sm:text-[16px] text-[#6B777D]">({clinicData.reviews} reviews)</p>
               </div>
               <div>
-                <p className="text-[#6B777D] text-[14px] leading-[19px] font-normal mb-1">{clinicData.reviewText}</p>
-                <p className="text-[#2C64D8] text-[16px] leading-[19px] font-normal">Read More</p>
+                <p className="text-[#6B777D] text-[12px] sm:text-[14px] leading-[19px] font-normal mb-1">{clinicData.reviewText}</p>
+                <p className="text-[#2C64D8] text-[14px] sm:text-[16px] leading-[19px] font-normal">Read More</p>
               </div>
             </div>
-            <div className="flex flex-col">
-              <button className="bg-[#FEF14B] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[18px]">
+            <div className="flex md:flex-col md:gap-2 gap-4 flex-row">
+              <button className="bg-[#FEF14B] rounded-[10px] h-[41px] w-[150px] md:w-[231px] text-[14px] leading-[14.45px] font-bold ">
                 Book Appointment
               </button>
-              <button className="border border-[#000000] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[10px]">
+              <button className="border border-[#000000] rounded-[10px] h-[41px] w-[150px] md:w-[231px] text-[14px] leading-[14.45px] font-bold ">
                 View Clinic
               </button>
             </div>
@@ -532,147 +582,65 @@ const page = () => {
       </div>
 
       <div className="px-2  py-10 max-w-[1440px] mx-auto">
-        <div className="flex overflow-x-auto w-full no-scrollbar gap-8 pb-10">
-          <div className="rounded-2xl max-w-[500px] min-w-[300px] py-6 px-12 shadow-lg bg-white flex-shrink-0">
-            <div className="flex justify-between items-center">
-              <p className="text-[130px] leading-10 text-[#2B59E0]/20 font-[900]">
-                "
-              </p>
-              <div className="flex items-center gap-2">
-                <p>5 star</p> <img src="/assets/5 stars.svg" alt="5 stars" />
+        <div className="overflow-x-auto flex flex-wrap justify-center items-center gap-6 p-4">
+          {patientOpinions.map((opinion, index) => (
+            <div key={index} className="sm:px-4 w-[320px] sm:w-[420px] flex-shrink-0">
+              <div className="bg-white rounded-lg shadow-lg">
+                <div className="flex items-center justify-between mb-4 p-4 sm:p-6">
+                  <Image
+                    src="/assets/comma.svg"
+                    alt="comma"
+                    width={52}
+                    height={84}
+                    className='h-[50px] w-[40px] md:h-[84px] md:w-[52px]'
+                  />
+                  <div className="flex items-center gap-2">
+                    <h3 className="font-bold text-xl text-gray-800">
+                      {opinion.rating}
+                    </h3>
+                    <div className="flex items-center gap-1 text-red-500">
+                      {Array(5)
+                        .fill()
+                        .map((_, i) => (
+                          <GoStarFill key={i} />
+                        ))}
+                    </div>
+                  </div>
+                </div>
+                <p className="text-gray-700 mb-6 px-4 sm:px-6">{opinion.opinion}</p>
+                <div className="flex items-center gap-4 p-4 sm:p-6 bg-[#FFFEEC] rounded-b-lg ">
+                  <div className="relative w-12 h-12">
+                    <Image
+                      src={opinion.user.avatar}
+                      alt="user avatar"
+                      layout="fill"
+                      className="rounded-full"
+                    />
+                    <Image
+                      src={opinion.user.verified}
+                      alt="verified"
+                      width={24}
+                      height={24}
+                      className="absolute bottom-0 right-0"
+                    />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-1.5">
+                      <h2 className="text-lg font-semibold">
+                        {opinion.user.name}
+                      </h2>
+                      <h3 className="text-sm bg-blue-100 text-blue-500 px-2 py-1 rounded-full">
+                        {opinion.user.procedure}
+                      </h3>
+                    </div>
+                    <p className="text-gray-700 text-sm">
+                      {opinion.user.designation}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <p className="text-[14px]">
-              TSI has revolutionized our procurement process. The ability to
-              directly search through product lists and chat with manufacturers
-              has saved us countless hours. Bulk ordering through the app is
-              seamless and efficient.
-            </p>
-
-            <div className="pt-9 flex items-start gap-3">
-              <img src="/assets/Rating-person.svg" alt="Reviewer" />
-              <div>
-                <p className="text-[14px] font-[700]">Riccy Hjon</p>
-                <p className="text-[14px] font-[400]">Sr. Dentist</p>
-              </div>
-              <p className="text-[14px] font-[500] py-1 px-3 text-[#2C64D8] bg-[#2C64D8]/20 rounded-[14px]">
-                Dental Implant
-              </p>
-            </div>
-          </div>
-          <div className="rounded-2xl max-w-[500px] min-w-[300px] py-6 px-12 shadow-lg bg-white flex-shrink-0">
-            <div className="flex justify-between items-center">
-              <p className="text-[130px] leading-10 text-[#2B59E0]/20 font-[900]">
-                "
-              </p>
-              <div className="flex items-center gap-2">
-                <p>5 star</p> <img src="/assets/5 stars.svg" alt="5 stars" />
-              </div>
-            </div>
-
-            <p className="text-[14px]">
-              TSI has revolutionized our procurement process. The ability to
-              directly search through product lists and chat with manufacturers
-              has saved us countless hours. Bulk ordering through the app is
-              seamless and efficient.
-            </p>
-
-            <div className="pt-9 flex items-start gap-3">
-              <img src="/assets/Rating-person.svg" alt="Reviewer" />
-              <div>
-                <p className="text-[14px] font-[700]">Riccy Hjon</p>
-                <p className="text-[14px] font-[400]">Sr. Dentist</p>
-              </div>
-              <p className="text-[14px] font-[500] py-1 px-3 text-[#2C64D8] bg-[#2C64D8]/20 rounded-[14px]">
-                Dental Implant
-              </p>
-            </div>
-          </div>
-          <div className="rounded-2xl max-w-[500px] min-w-[300px] py-6 px-12 shadow-lg bg-white flex-shrink-0">
-            <div className="flex justify-between items-center">
-              <p className="text-[130px] leading-10 text-[#2B59E0]/20 font-[900]">
-                "
-              </p>
-              <div className="flex items-center gap-2">
-                <p>5 star</p> <img src="/assets/5 stars.svg" alt="5 stars" />
-              </div>
-            </div>
-
-            <p className="text-[14px]">
-              TSI has revolutionized our procurement process. The ability to
-              directly search through product lists and chat with manufacturers
-              has saved us countless hours. Bulk ordering through the app is
-              seamless and efficient.
-            </p>
-
-            <div className="pt-9 flex items-start gap-3">
-              <img src="/assets/Rating-person.svg" alt="Reviewer" />
-              <div>
-                <p className="text-[14px] font-[700]">Riccy Hjon</p>
-                <p className="text-[14px] font-[400]">Sr. Dentist</p>
-              </div>
-              <p className="text-[14px] font-[500] py-1 px-3 text-[#2C64D8] bg-[#2C64D8]/20 rounded-[14px]">
-                Dental Implant
-              </p>
-            </div>
-          </div>
-          <div className="rounded-2xl max-w-[500px] min-w-[300px] py-6 px-12 shadow-lg bg-white flex-shrink-0">
-            <div className="flex justify-between items-center">
-              <p className="text-[130px] leading-10 text-[#2B59E0]/20 font-[900]">
-                "
-              </p>
-              <div className="flex items-center gap-2">
-                <p>5 star</p> <img src="/assets/5 stars.svg" alt="5 stars" />
-              </div>
-            </div>
-
-            <p className="text-[14px]">
-              TSI has revolutionized our procurement process. The ability to
-              directly search through product lists and chat with manufacturers
-              has saved us countless hours. Bulk ordering through the app is
-              seamless and efficient.
-            </p>
-
-            <div className="pt-9 flex items-start gap-3">
-              <img src="/assets/Rating-person.svg" alt="Reviewer" />
-              <div>
-                <p className="text-[14px] font-[700]">Riccy Hjon</p>
-                <p className="text-[14px] font-[400]">Sr. Dentist</p>
-              </div>
-              <p className="text-[14px] font-[500] py-1 px-3 text-[#2C64D8] bg-[#2C64D8]/20 rounded-[14px]">
-                Dental Implant
-              </p>
-            </div>
-          </div>
-          <div className="rounded-2xl max-w-[500px] min-w-[300px] py-6 px-12 shadow-lg bg-white flex-shrink-0">
-            <div className="flex justify-between items-center">
-              <p className="text-[130px] leading-10 text-[#2B59E0]/20 font-[900]">
-                "
-              </p>
-              <div className="flex items-center gap-2">
-                <p>5 star</p> <img src="/assets/5 stars.svg" alt="5 stars" />
-              </div>
-            </div>
-
-            <p className="text-[14px]">
-              TSI has revolutionized our procurement process. The ability to
-              directly search through product lists and chat with manufacturers
-              has saved us countless hours. Bulk ordering through the app is
-              seamless and efficient.
-            </p>
-
-            <div className="pt-9 flex items-start gap-3">
-              <img src="/assets/Rating-person.svg" alt="Reviewer" />
-              <div>
-                <p className="text-[14px] font-[700]">Riccy Hjon</p>
-                <p className="text-[14px] font-[400]">Sr. Dentist</p>
-              </div>
-              <p className="text-[14px] font-[500] py-1 px-3 text-[#2C64D8] bg-[#2C64D8]/20 rounded-[14px]">
-                Dental Implant
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 

@@ -10,6 +10,8 @@ module.exports = {
       boxShadow: {
         'custom1' : '8px 10px 36.1px 0px #0000001C',
         'custom': '8px 10px 36.1px 0px rgba(0, 0, 0, 0.11)',
+        'custom2': '7.6px 9.5px 34.29px 0px #0000001C',
+
       },
       screens: {
         sm: '480px',

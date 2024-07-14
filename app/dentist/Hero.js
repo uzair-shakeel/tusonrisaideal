@@ -234,7 +234,6 @@ const Hero = () => {
       </div>
       </div>
 
-
       <div className="border-y  border-[#D0D0D0] pt-2 2xl:pl-[109px] lg:pl-[40px] pl-2 w-full">
         <ul className="flex items-center gap-[40px] overflow-scroll">
           <li className="text-[#2C64D8] border-b-2 border-[#2C64D8] pb-1 text-[16px] leading-[24px] font-semibold">

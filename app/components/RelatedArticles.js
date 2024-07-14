@@ -14,10 +14,10 @@ const RelatedArticles = () => {
           </div>
 
           <div className="space-y-[17px] ">
-            <p className="text-[18px] font-[500]">
+            <p className="text-[16px] md:text-[18px] font-[500]">
               Understanding Tooth Pain: Causes, Symptoms, and Treatment
             </p>
-            <p className="text-[18px] font-[400]">
+            <p className="text-[14px] md:text-[18px] font-[400]">
               Tooth pain is a common ailment that affects people of all ages. It
               can range from a mild, occasional discomfort to a severe,
               persistent ache that disrupts daily life. Understanding the
@@ -32,11 +32,11 @@ const RelatedArticles = () => {
         </div>
 
         <div className="md:grid md:grid-cols-3 md:gap-[40px] overflow-x-auto py-10 md:overflow-hidden flex md:flex-none space-x-4 md:space-x-0">
-          <div className="rounded-[20px] w-[300px] md:w-auto shadow-lg flex-shrink-0 md:flex-shrink">
+          <div className="w-[300px] md:w-auto rounded-[16px] shadow-lg flex-shrink-0 md:flex-shrink">
             <div className="h-[196px] w-full overflow-hidden">
               <img
                 src="/assets/Article2.png"
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full rounded-t-[16px] "
               />
             </div>
             <div className="p-3">
@@ -47,11 +47,11 @@ const RelatedArticles = () => {
             </div>
           </div>
 
-          <div className="rounded-[20px] w-[300px] md:w-auto shadow-lg flex-shrink-0 md:flex-shrink">
+          <div className="rounded-[16px] w-[300px] md:w-auto shadow-lg flex-shrink-0 md:flex-shrink">
             <div className="h-[196px] w-full overflow-hidden">
               <img
                 src="/assets/Article3.png"
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full rounded-t-[16px]"
               />
             </div>
             <div className="p-3">
@@ -62,11 +62,11 @@ const RelatedArticles = () => {
             </div>
           </div>
 
-          <div className="rounded-[20px] w-[300px] md:w-auto shadow-lg flex-shrink-0 md:flex-shrink">
+          <div className="w-[300px] md:w-auto shadow-lg rounded-[16px] flex-shrink-0 md:flex-shrink">
             <div className="h-[196px] w-full overflow-hidden">
               <img
                 src="/assets/Article4.png"
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full rounded-t-[16px]"
               />
             </div>
             <div className="p-3">
