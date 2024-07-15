@@ -4,7 +4,7 @@ import React from 'react'
 
 const AssociatedClinics = () => {
   return (
-    <div className='bg-[#FCFAEE] 2xl:pl-[90px] px-3 xl:pl-[84px] mt-[40px] py-[44px]'>
+    <div id='location' className='bg-[#FCFAEE] 2xl:pl-[90px] px-3 xl:pl-[84px] mt-[40px] py-[44px]'>
         <div className='max-w-[1440px] mx-auto'>
             <h2 className='text-[#181515] text-[22px] leading-[19px] font-semibold pb-3'>Associated Clinics</h2>
             <p className='text-[#263238] text-[16px] leading-[19px] font-normal'>Doctor is associated with these clinis</p>

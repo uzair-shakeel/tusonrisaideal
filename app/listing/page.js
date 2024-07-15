@@ -14,6 +14,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { GoStarFill } from "react-icons/go";
 
 
+
 const page = () => {
   // One
   const [isOpen, setIsOpen] = useState(false);
@@ -80,6 +81,44 @@ const page = () => {
     setIsOpen4(false);
   };
 
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const goToPreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const goToNextPage = () => {
+    const maxPages = 4;
+    if (currentPage < maxPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const goToPage = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  // Render pagination buttons dynamically based on current page and total pages
+  const renderPaginationButtons = () => {
+    const totalPages = 4; // Example: Replace with your actual logic
+    const buttons = [];
+    for (let i = 1; i <= totalPages; i++) {
+      buttons.push(
+        <button
+          key={i}
+          className={`bg-[${currentPage === i ? '#2C64D8' : '#A1A1A1'}] text-white w-[30px] h-[30px] rounded-full text-[14px] leading-[15px] font-normal`}
+          onClick={() => goToPage(i)}
+        >
+          {i}
+        </button>
+      );
+    }
+    return buttons;
+  };
+
   const doctors = [
     {
       name: "Dr. Carlos Fernández",
@@ -128,7 +167,7 @@ const page = () => {
       reviewText: "Very friendly, polite and professional staff; nice and clean facility; the only downside is that, I",
       profileImg: "/assets/Doctor4.png",
       badgeImg: "/assets/Platinum.svg"
-    }
+    },
   ];
 
   // DoctorBox
@@ -515,7 +554,7 @@ const page = () => {
         </div>
 
         {/* Box 2 */}
-        <div className="pb-8 px-2 md:px-[44px] my-10 md:pt-[52px] md:pb-[25px] border-b md:border border-[#D0D0D0] md:shadow-xl md:rounded-[20px]">
+        <div className="pb-8 px-2 lg:px-[80px] my-10 md:pt-[52px] md:pb-[25px] border-b md:border border-[#D0D0D0] md:shadow-xl md:rounded-[20px]">
           <div className="flex flex-col md:flex-row items-center gap-[30px] border-b pb-5 border-[#D0D0D0]">
             <div className='flex items-center gap-5'>
               <div className="relative md:h-[125px] md:w-[125px] w-[100px] h-[100px]">
@@ -536,7 +575,7 @@ const page = () => {
                 <p className="text-[13px] md:text-[16px] text-[#263238] font-normal leading-[19px] flex items-center gap-1.5"><Image src='/assets/l.svg' alt='img' width={18} height={18} />{clinicData.address}</p>
               </div>
             </div>
-            <div className="bg-[#F1F1F1] md:max-w-[40%] rounded-[20px] flex items-center gap-[15px] sm:gap-[26px] px-[10px] sm:px-[26px] py-[21px]">
+            <div className="bg-[#F1F1F1] md:max-w-[43%] rounded-[20px] flex items-center gap-[15px] sm:gap-[26px] px-[10px] sm:px-[20px] py-[21px]">
               <div className="w-[170px] flex flex-col items-start gap-2">
                 <p className="text-[25px] sm:text-[34px] font-medium text-[#263238] leading-[19px]">{clinicData.rating.toFixed(2)}</p>
                 <img src="/assets/4star-.svg" />
@@ -579,13 +618,23 @@ const page = () => {
           </div>
         </div>
 
+        <div className='my-[20px] w-full flex items-center'>
+          <span className='w-full h-[1px] rounded-full bg-[#D0D0D0] ml-3'></span>
+          <div className='flex items-center justify-end gap-3 min-w-[320px]'>
+            <button onClick={goToPreviousPage}><IoIosArrowBack className='text-[20px]' /></button>
+            <button><Image src='/assets/ld.svg' alt='A' width={24} height={24} /></button>
+            {renderPaginationButtons()}
+            <button><Image src='/assets/rd.svg' alt='A' width={24} height={24} /></button>
+            <button onClick={goToNextPage}><IoIosArrowForward className='text-[20px]' /></button>
+          </div>
+        </div>
       </div>
 
       <div className="px-2  py-10 max-w-[1440px] mx-auto">
-        <div className="overflow-x-auto flex flex-wrap justify-center items-center gap-6 p-4">
+        <div className="overflow-x-auto flex md:flex-row flex-col  justify-center items-center rounded-[20px] gap-2 p-4">
           {patientOpinions.map((opinion, index) => (
-            <div key={index} className="sm:px-4 w-[320px] sm:w-[420px] flex-shrink-0">
-              <div className="bg-white rounded-lg shadow-lg">
+            <div key={index} className="sm:px-4 min-w-[400px] rounded-[20px]">
+              <div className="bg-white rounded-[20px] shadow-lg">
                 <div className="flex items-center justify-between mb-4 p-4 sm:p-6">
                   <Image
                     src="/assets/comma.svg"
@@ -608,7 +657,7 @@ const page = () => {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-6 px-4 sm:px-6">{opinion.opinion}</p>
-                <div className="flex items-center gap-4 p-4 sm:p-6 bg-[#FFFEEC] rounded-b-lg ">
+                <div className="flex items-center gap-4 p-4 sm:p-6 bg-[#FFFEEC] rounded-b-[20px] ">
                   <div className="relative w-12 h-12">
                     <Image
                       src={opinion.user.avatar}

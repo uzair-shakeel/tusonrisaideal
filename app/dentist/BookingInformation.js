@@ -14,7 +14,7 @@ const BookingInformation = () => {
 
 
   return (
-    <div className='max-w-[1380px] mx-auto w-full mt-[20px] px-4'>
+    <div id='fac' className='max-w-[1380px] mx-auto w-full mt-[20px] px-4'>
         <div className='max-w-[927px] flex flex-col gap-[30px] bg-[#FFFFFF] border border-[#D0D0D0] p-5 rounded-[10px]'>
             <h2 className='text-[#181515] text-[22px] leading-[19px] font-semibold'>Booking Information</h2>
             <div className='flex flex-col gap-4'>

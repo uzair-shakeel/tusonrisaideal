@@ -52,7 +52,7 @@ const ClinicRatings = () => {
   };
 
   return (
-    <div className='max-w-[1360px] w-full mx-auto py-10 md:pb-[70px] px-3 sm:px-5'>
+    <div id='rating' className='max-w-[1360px] w-full mx-auto py-10 md:pb-[70px] px-3 sm:px-5'>
       <div className='flex items-center justify-between w-full'>
           <h2 className='text-[#181515] text-[22px] leading-[19px] font-semibold '>Clinic Ratings</h2>
           <div className='md:hidden flex items-end justify-end'>

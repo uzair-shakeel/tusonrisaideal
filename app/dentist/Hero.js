@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
@@ -7,249 +8,178 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 const Hero = () => {
   const [showMore, setShowMore] = useState(false);
   return (
-    <div className=' relative' >
+    <>
       <div className="bg-[#FCFAEE] w-full">
-      <div className='max-w-[1440px]  mx-auto  pl-3 lg:pl-[40px]'>
-        <div className='py-[40px]  '>
-          <div className='flex items-center gap-3 border-b border-[#E0E0E0] max-w-[737px] pb-[20px]'>
-            <Image src='/assets/Group 18044.svg' alt='Image' width={179} height={169} className='md:w-[179px] md:h-[169px] w-[120px] h-[120px]' />
-            <div className='flex flex-col gap-2'>
-              <div className='flex md:flex-row flex-col md:items-center md:gap-1 gap-3 sm:gap-[1.5rem]'>
-                <h2 className='text-[#263238] text-[20px] md:text-[36px] leading-[19px] font-medium'>Dr. Carlos Fernández</h2>
-                <div className='flex items-center gap-1'>
-                  <FaStar className='text-[#F64850] mb-0.5 text-base' />
-                  <h2 className='text-[#263238] text-[14px] sm:text-[16px] leading-[19px] font-bold'>4.8  <span className='font-normal text-[#797E81]'>(33 evaluaciones)</span></h2>
+       
+        <div className='max-w-[1440px] mx-auto pl-3 lg:pl-[40px] w-full flex'>
+          <div className='py-[40px] w-full' id="overview">
+            <div className='flex items-center gap-3 border-b border-[#E0E0E0] max-w-[737px] pb-[20px]'>
+              <Image src='/assets/Group 18044.svg' alt='Image' width={179} height={169} className='md:w-[179px] md:h-[169px] w-[120px] h-[120px]' />
+              <div className='flex flex-col gap-2'>
+                <div className='flex md:flex-row flex-col md:items-center md:gap-1 gap-3 sm:gap-[1.5rem]'>
+                  <h2 className='text-[#263238] text-[20px] md:text-[36px] leading-[19px] font-medium'>Dr. Carlos Fernández</h2>
+                  <div className='flex items-center gap-1'>
+                    <FaStar className='text-[#F64850] mb-0.5 text-base' />
+                    <h2 className='text-[#263238] text-[14px] sm:text-[16px] leading-[19px] font-bold'>4.8  <span className='font-normal text-[#797E81]'>(33 evaluaciones)</span></h2>
+                  </div>
                 </div>
-              </div>
 
-              <div className="flex items-center gap-2 mt-2">
-                <h4 className="text-[#263238] text-[16px] leading-[19px]">
-                  Dentista
-                </h4>
-                <div className="flex items-center gap-1 pl-1 border-l border-[#CDCDCD]">
-                  <Image
-                    src="/assets/box.svg"
-                    alt="box"
-                    width={12}
-                    height={12}
-                  />
-                  <h3 className=" text-[#263238] text-[13px] sm:text-[16px] leading-[19px] ">
-                    25 years of experience
+                <div className="flex items-center gap-2 mt-2">
+                  <h4 className="text-[#263238] text-[16px] leading-[19px]">
+                    Dentista
+                  </h4>
+                  <div className="flex items-center gap-1 pl-1 border-l border-[#CDCDCD]">
+                    <Image
+                      src="/assets/box.svg"
+                      alt="box"
+                      width={12}
+                      height={12}
+                    />
+                    <h3 className=" text-[#263238] text-[13px] sm:text-[16px] leading-[19px] ">
+                      25 years of experience
+                    </h3>
+                  </div>
+                </div>
+
+                <div className="md:flex hidden items-center gap-4">
+                  <div className="flex items-center gap-2">
+                    <Image
+                      src="/assets/teeth.svg"
+                      alt="Image"
+                      width={20}
+                      height={20}
+                    />
+                    <h3 className="text-[#263238] text-[16px] leading-[19px] font-medium">
+                      ?/100 Calificación TSI
+                    </h3>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Image
+                      src="/assets/sun.svg"
+                      alt="Image"
+                      width={20}
+                      height={20}
+                    />
+                    <h3 className="text-[#263238] text-[16px] leading-[19px] font-medium">
+                      Clínica Verificada
+                    </h3>
+                  </div>
+                </div>
+
+                <div className="md:flex hidden items-center gap-4">
+                  <h3 className="text-[#263238] text-[16px] leading-[19px] font-normal">
+                    Trabaja en :{" "}
+                    <span className="text-[#2B59E0] underline">
+                      Centro de Salud El So
+                    </span>
+                  </h3>
+                  <h3 className="text-[#263238] text-[16px] leading-[19px] font-bold">
+                    Núm. Colegiado:{" "}
+                    <span className="text-[#263238] font-normal">28012141</span>
                   </h3>
                 </div>
               </div>
+            </div>
 
-              <div className="md:flex hidden items-center gap-4">
-                <div className="flex items-center gap-2">
-                  <Image
-                    src="/assets/teeth.svg"
-                    alt="Image"
-                    width={20}
-                    height={20}
-                  />
-                  <h3 className="text-[#263238] text-[16px] leading-[19px] font-medium">
-                    ?/100 Calificación TSI
-                  </h3>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Image
-                    src="/assets/sun.svg"
-                    alt="Image"
-                    width={20}
-                    height={20}
-                  />
-                  <h3 className="text-[#263238] text-[16px] leading-[19px] font-medium">
-                    Clínica Verificada
-                  </h3>
-                </div>
-              </div>
-
-              <div className="md:flex hidden items-center gap-4">
-                <h3 className="text-[#263238] text-[16px] leading-[19px] font-normal">
-                  Trabaja en :{" "}
-                  <span className="text-[#2B59E0] underline">
-                    Centro de Salud El So
-                  </span>
+            {/* Mobile */}
+            <div className="flex md:hidden items-center gap-4 mt-8">
+              <div className="flex items-center gap-2">
+                <Image
+                  src="/assets/teeth.svg"
+                  alt="Image"
+                  width={20}
+                  height={20}
+                />
+                <h3 className="text-[#263238] text-[16px] leading-[19px] font-medium">
+                  ?/100 Calificación TSI
                 </h3>
-                <h3 className="text-[#263238] text-[16px] leading-[19px] font-bold">
-                  Núm. Colegiado:{" "}
-                  <span className="text-[#263238] font-normal">28012141</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Image src="/assets/sun.svg" alt="Image" width={20} height={20} />
+                <h3 className="text-[#263238] text-[16px] leading-[19px] font-medium">
+                  Clínica Verificada
                 </h3>
               </div>
             </div>
-          </div>
 
-          {/* Mobile */}
-          <div className="flex md:hidden items-center gap-4 mt-8">
-            <div className="flex items-center gap-2">
-              <Image
-                src="/assets/teeth.svg"
-                alt="Image"
-                width={20}
-                height={20}
-              />
-              <h3 className="text-[#263238] text-[16px] leading-[19px] font-medium">
-                ?/100 Calificación TSI
+            <div className="flex flex-col md:hidden items-start gap-4 mt-8">
+              <h3 className="text-[#263238] text-[16px] leading-[19px] font-normal">
+                Trabaja en :{" "}
+                <span className="text-[#2B59E0] underline">
+                  Centro de Salud El So
+                </span>
+              </h3>
+              <h3 className="text-[#263238] text-[16px] leading-[19px] font-bold">
+                Núm. Colegiado:{" "}
+                <span className="text-[#263238] font-normal">28012141</span>
               </h3>
             </div>
-            <div className="flex items-center gap-2">
-              <Image src="/assets/sun.svg" alt="Image" width={20} height={20} />
-              <h3 className="text-[#263238] text-[16px] leading-[19px] font-medium">
-                Clínica Verificada
-              </h3>
-            </div>
-          </div>
 
-          <div className="flex flex-col md:hidden items-start gap-4 mt-8">
-            <h3 className="text-[#263238] text-[16px] leading-[19px] font-normal">
-              Trabaja en :{" "}
-              <span className="text-[#2B59E0] underline">
-                Centro de Salud El So
-              </span>
-            </h3>
-            <h3 className="text-[#263238] text-[16px] leading-[19px] font-bold">
-              Núm. Colegiado:{" "}
-              <span className="text-[#263238] font-normal">28012141</span>
-            </h3>
-          </div>
-
-          <div className="grid sm:grid-cols-2 grid-cols-1 max-w-[888px] gap-7 mt-14">
-            <div className="flex items-start gap-1.5">
-              <Image
-                src="/assets/thumb1.svg"
-                alt="img"
-                width={26}
-                height={26}
-              />
-              <div className="flex items-start gap-1.5 flex-col">
-                <h2 className="text-[#263238] text-[20px] leading-[19px] font-semibold">
-                  Highly Suggested
-                </h2>
-                <h4 className="text-[#263238] text-[14px] leading-[19px] font-normal">
-                  72% Patients are very positive about him
-                </h4>
+            <div className="grid sm:grid-cols-2 grid-cols-1 max-w-[888px] gap-7 mt-14">
+              <div className="flex items-start gap-1.5">
+                <Image
+                  src="/assets/thumb1.svg"
+                  alt="img"
+                  width={26}
+                  height={26}
+                />
+                <div className="flex items-start gap-1.5 flex-col">
+                  <h2 className="text-[#263238] text-[20px] leading-[19px] font-semibold">
+                    Highly Suggested
+                  </h2>
+                  <h4 className="text-[#263238] text-[14px] leading-[19px] font-normal">
+                    72% Patients are very positive about him
+                  </h4>
+                </div>
               </div>
-            </div>
-            <div className="flex items-start gap-1.5">
-              <Image src="/assets/timer.svg" alt="img" width={26} height={26} />
-              <div className="flex items-start gap-1.5 flex-col">
-                <h2 className="text-[#263238] text-[20px] leading-[19px] font-semibold">
-                  Lower Waiting Time
-                </h2>
-                <h4 className="text-[#263238] text-[14px] leading-[19px] font-normal">
-                  97% Patients waited less then 10 mins
-                </h4>
+              <div className="flex items-start gap-1.5">
+                <Image src="/assets/timer.svg" alt="img" width={26} height={26} />
+                <div className="flex items-start gap-1.5 flex-col">
+                  <h2 className="text-[#263238] text-[20px] leading-[19px] font-semibold">
+                    Lower Waiting Time
+                  </h2>
+                  <h4 className="text-[#263238] text-[14px] leading-[19px] font-normal">
+                    97% Patients waited less then 10 mins
+                  </h4>
+                </div>
               </div>
-            </div>
-            <div className="flex items-start gap-1.5">
-              <Image
-                src="/assets/availablity.svg"
-                alt="img"
-                width={26}
-                height={26}
-              />
-              <div className="flex items-start gap-1.5 flex-col">
-                <h2 className="text-[#263238] text-[20px] leading-[19px] font-semibold">
-                  Availablity
-                </h2>
-                <h4 className="text-[#263238] text-[14px] leading-[19px] font-normal">
-                  He is active on platform
-                </h4>
+              <div className="flex items-start gap-1.5">
+                <Image
+                  src="/assets/availablity.svg"
+                  alt="img"
+                  width={26}
+                  height={26}
+                />
+                <div className="flex items-start gap-1.5 flex-col">
+                  <h2 className="text-[#263238] text-[20px] leading-[19px] font-semibold">
+                    Availablity
+                  </h2>
+                  <h4 className="text-[#263238] text-[14px] leading-[19px] font-normal">
+                    He is active on platform
+                  </h4>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
-        {/* Top Content */}
-
-        <div className="xl:block hidden  absolute top-[50px] w-[386px] z-40 right-[67px] bg-[#FFFFFF] rounded-[11px] shadow-custom">
-          {/* Virtual Consultation Accepted */}
-          <div className="py-5 w-[231px] mx-auto rounded-[10px]">
-            <div className="flex items-center gap-2.5">
-              <Image
-                src="/assets/video.svg"
-                alt="Video"
-                width={24}
-                height={24}
-              />
-              <h3 className="text-[#4F4F4F] text-[14px] leading-[19px] font-medium">
-                Virtual Consultation Accepted
-              </h3>
-            </div>
-            <button className="bg-[#FEF14B] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[18px]">
-              Get a Free Consultation
-            </button>
-            <button className="border border-[#000000] rounded-[10px] h-[41px] w-[231px] text-[14px] leading-[14.45px] font-bold mt-[10px]">
-              Pricing
-            </button>
-          </div>
-
-          {/* Form */}
-          <div className="bg-white shadow-custom rounded-[10px] py-[24px] px-2.5 w-[357px] h-[282px] mx-auto">
-            <h2 className="text-[#263238] text-[16px] leading-[19px] font-medium">
-              Request more information
-            </h2>
-            <form
-              action="/submit-form"
-              method="post"
-              className="mt-[20px] flex flex-col gap-4"
-            >
-              <div className="flex items-start flex-col gap-1">
-                <label className="text-[#263238] text-[14px] leading-[14px] font-normal">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  className="border border-[#CDCDCD] rounded-md h-[40px] outline-none px-2 w-full"
-                />
-              </div>
-              <div className="flex items-start flex-col gap-1">
-                <label className="text-[#263238] text-[14px] leading-[14px] font-normal">
-                  Email
-                </label>
-                <input
-                  type="text"
-                  className="border border-[#CDCDCD] rounded-md h-[40px] outline-none px-2 w-full"
-                />
-              </div>
-              <div className="flex items-start flex-col gap-1">
-                <label className="text-[#263238] text-[14px] leading-[14px] font-normal">
-                  Phone
-                </label>
-                <input
-                  type="text"
-                  className="border border-[#CDCDCD] rounded-md h-[40px] outline-none px-2 w-full"
-                />
-              </div>
-            </form>
-          </div>
-
-          <div className="shadow-custom bg-white w-[358px] h-[57px] rounded-[10px] mx-auto flex items-center justify-center mt-[24px] mb-[17px]">
-            <h2 className="text-[16px] text-[#767676] leading-[22.4px] font-bold lato-font underline underline-offset-4">
-              ¿Gestionas este Centro?
-            </h2>
-          </div>
-        </div>
-
-      </div>
       </div>
 
       <div className="border-y  border-[#D0D0D0] pt-2 2xl:pl-[109px] lg:pl-[40px] pl-2 w-full">
         <ul className="flex items-center gap-[40px] overflow-scroll">
-          <li className="text-[#2C64D8] border-b-2 border-[#2C64D8] pb-1 text-[16px] leading-[24px] font-semibold">
-            Photos
+          <li className="hover:text-[#2C64D8] text-[#6A6A6A] hover:border-b-2 border-[#2C64D8] pb-1 text-[16px] leading-[24px] hover:font-semibold">
+            <Link href='/gallery'>Photos</Link>
           </li>
-          <li className="text-[#6A6A6A] text-[16px] leading-[24px] font-normal">
-            Overview
+          <li className="text-[#6A6A6A] hover:text-[#2C64D8] hover:border-b-2 border-[#2C64D8] hover:font-semibold pb-1 text-[16px] leading-[24px] font-normal">
+            <a href="#overview">Overview</a>
           </li>
-          <li className="text-[#6A6A6A] text-[16px] leading-[24px] font-normal">
-            Location
+          <li className="text-[#6A6A6A] hover:text-[#2C64D8] hover:border-b-2 border-[#2C64D8] hover:font-semibold pb-1 text-[16px] leading-[24px] font-normal">
+          <a href="#location">Location</a>
           </li>
-          <li className="text-[#6A6A6A] text-[16px] leading-[24px] font-normal">
-            Ratings
+          <li className="text-[#6A6A6A] hover:text-[#2C64D8] hover:border-b-2 border-[#2C64D8] hover:font-semibold pb-1 text-[16px] leading-[24px] font-normal">
+          <a href="#rating">Ratings</a>
           </li>
-          <li className="text-[#6A6A6A] text-[16px] leading-[24px] font-normal">
-            Facilities
+          <li className="text-[#6A6A6A] hover:text-[#2C64D8] hover:border-b-2 border-[#2C64D8] hover:font-semibold pb-1 text-[16px] leading-[24px] font-normal">
+          <a href="#fac">Facilities</a>
           </li>
         </ul>
       </div>
@@ -307,7 +237,9 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </div>
+
+
+    </>
   );
 };
 
