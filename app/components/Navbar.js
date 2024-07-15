@@ -18,7 +18,7 @@ const Navbar = () => {
           >
             <HiOutlineMenu />
           </button>
-          <Image
+          <img
             src="/assets/logo.svg"
             alt="Logo"
             width={91.02}
