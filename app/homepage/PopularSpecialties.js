@@ -133,16 +133,23 @@ const PopularSpecialties = () => {
         )}
       </div>
 
-      <div className="bg-[#E9E9E93B] w-full px-2 md:px-6">
-        <div className="w-full max-w-[1440x] mx-auto py-10">
-          <div className="flex md:flex-row flex-col items-center gap-14 md:gap-2 justify-between max-w-[1100px] mx-auto">
-            <div className="relative">
+      <div className=" bg-[#E9E9E93B] w-full px-2 md:px-6">
+        <div className="relative w-full max-w-[1440x] mx-auto py-10">
+          <div className=" flex md:flex-row flex-col items-center gap-14 md:gap-2 justify-between max-w-[1100px] mx-auto">
+            <div className="">
               <Image
                 src="/assets/customers.svg"
                 alt="Image"
                 width={450}
                 height={300}
-                className="relative"
+                className="relative z-50"
+              />
+              <Image
+                src="/assets/lines.svg"
+                alt="Image"
+                width={450}
+                height={300}
+                className="absolute w-1/2 left-[4%] opacity-30 bottom-0 z-30"
               />
               <div className="absolute bg-image-h  -bottom-14"></div>
             </div>
@@ -161,7 +168,7 @@ const PopularSpecialties = () => {
         </div>
       </div>
 
-      <div className="w-full text-center py-[40px] px-2 sm:px-6">
+      <div className="w-full text-center py-[40px] xl:py-[60px] px-2 sm:px-6">
         <h2 className="text-[#181515] text-[22px] leading-[19px] font-semibold">
           Check if this Doctor covers your insurance.
         </h2>
