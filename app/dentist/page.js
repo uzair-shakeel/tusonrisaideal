@@ -16,7 +16,8 @@ import Image from "next/image";
 const Dentist = () => {
   return (
     <div className="relative">
-      <div className="xl:flex flex-col hidden sticky top-10 h-full max-w-[382px] z-30 right-0 bg-[#FFFFFF] rounded-[11px] shadow-custom">
+      <div className=" absolute top-10 right-10">
+      <div className="xl:flex flex-col hidden sticky top-10 h-full px-4 max-w-[382px] z-30 right-0 bg-[#FFFFFF] rounded-[11px] shadow-custom">
         <div className="py-5 w-[231px] mx-auto rounded-[10px]">
           <div className="flex items-center gap-2.5">
             <Image
@@ -82,32 +83,27 @@ const Dentist = () => {
           </h2>
         </div>
       </div>
-      <div className="w-full">
-        <Hero />
-        <Qualifications />
-        <Expertise />
-        <ServicesDentalClinic />
-        <AssociatedClinics />
-        <Insurance />
-        <BookingInformation />
-        <ClinicRatings />
-        <FAQ />
-        <FindDoctor />
-        <RegisterNowBanner />
-        <div className="bg-[#D0D3D4] w-full py-[10px] px-4">
-          <div className="max-w-[1360px] mx-auto w-full">
-            <h1 className="text-[#263238] text-[13px] sm:text-[16px] leading-[19px] font-normal flex items-center gap-1">
-              Inicio <RiArrowRightSLine /> Dentista <RiArrowRightSLine /> Madrid{" "}
-              <RiArrowRightSLine /> Dr Carlos Fernandez
-            </h1>
-          </div>
+      </div>
+      <Hero />
+      <Qualifications />
+      <Expertise />
+      <ServicesDentalClinic />
+      <AssociatedClinics />
+      <Insurance />
+      <BookingInformation />
+      <ClinicRatings />
+      <FAQ />
+      <FindDoctor />
+      <RegisterNowBanner />
+      <div className="bg-[#D0D3D4] w-full py-[10px] px-4">
+        <div className="max-w-[1360px] mx-auto w-full">
+          <h1 className="text-[#263238] text-[13px] sm:text-[16px] leading-[19px] font-normal flex items-center gap-1">
+            Inicio <RiArrowRightSLine /> Dentista <RiArrowRightSLine /> Madrid{" "}
+            <RiArrowRightSLine /> Dr Carlos Fernandez
+          </h1>
         </div>
-
-
       </div>
     </div>
-
-
   );
 };
 

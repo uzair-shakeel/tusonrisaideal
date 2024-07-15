@@ -7,11 +7,11 @@ const Hero = () => {
     <div className='w-full max-w-[1440px] mx-auto px-4'>
         <div className='pt-5 pb-[31px] max-w-[1320px] mx-auto'>
             <ul className='flex items-center justify-center sm:justify-start gap-3 md:gap-10'>
-                <li><Link href='/' className='text-[#6A6A6A] active:text-[#2C64D8] text-[16px] leading-[24px] font-normal active:font-semibold'>Photos</Link></li>
-                <li><Link href='/' className='text-[#6A6A6A] active:text-[#2C64D8] text-[16px] leading-[24px] font-normal active:font-semibold'>Overview</Link></li>
-                <li><Link href='/' className='text-[#6A6A6A] active:text-[#2C64D8] text-[16px] leading-[24px] font-normal active:font-semibold'>Location</Link></li>
-                <li><Link href='/' className='text-[#6A6A6A] active:text-[#2C64D8] text-[16px] leading-[24px] font-normal active:font-semibold'>Ratings</Link></li>
-                <li><Link href='/' className='text-[#6A6A6A] active:text-[#2C64D8] text-[16px] leading-[24px] font-normal active:font-semibold '>Facilities</Link></li>
+                <li><Link href='/gallery' className='text-[#6A6A6A] hover:text-[#2C64D8] hover:underline underline-offset-4 hover:font-bold text-[16px] leading-[24px] font-normal active:font-semibold'>Photos</Link></li>
+                <li><Link href='/#overview' className='text-[#6A6A6A] hover:text-[#2C64D8] hover:underline underline-offset-4 hover:font-bold text-[16px] leading-[24px] font-normal active:font-semibold'>Overview</Link></li>
+                <li><Link href='/#location' className='text-[#6A6A6A] hover:text-[#2C64D8] hover:underline underline-offset-4 hover:font-bold text-[16px] leading-[24px] font-normal active:font-semibold'>Location</Link></li>
+                <li><Link href='/#rating' className='text-[#6A6A6A] hover:text-[#2C64D8] hover:underline underline-offset-4 hover:font-bold text-[16px] leading-[24px] font-normal active:font-semibold'>Ratings</Link></li>
+                <li><Link href='/' className='text-[#6A6A6A] hover:text-[#2C64D8] hover:underline underline-offset-4 hover:font-bold text-[16px] leading-[24px] font-normal active:font-semibold '>Facilities</Link></li>
             </ul>
         </div>
         <div className='hero-img bg-contain w-full max-w-[1388px] mx-auto h-[389px] md:h-[520px] rounded-[20px] relative'>

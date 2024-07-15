@@ -8,7 +8,7 @@ import ClinicSpecialities from './ClinicSpecialities';
 const ClinicOverview = () => {
     const [showMore, setShowMore] = useState(false);
   return (
-    <div className='py-10 w-full px-4'>
+    <div id='overview' className='py-10 w-full px-4'>
         <div className='max-w-[1369px] w-full mx-auto flex justify-between gap-4'>
             <div className='max-w-[945px] w-full'>
                <div className='max-w-[845px] lg:pl-2'>
@@ -83,7 +83,7 @@ const ClinicOverview = () => {
                 </div>
 
                 {/* Explore the area */}
-                <div className='pt-[40px]'>
+                <div id='location' className='pt-[40px]'>
                     <h3 className='text-[#181515] text-[22px] leading-[19px] font-semibold mb-4'>Explore the area</h3>
                     <p className='text-[#263238] text-[16px] leading-[19px] font-normal mb-4'>Avenida Principal 123, Ciudad del Sol, Estado del Sol, 45678</p>
                     
