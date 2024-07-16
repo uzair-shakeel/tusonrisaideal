@@ -1,24 +1,23 @@
-"use client"
-import React, { useEffect, useState } from 'react';
+"use client";
+import React, { useEffect, useState } from "react";
 import RegisterNowBanner from "../components/RegisterNowBanner";
 import FAQ from "../components/FAQ";
 import { MdOutlineSearch } from "react-icons/md";
 import RelatedArticles from "../components/RelatedArticles";
 import { BiSearch } from "react-icons/bi";
-import Image from 'next/image';
+import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import { GoStarFill } from "react-icons/go";
-
-
+import FindDoctor from "../dentist/FindDoctor";
 
 const page = () => {
   // One
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState('Consulta Online');
+  const [selectedOption, setSelectedOption] = useState("Consulta Online");
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -31,7 +30,7 @@ const page = () => {
 
   // Two
   const [isOpen1, setIsOpen1] = useState(false);
-  const [selectedOption1, setSelectedOption1] = useState('Aseguradora');
+  const [selectedOption1, setSelectedOption1] = useState("Aseguradora");
 
   const toggleDropdown1 = () => {
     setIsOpen1(!isOpen1);
@@ -44,7 +43,7 @@ const page = () => {
 
   // Three
   const [isOpen2, setIsOpen2] = useState(false);
-  const [selectedOption2, setSelectedOption2] = useState('Fechas Disponibles');
+  const [selectedOption2, setSelectedOption2] = useState("Fechas Disponibles");
 
   const toggleDropdown2 = () => {
     setIsOpen2(!isOpen2);
@@ -57,7 +56,7 @@ const page = () => {
 
   // Four
   const [isOpen3, setIsOpen3] = useState(false);
-  const [selectedOption3, setSelectedOption3] = useState('Mas Filtros');
+  const [selectedOption3, setSelectedOption3] = useState("Mas Filtros");
 
   const toggleDropdown3 = () => {
     setIsOpen3(!isOpen3);
@@ -70,7 +69,7 @@ const page = () => {
 
   // Five
   const [isOpen4, setIsOpen4] = useState(false);
-  const [selectedOption4, setSelectedOption4] = useState('All');
+  const [selectedOption4, setSelectedOption4] = useState("All");
 
   const toggleDropdown4 = () => {
     setIsOpen4(!isOpen4);
@@ -80,7 +79,6 @@ const page = () => {
     setSelectedOption4(option);
     setIsOpen4(false);
   };
-
 
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -109,7 +107,9 @@ const page = () => {
       buttons.push(
         <button
           key={i}
-          className={`bg-[${currentPage === i ? '#2C64D8' : '#A1A1A1'}] text-white w-[30px] h-[30px] rounded-full text-[14px] leading-[15px] font-normal`}
+          className={`bg-[${
+            currentPage === i ? "#2C64D8" : "#A1A1A1"
+          }] text-white w-[30px] h-[30px] rounded-full text-[14px] leading-[15px] font-normal`}
           onClick={() => goToPage(i)}
         >
           {i}
@@ -128,9 +128,10 @@ const page = () => {
       workplace: "Centro de Salud El Sol",
       rating: 3.45,
       reviews: 52,
-      reviewText: "Very friendly, polite and professional staff; nice and clean facility; the only downside is that, I",
+      reviewText:
+        "Very friendly, polite and professional staff; nice and clean facility; the only downside is that, I",
       profileImg: "/assets/Doctor1.png",
-      badgeImg: "/assets/Bronze (2).svg"
+      badgeImg: "/assets/Bronze (2).svg",
     },
     {
       name: "Dr. Alejandro López",
@@ -140,9 +141,10 @@ const page = () => {
       workplace: "Centro de Salud El Sol",
       rating: 3.45,
       reviews: 52,
-      reviewText: "Very friendly, polite and professional staff; nice and clean facility; the only downside is that, I",
+      reviewText:
+        "Very friendly, polite and professional staff; nice and clean facility; the only downside is that, I",
       profileImg: "/assets/Doctor2.png",
-      badgeImg: "/assets/Diamond.svg"
+      badgeImg: "/assets/Diamond.svg",
     },
     {
       name: "Dr. Ana Sánchez",
@@ -152,9 +154,10 @@ const page = () => {
       workplace: "Centro de Salud El Sol",
       rating: 3.45,
       reviews: 52,
-      reviewText: "Very friendly, polite and professional staff; nice and clean facility; the only downside is that, I",
+      reviewText:
+        "Very friendly, polite and professional staff; nice and clean facility; the only downside is that, I",
       profileImg: "/assets/Doctor3.png",
-      badgeImg: "/assets/Gold.svg"
+      badgeImg: "/assets/Gold.svg",
     },
     {
       name: "Dr. Laura Martínez",
@@ -164,16 +167,17 @@ const page = () => {
       workplace: "Centro de Salud El Sol",
       rating: 3.45,
       reviews: 52,
-      reviewText: "Very friendly, polite and professional staff; nice and clean facility; the only downside is that, I",
+      reviewText:
+        "Very friendly, polite and professional staff; nice and clean facility; the only downside is that, I",
       profileImg: "/assets/Doctor4.png",
-      badgeImg: "/assets/Platinum.svg"
+      badgeImg: "/assets/Platinum.svg",
     },
   ];
 
   // DoctorBox
   const DoctorCard = ({ doctor }) => (
     <div className="p-2 md:px-[55px] md:mb-10 py-[44px] flex flex-col items-center md:flex-row gap-[30px] md:justify-center md:shadow-xl border border-[#D0D0D0] md:rounded-[20px]">
-      <div className='flex gap-5'>
+      <div className="flex gap-5">
         <div className="relative md:h-[125px] md:w-[125px]">
           <img
             src={doctor.profileImg}
@@ -185,31 +189,56 @@ const page = () => {
           />
         </div>
         <div className="">
-          <h5 className="text-[18px] md:text-[22px] font-500 text-[#263238] leading-[19px] pb-2">{doctor.name}</h5>
+          <h5 className="text-[18px] md:text-[22px] font-500 text-[#263238] leading-[19px] pb-2">
+            {doctor.name}
+          </h5>
           <div className="flex items-center gap-2 md:gap-5">
-            <p className="text-[14px] md:text-[16px] text-[#263238] leading-[19px] font-normal">{doctor.specialization}</p>
-            <div className='flex items-center gap-1 border-l border-[#CDCDCD]'>
-              <Image src='/assets/m.svg' alt='image' width={10} height={10} className='-mt-[2px] ml-2' />
+            <p className="text-[14px] md:text-[16px] text-[#263238] leading-[19px] font-normal">
+              {doctor.specialization}
+            </p>
+            <div className="flex items-center gap-1 border-l border-[#CDCDCD]">
+              <Image
+                src="/assets/m.svg"
+                alt="image"
+                width={10}
+                height={10}
+                className="-mt-[2px] ml-2"
+              />
               <p className="text-[12px] md:text-[16px] text-[#263238] leading-[18.75px] font-normal">
                 {doctor.experience}
               </p>
             </div>
           </div>
-          <p className="flex items-center gap-1.5 text-[#263238] text-[13px] md:text-[16px] leading-[19px] font-normal my-3.5"><Image src='/assets/l.svg' alt='location' width={18} height={18} />{doctor.address}</p>
-          <p className="text-[13px] md:text-[16px] text-[#263238] leading-[19px] font-normal">Trabaja en : <span className='text-[#2B59E0] underline'> {doctor.workplace}</span></p>
+          <p className="flex items-center gap-1.5 text-[#263238] text-[13px] md:text-[16px] leading-[19px] font-normal my-3.5">
+            <Image src="/assets/l.svg" alt="location" width={18} height={18} />
+            {doctor.address}
+          </p>
+          <p className="text-[13px] md:text-[16px] text-[#263238] leading-[19px] font-normal">
+            Trabaja en :{" "}
+            <span className="text-[#2B59E0] underline">
+              {" "}
+              {doctor.workplace}
+            </span>
+          </p>
         </div>
       </div>
       <div className="bg-[#F1F1F1] md:max-w-[40%] rounded-[20px] flex items-center gap-[15px] sm:gap-[25px] px-[10px] sm:px-[17px] py-[27px]">
         <div className="w-[150px] flex flex-col items-center gap-2">
-          <p className="text-[25px] sm:text-[34px] font-medium text-[#263238] leading-[19px]">{doctor.rating.toFixed(2)}</p>
+          <p className="text-[25px] sm:text-[34px] font-medium text-[#263238] leading-[19px]">
+            {doctor.rating.toFixed(2)}
+          </p>
           <img src="/assets/4star-.svg" />
-          <p className="text-[12px] sm:text-[16px] text-[#6B777D] leading-[19px]">({doctor.reviews} reviews)</p>
+          <p className="text-[12px] sm:text-[16px] text-[#6B777D] leading-[19px]">
+            ({doctor.reviews} reviews)
+          </p>
         </div>
         <div>
           <p className="text-[#6B777D] text-[12px] sm:text-[14px] leading-[19px] font-normal">
             {doctor.reviewText}
           </p>
-          <p className="text-[#2C64D8] leading-[19px] text-[14px] sm:text-[16px] mt-1">Read More</p>
+          <p className="text-[#2C64D8] leading-[19px] text-[14px] sm:text-[16px] mt-1">
+            Read More
+          </p>
         </div>
       </div>
       <div className="flex md:flex-col flex-row items-center gap-4 md:gap-0">
@@ -223,7 +252,6 @@ const page = () => {
     </div>
   );
 
-
   const clinicData = {
     name: "Stroll Health Clinic",
     openHours: "09:00  - 22:00  ",
@@ -231,7 +259,8 @@ const page = () => {
     address: "111 NE 32nd St, Spain, FL",
     rating: 5.0,
     reviews: 52,
-    reviewText: "Very friendly , polite and professional staff ; nice and clean facility ; the only downside is that , I was confirmed...",
+    reviewText:
+      "Very friendly , polite and professional staff ; nice and clean facility ; the only downside is that , I was confirmed...",
   };
 
   const dentists = [
@@ -293,18 +322,18 @@ const page = () => {
     // Add more opinions as needed
   ];
 
-
-
   return (
     <div>
-      <div className=' bg-[#FCFAEE] border-b border-[#D0D0D0] w-full'>
+      <div className=" bg-[#FCFAEE] border-b border-[#D0D0D0] w-full">
         <div className="px-5 lg:px-[36px] py-[52px] max-w-[1440px] mx-auto flex">
           <div className="w-full">
             <h3 className="hidden md:block text-[28px] leading-[37px] font-medium text-[#263238]">
               Agenda entre +100 de los mejores Dentistas cerca tuyo
             </h3>
             <p className="hidden md:block text-[16px] leading-[21px] my-2 max-w-[670px] text-[#263238]">
-              ¿Necesitas agendar cita en el dentista esta semana? Usa TSI y encuentra dentistas cerca de ti que aceptan tu seguro. Es simple, seguro y gratuito.
+              ¿Necesitas agendar cita en el dentista esta semana? Usa TSI y
+              encuentra dentistas cerca de ti que aceptan tu seguro. Es simple,
+              seguro y gratuito.
             </p>
 
             {/* Desktop */}
@@ -348,9 +377,15 @@ const page = () => {
 
             {/* Mobile */}
             <div className="bg-white border border-[#DDDDDD] justify-between shadow-custom max-w-[392px] h-[66px] rounded-[32px] flex md:hidden items-center px-5">
-              <div className='flex flex-col w-full'>
-                <label className='text-[#222222] text-[12px] leading-[16px] font-semibold'>Condition</label>
-                <input type='text' placeholder='Eg., Headache' className='text-[12px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none max-w-[70px]' />
+              <div className="flex flex-col w-full">
+                <label className="text-[#222222] text-[12px] leading-[16px] font-semibold">
+                  Condition
+                </label>
+                <input
+                  type="text"
+                  placeholder="Eg., Headache"
+                  className="text-[12px] leading-[16.14px] font-normal text-[#6A6A6A] outline-none max-w-[70px]"
+                />
               </div>
               <div className="flex flex-col w-full">
                 <label className="text-[#222222] text-[12px] leading-[16px] font-semibold">
@@ -384,7 +419,9 @@ const page = () => {
       </div>
 
       <div className="md:px-5 max-w-[1440px] mx-auto">
-        <h4 className="text-[14px] my-4 text-[#263238] leading-[21px] font-normal px-2">Filter By</h4>
+        <h4 className="text-[14px] my-4 text-[#263238] leading-[21px] font-normal px-2">
+          Filter By
+        </h4>
         <div className=" flex justify-between flex-wrap gap-8">
           <div className="flex gap-4 flex-wrap px-2 ">
             {/* Consulta Online */}
@@ -393,17 +430,36 @@ const page = () => {
                 onClick={toggleDropdown}
                 className="font-normal text-[14px] leading-[19px]  min-w-[211px] h-[39px]  cursor-pointer text-[#54595C] border border-black outline-none rounded-lg flex items-center justify-center"
               >
-                <Image src="/assets/vide.svg" alt="icon" width={20} height={20} className='mr-[10px]' />
+                <Image
+                  src="/assets/vide.svg"
+                  alt="icon"
+                  width={20}
+                  height={20}
+                  className="mr-[10px]"
+                />
                 {selectedOption}
                 <span
-                  className={`transform transition-transform duration-200 ml-[10px] ${isOpen ? 'rotate-180' : 'rotate-0'}`}
+                  className={`transform transition-transform duration-200 ml-[10px] ${
+                    isOpen ? "rotate-180" : "rotate-0"
+                  }`}
                 >
-                  <Image src='/assets/d-ar.svg' alt='arrow' width={12} height={15} />
+                  <Image
+                    src="/assets/d-ar.svg"
+                    alt="arrow"
+                    width={12}
+                    height={15}
+                  />
                 </span>
               </button>
               {isOpen && (
                 <ul className="absolute left-0 top-full mt-1 w-full bg-white border border-black rounded-lg z-10">
-                  {['Consulta Online', 'Consulta Online', 'Consulta Online', 'Consulta Online', 'Consulta Online'].map((option, index) => (
+                  {[
+                    "Consulta Online",
+                    "Consulta Online",
+                    "Consulta Online",
+                    "Consulta Online",
+                    "Consulta Online",
+                  ].map((option, index) => (
                     <li
                       key={index}
                       onClick={() => handleOptionClick(option)}
@@ -425,14 +481,27 @@ const page = () => {
                 {/* <Image src="/assets/vide.svg" alt="icon" width={20} height={20} className='mr-[10px]'/> */}
                 {selectedOption1}
                 <span
-                  className={`transform transition-transform duration-200 ml-[10px] ${isOpen1 ? 'rotate-180' : 'rotate-0'}`}
+                  className={`transform transition-transform duration-200 ml-[10px] ${
+                    isOpen1 ? "rotate-180" : "rotate-0"
+                  }`}
                 >
-                  <Image src='/assets/d-ar.svg' alt='arrow' width={12} height={15} />
+                  <Image
+                    src="/assets/d-ar.svg"
+                    alt="arrow"
+                    width={12}
+                    height={15}
+                  />
                 </span>
               </button>
               {isOpen1 && (
                 <ul className="absolute left-0 top-full mt-1 w-full bg-white border border-black rounded-lg z-10">
-                  {['Aseguradora', 'Aseguradora', 'Aseguradora', 'Aseguradora', 'Aseguradora'].map((option1, index1) => (
+                  {[
+                    "Aseguradora",
+                    "Aseguradora",
+                    "Aseguradora",
+                    "Aseguradora",
+                    "Aseguradora",
+                  ].map((option1, index1) => (
                     <li
                       key={index1}
                       onClick={() => handleOptionClick1(option1)}
@@ -454,14 +523,27 @@ const page = () => {
                 {/* <Image src="/assets/vide.svg" alt="icon" width={20} height={20} className='mr-[10px]'/> */}
                 {selectedOption2}
                 <span
-                  className={`transform transition-transform duration-200 ml-[10px] ${isOpen2 ? 'rotate-180' : 'rotate-0'}`}
+                  className={`transform transition-transform duration-200 ml-[10px] ${
+                    isOpen2 ? "rotate-180" : "rotate-0"
+                  }`}
                 >
-                  <Image src='/assets/d-ar.svg' alt='arrow' width={12} height={15} />
+                  <Image
+                    src="/assets/d-ar.svg"
+                    alt="arrow"
+                    width={12}
+                    height={15}
+                  />
                 </span>
               </button>
               {isOpen2 && (
                 <ul className="absolute left-0 top-full mt-1 w-full bg-white border border-black rounded-lg z-10">
-                  {['Fechas Disponibles', 'Fechas Disponibles', 'Fechas Disponibles', 'Fechas Disponibles', 'Fechas Disponibles'].map((option2, index2) => (
+                  {[
+                    "Fechas Disponibles",
+                    "Fechas Disponibles",
+                    "Fechas Disponibles",
+                    "Fechas Disponibles",
+                    "Fechas Disponibles",
+                  ].map((option2, index2) => (
                     <li
                       key={index2}
                       onClick={() => handleOptionClick2(option2)}
@@ -483,14 +565,27 @@ const page = () => {
                 {/* <Image src="/assets/vide.svg" alt="icon" width={20} height={20} className='mr-[10px]'/> */}
                 {selectedOption3}
                 <span
-                  className={`transform transition-transform duration-200 ml-[10px] ${isOpen3 ? 'rotate-180' : 'rotate-0'}`}
+                  className={`transform transition-transform duration-200 ml-[10px] ${
+                    isOpen3 ? "rotate-180" : "rotate-0"
+                  }`}
                 >
-                  <Image src='/assets/d-ar.svg' alt='arrow' width={12} height={15} />
+                  <Image
+                    src="/assets/d-ar.svg"
+                    alt="arrow"
+                    width={12}
+                    height={15}
+                  />
                 </span>
               </button>
               {isOpen3 && (
                 <ul className="absolute left-0 top-full mt-1 w-full bg-white border border-black rounded-lg z-10">
-                  {['Mas Filtros', 'Mas Filtros', 'Mas Filtros', 'Mas Filtros', 'Mas Filtros'].map((option3, index3) => (
+                  {[
+                    "Mas Filtros",
+                    "Mas Filtros",
+                    "Mas Filtros",
+                    "Mas Filtros",
+                    "Mas Filtros",
+                  ].map((option3, index3) => (
                     <li
                       key={index3}
                       onClick={() => handleOptionClick3(option3)}
@@ -511,15 +606,16 @@ const page = () => {
             >
               {selectedOption4}
               <span
-                className={`transform transition-transform duration-200   ${isOpen4 ? 'rotate-180' : 'rotate-0'}`}
+                className={`transform transition-transform duration-200   ${
+                  isOpen4 ? "rotate-180" : "rotate-0"
+                }`}
               >
-
-                <Image src='/assets/a.svg' alt='arrow' width={20} height={20} />
+                <Image src="/assets/a.svg" alt="arrow" width={20} height={20} />
               </span>
             </button>
             {isOpen4 && (
               <ul className="absolute left-0 top-full mt-1 w-full bg-white border border-black rounded-lg z-10">
-                {['All', 'All', 'All'].map((option4, index4) => (
+                {["All", "All", "All"].map((option4, index4) => (
                   <li
                     key={index4}
                     onClick={() => handleOptionClick4(option4)}
@@ -539,7 +635,9 @@ const page = () => {
         </div>
 
         <p className="px-2 text-[16px] my-3 max-w-[845px] text-[#263238] leading-[19px] font-normal">
-          TSI verifica a todos los profesionales antes de que aparezcan en este listado y puedan ofrecerte atención, ¡ Nos aseguramos de que estás en buenas manos!
+          TSI verifica a todos los profesionales antes de que aparezcan en este
+          listado y puedan ofrecerte atención, ¡ Nos aseguramos de que estás en
+          buenas manos!
         </p>
         <h3 className="px-2 font-[700] text-[26px] my-4">All Providers</h3>
         <div className="text-end mr-4 text-[14px] text-[#263238]">
@@ -547,7 +645,7 @@ const page = () => {
         </div>
 
         {/* Boxes */}
-        <div className='pt-4'>
+        <div className="pt-4">
           {doctors.map((doctor, index) => (
             <DoctorCard key={index} doctor={doctor} />
           ))}
@@ -556,7 +654,7 @@ const page = () => {
         {/* Box 2 */}
         <div className="pb-8 px-2 lg:px-[80px] my-10 md:pt-[52px] md:pb-[25px] border-b md:border border-[#D0D0D0] md:shadow-xl md:rounded-[20px]">
           <div className="flex flex-col md:flex-row items-center gap-[30px] border-b pb-5 border-[#D0D0D0]">
-            <div className='flex items-center gap-5'>
+            <div className="flex items-center gap-5">
               <div className="relative md:h-[125px] md:w-[125px] w-[100px] h-[100px]">
                 <img
                   src="/assets/Doctor5.png"
@@ -564,26 +662,47 @@ const page = () => {
                 />
               </div>
               <div className="space-y-[10px]">
-                <h5 className="text-[18px] md:text-[22px] font-[500]">{clinicData.name}</h5>
+                <h5 className="text-[18px] md:text-[22px] font-[500]">
+                  {clinicData.name}
+                </h5>
                 <div className="flex gap-3 md:gap-7">
-                  <p className="text-[13px] md:text-[16px]">Abre : {clinicData.openHours}</p>
+                  <p className="text-[13px] md:text-[16px]">
+                    Abre : {clinicData.openHours}
+                  </p>
                   <p className="text-[13px] md:text-[16px] border-l border-[#CDCDCD] flex items-center gap-1">
-                    <Image src='/assets/m.svg' alt='image' width={10} height={10} className='-mt-[2px] ml-2' />
+                    <Image
+                      src="/assets/m.svg"
+                      alt="image"
+                      width={10}
+                      height={10}
+                      className="-mt-[2px] ml-2"
+                    />
                     {clinicData.dentistsCount} Dentists
                   </p>
                 </div>
-                <p className="text-[13px] md:text-[16px] text-[#263238] font-normal leading-[19px] flex items-center gap-1.5"><Image src='/assets/l.svg' alt='img' width={18} height={18} />{clinicData.address}</p>
+                <p className="text-[13px] md:text-[16px] text-[#263238] font-normal leading-[19px] flex items-center gap-1.5">
+                  <Image src="/assets/l.svg" alt="img" width={18} height={18} />
+                  {clinicData.address}
+                </p>
               </div>
             </div>
             <div className="bg-[#F1F1F1] md:max-w-[43%] rounded-[20px] flex items-center gap-[15px] sm:gap-[26px] px-[10px] sm:px-[20px] py-[21px]">
               <div className="w-[170px] flex flex-col items-start gap-2">
-                <p className="text-[25px] sm:text-[34px] font-medium text-[#263238] leading-[19px]">{clinicData.rating.toFixed(2)}</p>
+                <p className="text-[25px] sm:text-[34px] font-medium text-[#263238] leading-[19px]">
+                  {clinicData.rating.toFixed(2)}
+                </p>
                 <img src="/assets/4star-.svg" />
-                <p className="text-[12px] sm:text-[16px] text-[#6B777D]">({clinicData.reviews} reviews)</p>
+                <p className="text-[12px] sm:text-[16px] text-[#6B777D]">
+                  ({clinicData.reviews} reviews)
+                </p>
               </div>
               <div>
-                <p className="text-[#6B777D] text-[12px] sm:text-[14px] leading-[19px] font-normal mb-1">{clinicData.reviewText}</p>
-                <p className="text-[#2C64D8] text-[14px] sm:text-[16px] leading-[19px] font-normal">Read More</p>
+                <p className="text-[#6B777D] text-[12px] sm:text-[14px] leading-[19px] font-normal mb-1">
+                  {clinicData.reviewText}
+                </p>
+                <p className="text-[#2C64D8] text-[14px] sm:text-[16px] leading-[19px] font-normal">
+                  Read More
+                </p>
               </div>
             </div>
             <div className="flex md:flex-col md:gap-2 gap-4 flex-row">
@@ -600,13 +719,20 @@ const page = () => {
             <h4 className="text-[22px] font-[600] pt-5">Associated dentist</h4>
             <div className="flex gap-5">
               {dentists.map((dentist) => (
-                <div key={dentist.id} className="rounded-[10px] p-4 shadow-custom1 block my-5">
+                <div
+                  key={dentist.id}
+                  className="rounded-[10px] p-4 shadow-custom1 block my-5"
+                >
                   <img
                     src={dentist.image}
                     className="h-[82px] w-[82px] rounded-full"
                   />
-                  <h3 className="text-[20px] text-[#263238] leading-[19px] font-medium mt-2.5">{dentist.name}</h3>
-                  <p className="text-[16px] leading-[19px] font-normal mt-1 text-[#263238]">{dentist.specialty}</p>
+                  <h3 className="text-[20px] text-[#263238] leading-[19px] font-medium mt-2.5">
+                    {dentist.name}
+                  </h3>
+                  <p className="text-[16px] leading-[19px] font-normal mt-1 text-[#263238]">
+                    {dentist.specialty}
+                  </p>
                   <div className="flex items-center gap-2">
                     <img src="/assets/4star-.svg" />
                     <p className="text-[18px] font-[700]">{dentist.rating}</p>
@@ -614,18 +740,28 @@ const page = () => {
                 </div>
               ))}
             </div>
-            <p className="text-[16px] leading-[19px] font-normal text-[#2C64D8]">Ver todos los Dentistas</p>
+            <p className="text-[16px] leading-[19px] font-normal text-[#2C64D8]">
+              Ver todos los Dentistas
+            </p>
           </div>
         </div>
 
-        <div className='my-[20px] w-full flex items-center'>
-          <span className='w-full h-[1px] rounded-full bg-[#D0D0D0] ml-3'></span>
-          <div className='flex items-center justify-end gap-3 min-w-[320px]'>
-            <button onClick={goToPreviousPage}><IoIosArrowBack className='text-[20px]' /></button>
-            <button><Image src='/assets/ld.svg' alt='A' width={24} height={24} /></button>
+        <div className="my-[20px] w-full flex items-center">
+          <span className="w-full h-[1px] rounded-full bg-[#D0D0D0] ml-3"></span>
+          <div className="flex items-center justify-end gap-3 min-w-[320px]">
+            <button onClick={goToPreviousPage}>
+              <IoIosArrowBack className="text-[20px]" />
+            </button>
+            <button>
+              <Image src="/assets/ld.svg" alt="A" width={24} height={24} />
+            </button>
             {renderPaginationButtons()}
-            <button><Image src='/assets/rd.svg' alt='A' width={24} height={24} /></button>
-            <button onClick={goToNextPage}><IoIosArrowForward className='text-[20px]' /></button>
+            <button>
+              <Image src="/assets/rd.svg" alt="A" width={24} height={24} />
+            </button>
+            <button onClick={goToNextPage}>
+              <IoIosArrowForward className="text-[20px]" />
+            </button>
           </div>
         </div>
       </div>
@@ -641,7 +777,7 @@ const page = () => {
                     alt="comma"
                     width={52}
                     height={84}
-                    className='h-[50px] w-[40px] md:h-[84px] md:w-[52px]'
+                    className="h-[50px] w-[40px] md:h-[84px] md:w-[52px]"
                   />
                   <div className="flex items-center gap-2">
                     <h3 className="font-bold text-xl text-gray-800">
@@ -656,7 +792,9 @@ const page = () => {
                     </div>
                   </div>
                 </div>
-                <p className="text-gray-700 mb-6 px-4 sm:px-6">{opinion.opinion}</p>
+                <p className="text-gray-700 mb-6 px-4 sm:px-6">
+                  {opinion.opinion}
+                </p>
                 <div className="flex items-center gap-4 p-4 sm:p-6 bg-[#FFFEEC] rounded-b-[20px] ">
                   <div className="relative w-12 h-12">
                     <Image
@@ -693,9 +831,12 @@ const page = () => {
         </div>
       </div>
 
-      <RelatedArticles />
-      <FAQ />
-      <RegisterNowBanner />
+      <div className="max-w-[1440px] mx-auto flex flex-col justify-center w-full items-center">
+        <RelatedArticles />
+        <FAQ />
+        <FindDoctor />
+        <RegisterNowBanner />
+      </div>
     </div>
   );
 };
