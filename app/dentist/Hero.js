@@ -206,7 +206,7 @@ const Hero = () => {
         </ul>
       </div>
 
-      <div className="w-[60%]">
+      <div className="lg:w-[60%]">
         <div className="mt-14  pl-2 lg:ml-[40px]">
           <div className="mt-7 max-w-[845px]">
             <h2 className="text-[#181515] text-[22px] leading-[19px] font-semibold mb-5">

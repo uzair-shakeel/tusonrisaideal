@@ -28,7 +28,7 @@ const BookingInformation = () => {
   ];
 
   return (
-    <div className="w-[65%]">
+    <div className="lg:w-[65%]">
       <div
         id="fac"
         className="max-w-[1380px] mx-auto lg:pl-[40px] w-full mt-[20px] px-4"

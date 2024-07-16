@@ -32,7 +32,7 @@ const options = {
 
 const Expertise = () => {
   return (
-    <div className="w-[60%]">
+    <div className="lg:w-[60%]">
       <div className="w-full max-w-[1440px] mx-auto">
         <div className="2xl:pl-[50px] pl-5 lg:pl-[40px] flex md:flex-row flex-col gap-5 md:items-center justify-between max-w-[927px]">
           <div>

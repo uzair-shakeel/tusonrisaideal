@@ -47,7 +47,7 @@ const Insurance = () => {
   ];
 
   return (
-    <div className="w-[60%]">
+    <div className="lg:w-[60%] px-2 lg:px-0">
       <div className="w-full max-w-[1440px] mx-auto">
         <div className="w-full py-[40px] sm:px-4 max-w-[927px] lg:ml-[40px]">
           <h2 className="text-[#181515] text-[22px] leading-[19px] font-semibold">
