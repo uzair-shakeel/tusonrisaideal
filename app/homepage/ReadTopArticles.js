@@ -11,7 +11,7 @@ const NextArrow = (props) => {
   const { onClick } = props;
   return (
     <div
-      className="absolute top-1/2 transform -translate-y-1/2 -right-14 cursor-pointer z-10 hidden"
+      className="absolute top-1/2 transform -translate-y-1/2 -right-4 md:-right-14 cursor-pointer z-10 "
       onClick={onClick}
     >
       <IoIosArrowForward className="text-2xl lg:text-4xl" />
@@ -23,7 +23,7 @@ const PrevArrow = (props) => {
   const { onClick } = props;
   return (
     <div
-      className="absolute top-1/2 transform -translate-y-1/2 -left-14 cursor-pointer z-10  hidden"
+      className="absolute top-1/2 transform -translate-y-1/2 -left-4 md:-left-14 cursor-pointer z-10  "
       onClick={onClick}
     >
       <IoIosArrowBack className="text-2xl lg:text-4xl" />
@@ -73,7 +73,7 @@ const ReadTopArticles = () => {
   ];
 
   return (
-    <div className="py-10 pb-28 max-w-[1300px] mx-auto px-4 bg-white">
+    <div className="py-10 pb-28 max-w-[1300px] w-[90%] xl:w-full mx-auto px-4 bg-white">
       <h2 className="text-[#333333] text-2xl lg:text-[28px] leading-tight lg:leading-[54px] font-bold mb-4">
         Read top articles from health experts
       </h2>

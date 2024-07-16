@@ -12,6 +12,7 @@ import Expertise from "./Expertise";
 import Qualifications from "./Qualifications";
 import Hero from "./Hero";
 import Image from "next/image";
+import { IoMdChatboxes } from "react-icons/io";
 
 const Dentist = () => {
   return (
@@ -38,7 +39,7 @@ const Dentist = () => {
             </button>
           </div>
 
-          <div className="bg-white shadow-custom rounded-[10px] py-[24px] px-2.5 w-[357px] h-[282px] mx-auto">
+          <div className="bg-white shadow-custom rounded-[10px] py-[24px] px-2.5 w-[357px] h-[340px] mx-auto">
             <h2 className="text-[#263238] text-[16px] leading-[19px] font-medium">
               Request more information
             </h2>
@@ -74,6 +75,9 @@ const Dentist = () => {
                   className="border border-[#CDCDCD] rounded-md h-[40px] outline-none px-2 w-full"
                 />
               </div>
+              <button className="border-[2px] flex gap-4 items-center justify-center font-semibold border-[#CDCDCD] rounded-md h-[40px] outline-none px-2 w-full">
+                <IoMdChatboxes size={25} /> Envior
+              </button>
             </form>
           </div>
 
