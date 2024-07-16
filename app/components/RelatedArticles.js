@@ -4,7 +4,7 @@ const RelatedArticles = () => {
   return (
     <div className="px-2 md:px-5 max-w-[1440px] mx-auto">
       <h4 className="text-[22px] font-[600] my-6 ">Related Articles</h4>
-      <div className="space-y-[40px]">
+      <div className="space-y-[40px] w-screen md:w-full">
         <div className="shadow-lg p-4 rounded-[20px] border border-[#DADADA] flex flex-col md:flex-row gap-[20px]">
           <div className="w-full rounded-[20px] h-full flex items-center justify-center overflow-hidden">
             <img

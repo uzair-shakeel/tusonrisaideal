@@ -13,6 +13,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import { GoStarFill } from "react-icons/go";
 import FindDoctor from "../dentist/FindDoctor";
+import { Select, SelectItem } from "@nextui-org/react";
 
 const page = () => {
   // One
@@ -422,8 +423,8 @@ const page = () => {
         <h4 className="text-[14px] my-4 text-[#263238] leading-[21px] font-normal px-2">
           Filter By
         </h4>
-        <div className=" flex justify-between flex-wrap gap-8">
-          <div className="flex gap-4 flex-wrap px-2 ">
+        <div className="hidden lg:flex justify-between flex-wrap gap-8">
+          <div className="flex gap-4 px-2 flex-wrap">
             {/* Consulta Online */}
             <div className="relative inline-block">
               <button
@@ -599,33 +600,218 @@ const page = () => {
             </div>
           </div>
           {/* All */}
-          <div className="relative inline-block px-2 ">
-            <button
-              onClick={toggleDropdown4}
-              className="font-normal text-[18px] leading-[14.45px]  min-w-[296px] h-[39px] px-2.5 cursor-pointer text-[#1F272B] border border-[#263238] outline-none rounded-[10px] flex items-center justify-between"
-            >
-              {selectedOption4}
-              <span
-                className={`transform transition-transform duration-200   ${
-                  isOpen4 ? "rotate-180" : "rotate-0"
-                }`}
+
+          <Select
+            variant="bordered"
+            color="default"
+            label="Filter By"
+            className="max-w-xs"
+            css={{
+              color: "black",
+              borderColor: "black",
+              "& .nextui-select-item": { color: "black" },
+            }}
+          >
+            {["All", "All", "All", "All"].map((animal, index) => (
+              <SelectItem key={index} css={{ color: "black" }}>
+                {animal}
+              </SelectItem>
+            ))}
+          </Select>
+        </div>
+
+        <div className="flex lg:hidden justify-between flex-wrap gap-8">
+          <div className="flex gap-4 px-2 flex-wrap">
+            {/* Consulta Online */}
+            <div className="relative inline-block">
+              <button
+                onClick={toggleDropdown}
+                className="font-normal text-[14px] leading-[19px]  min-w-[211px] h-[39px]  cursor-pointer text-[#54595C] border border-black outline-none rounded-lg flex items-center justify-center"
               >
-                <Image src="/assets/a.svg" alt="arrow" width={20} height={20} />
-              </span>
-            </button>
-            {isOpen4 && (
-              <ul className="absolute left-0 top-full mt-1 w-full bg-white border border-black rounded-lg z-10">
-                {["All", "All", "All"].map((option4, index4) => (
-                  <li
-                    key={index4}
-                    onClick={() => handleOptionClick4(option4)}
-                    className="font-normal text-[14px] leading-[19px] cursor-pointer px-2 py-1 border-b text-[#54595C]"
-                  >
-                    {option4}
-                  </li>
-                ))}
-              </ul>
-            )}
+                <Image
+                  src="/assets/vide.svg"
+                  alt="icon"
+                  width={20}
+                  height={20}
+                  className="mr-[10px]"
+                />
+                {selectedOption}
+                <span
+                  className={`transform transition-transform duration-200 ml-[10px] ${
+                    isOpen ? "rotate-180" : "rotate-0"
+                  }`}
+                >
+                  <Image
+                    src="/assets/d-ar.svg"
+                    alt="arrow"
+                    width={12}
+                    height={15}
+                  />
+                </span>
+              </button>
+              {isOpen && (
+                <ul className="absolute left-0 top-full mt-1 w-full bg-white border border-black rounded-lg z-10">
+                  {[
+                    "Consulta Online",
+                    "Consulta Online",
+                    "Consulta Online",
+                    "Consulta Online",
+                    "Consulta Online",
+                  ].map((option, index) => (
+                    <li
+                      key={index}
+                      onClick={() => handleOptionClick(option)}
+                      className="font-normal text-[14px] leading-[19px] cursor-pointer px-2 py-1 border-b text-[#54595C]"
+                    >
+                      {option}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+
+            {/* Aseguradora */}
+            <div className="relative inline-block">
+              <button
+                onClick={toggleDropdown1}
+                className="font-normal text-[14px] leading-[19px]  min-w-[135px] h-[39px]  cursor-pointer text-[#54595C] border border-black outline-none rounded-lg flex items-center justify-center"
+              >
+                {/* <Image src="/assets/vide.svg" alt="icon" width={20} height={20} className='mr-[10px]'/> */}
+                {selectedOption1}
+                <span
+                  className={`transform transition-transform duration-200 ml-[10px] ${
+                    isOpen1 ? "rotate-180" : "rotate-0"
+                  }`}
+                >
+                  <Image
+                    src="/assets/d-ar.svg"
+                    alt="arrow"
+                    width={12}
+                    height={15}
+                  />
+                </span>
+              </button>
+              {isOpen1 && (
+                <ul className="absolute left-0 top-full mt-1 w-full bg-white border border-black rounded-lg z-10">
+                  {[
+                    "Aseguradora",
+                    "Aseguradora",
+                    "Aseguradora",
+                    "Aseguradora",
+                    "Aseguradora",
+                  ].map((option1, index1) => (
+                    <li
+                      key={index1}
+                      onClick={() => handleOptionClick1(option1)}
+                      className="font-normal text-[14px] leading-[19px] cursor-pointer px-2 py-1 border-b text-[#54595C]"
+                    >
+                      {option1}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+
+            {/* Fechas Disponibles */}
+            <div className="relative inline-block">
+              <button
+                onClick={toggleDropdown2}
+                className="font-normal text-[14px] leading-[19px]  min-w-[185px] h-[39px]  cursor-pointer text-[#54595C] border border-black outline-none rounded-lg flex items-center justify-center"
+              >
+                {/* <Image src="/assets/vide.svg" alt="icon" width={20} height={20} className='mr-[10px]'/> */}
+                {selectedOption2}
+                <span
+                  className={`transform transition-transform duration-200 ml-[10px] ${
+                    isOpen2 ? "rotate-180" : "rotate-0"
+                  }`}
+                >
+                  <Image
+                    src="/assets/d-ar.svg"
+                    alt="arrow"
+                    width={12}
+                    height={15}
+                  />
+                </span>
+              </button>
+              {isOpen2 && (
+                <ul className="absolute left-0 top-full mt-1 w-full bg-white border border-black rounded-lg z-10">
+                  {[
+                    "Fechas Disponibles",
+                    "Fechas Disponibles",
+                    "Fechas Disponibles",
+                    "Fechas Disponibles",
+                    "Fechas Disponibles",
+                  ].map((option2, index2) => (
+                    <li
+                      key={index2}
+                      onClick={() => handleOptionClick2(option2)}
+                      className="font-normal text-[14px] leading-[19px] cursor-pointer px-2 py-1 border-b text-[#54595C]"
+                    >
+                      {option2}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+
+            {/* Mas Filtros */}
+            <div className="relative inline-block">
+              <button
+                onClick={toggleDropdown3}
+                className="font-normal text-[14px] leading-[19px]  min-w-[134px] h-[39px]  cursor-pointer text-[#54595C] border border-black outline-none rounded-lg flex items-center justify-center"
+              >
+                {/* <Image src="/assets/vide.svg" alt="icon" width={20} height={20} className='mr-[10px]'/> */}
+                {selectedOption3}
+                <span
+                  className={`transform transition-transform duration-200 ml-[10px] ${
+                    isOpen3 ? "rotate-180" : "rotate-0"
+                  }`}
+                >
+                  <Image
+                    src="/assets/d-ar.svg"
+                    alt="arrow"
+                    width={12}
+                    height={15}
+                  />
+                </span>
+              </button>
+              {isOpen3 && (
+                <ul className="absolute left-0 top-full mt-1 w-full bg-white border border-black rounded-lg z-10">
+                  {[
+                    "Mas Filtros",
+                    "Mas Filtros",
+                    "Mas Filtros",
+                    "Mas Filtros",
+                    "Mas Filtros",
+                  ].map((option3, index3) => (
+                    <li
+                      key={index3}
+                      onClick={() => handleOptionClick3(option3)}
+                      className="font-normal text-[14px] leading-[19px] cursor-pointer px-2 py-1 border-b text-[#54595C]"
+                    >
+                      {option3}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+            <Select
+              variant="bordered"
+              color="default"
+              label="Filter By"
+              className="max-w-xs"
+              css={{
+                color: "black",
+                borderColor: "black",
+                "& .nextui-select-item": { color: "black" },
+              }}
+            >
+              {["All", "All", "All", "All"].map((animal, index) => (
+                <SelectItem key={index} css={{ color: "black" }}>
+                  {animal}
+                </SelectItem>
+              ))}
+            </Select>
           </div>
         </div>
 

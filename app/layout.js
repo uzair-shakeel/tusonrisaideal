@@ -2,6 +2,7 @@ import Cookies from "./components/Cookies";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import "./globals.css";
+import { NextUIProvider } from "@nextui-org/react";
 
 export const metadata = {
   title: "Tusonrisai Deal",
@@ -12,10 +13,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        {/* <Cookies/> */}
-        <Navbar />
-        {children}
-        <Footer />
+        <NextUIProvider>
+          {/* <Cookies/> */}
+          <Navbar />
+          {children}
+          <Footer />
+        </NextUIProvider>
       </body>
     </html>
   );

@@ -4,7 +4,7 @@ import React from "react";
 const RegisterNowBanner = () => {
   return (
     <div className="w-[96%] px-2">
-      <div className="bg-[#FCFAEE] w-full  p-4 mt-[40px] md:mt-0 mx-auto rounded-t-[20px]">
+      <div className="bg-[#FCFAEE] w-full overflow-hidden p-4 mt-[40px] md:mt-0 mx-auto rounded-t-[20px]">
         <div className="">
           <div className="max-w-[831px] mx-auto flex items-center justify-between px-1 md:p-[18px]">
             <div className="max-w-[491px]">
