@@ -108,9 +108,9 @@ const page = () => {
       buttons.push(
         <button
           key={i}
-          className={`bg-[${
-            currentPage === i ? "#2C64D8" : "#A1A1A1"
-          }] text-white w-[30px] h-[30px] rounded-full text-[14px] leading-[15px] font-normal`}
+          className={`${
+            currentPage === i ? "bg-[#2C64D8] " : "bg-[#A1A1A1] "
+          }]  w-[30px] h-[30px] rounded-full text-[14px] text-white leading-[15px] font-normal`}
           onClick={() => goToPage(i)}
         >
           {i}
@@ -932,7 +932,7 @@ const page = () => {
           </div>
         </div>
 
-        <div className="my-[20px] w-full flex items-center">
+        <div className="my-[20px] w-full flex items-center text-black">
           <span className="w-full h-[1px] rounded-full bg-[#D0D0D0] ml-3"></span>
           <div className="flex items-center justify-end gap-3 min-w-[320px]">
             <button onClick={goToPreviousPage}>
