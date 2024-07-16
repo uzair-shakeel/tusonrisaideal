@@ -16,7 +16,7 @@ import Image from "next/image";
 const Dentist = () => {
   return (
     <div className="max-w-[1440px] mx-auto">
-      <div className="fixed  top-[20%] right-[10%] 3xl:right-[18%]">
+      <div className="fixed  top-[20%] right-[2%] 2xl:right-[10%]  3xl:right-[18%]">
         <div className="xl:flex flex-col hidden sticky top-10 h-full px-4 max-w-[382px] z-30 right-0 bg-[#FFFFFF] rounded-[11px] shadow-custom">
           <div className="py-5 w-[231px] mx-auto rounded-[10px]">
             <div className="flex items-center gap-2.5">
