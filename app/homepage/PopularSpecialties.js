@@ -135,7 +135,38 @@ const PopularSpecialties = () => {
 
       <div className=" bg-[#E9E9E93B] w-full px-2 md:px-6">
         <div className="relative w-full max-w-[1440x] mx-auto py-10">
-          <div className=" flex md:flex-row flex-col items-center gap-14 md:gap-2 justify-between max-w-[1100px] mx-auto">
+          <div className="flex md:flex-row flex-col items-center gap-14 md:gap-2 justify-between max-w-[1100px] mx-auto relative">
+            <div className="relative w-full flex items-center justify-center md:block md:w-[70%]">
+              <Image
+                src="/assets/customers.svg"
+                alt="Image"
+                width={450}
+                height={300}
+                className="relative z-50"
+              />
+              <Image
+                src="/assets/lines.svg"
+                alt="Image"
+                width={450}
+                height={300}
+                className="absolute -bottom-[10%] left-0 md:-left-[20%] md:-bottom-[10%] w-full   z-30"
+              />
+              <div className="absolute bg-image-h -bottom-14"></div>
+            </div>
+            <div className="max-w-[260px] flex flex-col gap-2">
+              <h4 className="text-[#263238] text-[16px] leading-[19px] font-normal">
+                We believe on our
+              </h4>
+              <h2 className="text-[52px] leading-[54px] font-bold text-[#333333]">
+                <span className="text-[#2C64D8]">560K+</span> Customers
+              </h2>
+              <h3 className="text-[#263238] text-[16px] leading-[19px] font-normal">
+                Feedback
+              </h3>
+            </div>
+          </div>
+
+          {/* <div className=" flex md:flex-row flex-col items-center gap-14 md:gap-2 justify-between max-w-[1100px] mx-auto">
             <div className="">
               <Image
                 src="/assets/customers.svg"
@@ -149,7 +180,7 @@ const PopularSpecialties = () => {
                 alt="Image"
                 width={450}
                 height={300}
-                className="absolute w-1/2 left-[4%] opacity-30 bottom-0 z-30"
+                className="absolute md:w-[75%] md:max-w-[600px] xl:max-w-[700px] w-full sm:-left-[6%]  xl:-left-[3%] 2xl:left-[12%]  opacity-30 bottom-0 z-30"
               />
               <div className="absolute bg-image-h  -bottom-14"></div>
             </div>
@@ -164,7 +195,7 @@ const PopularSpecialties = () => {
                 Feedback
               </h3>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
