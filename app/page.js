@@ -25,7 +25,7 @@ export default function Home() {
           <FAQ />
           <RegisterNowBanner />
         </div>
-        <div className="w-[30%] h-full my-[40px] sticky top-[2%] right-[3%] 2xl:right-[5%]  lg:flex hidden flex-col gap-5">
+        <div className="w-[30%] h-full my-[40px] sticky top-[2%] 2xl:top-[8%] right-[3%] 2xl:right-[5%]  lg:flex hidden flex-col gap-5">
           {/* Virtual Consultation Accepted */}
           <div className="shadow-custom bg-white py-5 px-14 max-w-[357px] rounded-[10px]">
             <div className="flex items-center gap-2.5">
