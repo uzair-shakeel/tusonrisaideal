@@ -6,7 +6,7 @@ const AssociatedClinics = () => {
   return (
     <div
       id="location"
-      className="bg-[#FCFAEE]  px-3 lg:pl-[40px] mt-[40px] py-[44px]"
+      className="bg-[#FCFAEE]  px-3 lg:pl-[40px]  mt-[40px] py-[44px]"
     >
       <div className="max-w-[1440px] mx-auto">
         <h2 className="text-[#181515] text-[22px] leading-[19px] font-semibold pb-3">

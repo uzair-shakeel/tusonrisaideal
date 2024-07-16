@@ -34,7 +34,7 @@ const FAQ = () => {
 
   return (
     <div className="w-[65%]">
-      <div className="max-w-[1344px] w-full mx-auto p-1 lg:ml-[40px] pt-[40px] md:py-[70px] px-2 md:px-5">
+      <div className="max-w-[1344px] w-full p-1 lg:ml-[40px] pt-[40px] md:py-[70px] px-2 ">
         <h2 className="text-[#181515] text-[22px] leading-[19px] font-semibold mb-7">
           FAQ’s
         </h2>
