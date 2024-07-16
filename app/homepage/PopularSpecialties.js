@@ -149,7 +149,7 @@ const PopularSpecialties = () => {
                 alt="Image"
                 width={450}
                 height={300}
-                className="absolute -bottom-[10%] left-0 md:-left-[20%] md:-bottom-[10%] w-full   z-30"
+                className="absolute -bottom-[10%] left-0 md:-left-[20%] md:-bottom-[10%] w-full opacity-30  z-30"
               />
               <div className="absolute bg-image-h -bottom-14"></div>
             </div>

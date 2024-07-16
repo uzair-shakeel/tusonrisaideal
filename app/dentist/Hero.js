@@ -10,17 +10,29 @@ const Hero = () => {
   return (
     <>
       <div className="bg-[#FCFAEE] w-full">
-       
-        <div className='max-w-[1440px] mx-auto pl-3 lg:pl-[40px] w-full flex'>
-          <div className='py-[40px] w-full' id="overview">
-            <div className='flex items-center gap-3 border-b border-[#E0E0E0] max-w-[737px] pb-[20px]'>
-              <Image src='/assets/Group 18044.svg' alt='Image' width={179} height={169} className='md:w-[179px] md:h-[169px] w-[120px] h-[120px]' />
-              <div className='flex flex-col gap-2'>
-                <div className='flex md:flex-row flex-col md:items-center md:gap-1 gap-3 sm:gap-[1.5rem]'>
-                  <h2 className='text-[#263238] text-[20px] md:text-[36px] leading-[19px] font-medium'>Dr. Carlos Fernández</h2>
-                  <div className='flex items-center gap-1'>
-                    <FaStar className='text-[#F64850] mb-0.5 text-base' />
-                    <h2 className='text-[#263238] text-[14px] sm:text-[16px] leading-[19px] font-bold'>4.8  <span className='font-normal text-[#797E81]'>(33 evaluaciones)</span></h2>
+        <div className="max-w-[1440px] mx-auto pl-3 lg:pl-[40px] w-full flex">
+          <div className="py-[40px] w-full" id="overview">
+            <div className="flex items-center gap-3 border-b border-[#E0E0E0] max-w-[737px] pb-[20px]">
+              <Image
+                src="/assets/Group 18044.svg"
+                alt="Image"
+                width={179}
+                height={169}
+                className="md:w-[179px] md:h-[169px] w-[120px] h-[120px]"
+              />
+              <div className="flex flex-col gap-2">
+                <div className="flex md:flex-row flex-col md:items-center md:gap-1 gap-3 sm:gap-[1.5rem]">
+                  <h2 className="text-[#263238] text-[20px] md:text-[36px] leading-[19px] font-medium">
+                    Dr. Carlos Fernández
+                  </h2>
+                  <div className="flex items-center gap-1">
+                    <FaStar className="text-[#F64850] mb-0.5 text-base" />
+                    <h2 className="text-[#263238] text-[14px] sm:text-[16px] leading-[19px] font-bold">
+                      4.8{" "}
+                      <span className="font-normal text-[#797E81]">
+                        (33 evaluaciones)
+                      </span>
+                    </h2>
                   </div>
                 </div>
 
@@ -95,7 +107,12 @@ const Hero = () => {
                 </h3>
               </div>
               <div className="flex items-center gap-2">
-                <Image src="/assets/sun.svg" alt="Image" width={20} height={20} />
+                <Image
+                  src="/assets/sun.svg"
+                  alt="Image"
+                  width={20}
+                  height={20}
+                />
                 <h3 className="text-[#263238] text-[16px] leading-[19px] font-medium">
                   Clínica Verificada
                 </h3>
@@ -133,7 +150,12 @@ const Hero = () => {
                 </div>
               </div>
               <div className="flex items-start gap-1.5">
-                <Image src="/assets/timer.svg" alt="img" width={26} height={26} />
+                <Image
+                  src="/assets/timer.svg"
+                  alt="img"
+                  width={26}
+                  height={26}
+                />
                 <div className="flex items-start gap-1.5 flex-col">
                   <h2 className="text-[#263238] text-[20px] leading-[19px] font-semibold">
                     Lower Waiting Time
@@ -164,62 +186,60 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="border-y  border-[#D0D0D0] pt-2 2xl:pl-[109px] lg:pl-[40px] pl-2 w-full">
+      <div className="border-y  border-[#D0D0D0] pt-2  lg:pl-[40px] pl-2 w-full">
         <ul className="flex items-center gap-[40px] overflow-scroll">
           <li className="hover:text-[#2C64D8] text-[#6A6A6A] hover:border-b-2 border-[#2C64D8] pb-1 text-[16px] leading-[24px] hover:font-semibold">
-            <Link href='/gallery'>Photos</Link>
+            <Link href="/gallery">Photos</Link>
           </li>
           <li className="text-[#6A6A6A] hover:text-[#2C64D8] hover:border-b-2 border-[#2C64D8] hover:font-semibold pb-1 text-[16px] leading-[24px] font-normal">
             <a href="#overview">Overview</a>
           </li>
           <li className="text-[#6A6A6A] hover:text-[#2C64D8] hover:border-b-2 border-[#2C64D8] hover:font-semibold pb-1 text-[16px] leading-[24px] font-normal">
-          <a href="#location">Location</a>
+            <a href="#location">Location</a>
           </li>
           <li className="text-[#6A6A6A] hover:text-[#2C64D8] hover:border-b-2 border-[#2C64D8] hover:font-semibold pb-1 text-[16px] leading-[24px] font-normal">
-          <a href="#rating">Ratings</a>
+            <a href="#rating">Ratings</a>
           </li>
           <li className="text-[#6A6A6A] hover:text-[#2C64D8] hover:border-b-2 border-[#2C64D8] hover:font-semibold pb-1 text-[16px] leading-[24px] font-normal">
-          <a href="#fac">Facilities</a>
+            <a href="#fac">Facilities</a>
           </li>
         </ul>
       </div>
 
-      <div className="mt-14 2xl:ml-[110px] pl-2 lg:ml-[40px]">
-        <div className="mt-7 max-w-[845px]">
-          <h2 className="text-[#181515] text-[22px] leading-[19px] font-semibold mb-5">
-            Dentist Overview
-          </h2>
-          <p className="text-[#263238] text-[16px] leading-[19px] font-normal">
-            He is a highly skilled and experienced dentist, dedicated to
-            providing top-quality dental care. With over 15 years of experience
-            in the field, Dr. Martínez specializes in preventive, restorative,
-            and cosmetic dentistry. His patient-centric approach ensures that
-            each individual receives personalized care tailored to their
-            specific needs.
-          </p>
-          {showMore && (
-            <p className="text-[#263238] text-[16px] leading-[19px] font-normal mt-2.5">
-              Centro de Salud El Sol es un hospital líder en atención médica,
-              comprometido con ofrecer servicios de salud de alta calidad a la
-              comunidad. Ubicado en el corazón de Ciudad del Sol, nuestro centro
-              se dedica a proporcionar atención médica integral y personalizada
-              en un entorno acogedor y moderno.
+      <div className="w-[60%]">
+        <div className="mt-14  pl-2 lg:ml-[40px]">
+          <div className="mt-7 max-w-[845px]">
+            <h2 className="text-[#181515] text-[22px] leading-[19px] font-semibold mb-5">
+              Dentist Overview
+            </h2>
+            <p className="text-[#263238] text-[16px] leading-[19px] font-normal">
+              He is a highly skilled and experienced dentist, dedicated to
+              providing top-quality dental care. With over 15 years of
+              experience in the field, Dr. Martínez specializes in preventive,
+              restorative, and cosmetic dentistry. His patient-centric approach
+              ensures that each individual receives personalized care tailored
+              to their specific needs.
             </p>
-          )}
-          <button
-            className="text-[#2C64D8] text-[16px] leading-[19px] font-normal py-4 flex items-center gap-1"
-            onClick={() => setShowMore(!showMore)}
-          >
-            {showMore ? "Show Less" : "Show More"}
-            {showMore ? <IoIosArrowUp /> : <IoIosArrowDown />}
-          </button>
-
+            {showMore && (
+              <p className="text-[#263238] text-[16px] leading-[19px] font-normal mt-2.5">
+                Centro de Salud El Sol es un hospital líder en atención médica,
+                comprometido con ofrecer servicios de salud de alta calidad a la
+                comunidad. Ubicado en el corazón de Ciudad del Sol, nuestro
+                centro se dedica a proporcionar atención médica integral y
+                personalizada en un entorno acogedor y moderno.
+              </p>
+            )}
+            <button
+              className="text-[#2C64D8] text-[16px] leading-[19px] font-normal py-4 flex items-center gap-1"
+              onClick={() => setShowMore(!showMore)}
+            >
+              {showMore ? "Show Less" : "Show More"}
+              {showMore ? <IoIosArrowUp /> : <IoIosArrowDown />}
+            </button>
+          </div>
         </div>
-
       </div>
-      <div className=' pl-3 lg:pl-[60px] max-w-[1440px] mx-auto'>
-
-
+      <div className=" pl-3 lg:pl-[60px] max-w-[1440px] mx-auto">
         <div className="flex items-start gap-1.5">
           <Image
             src="/assets/language1.svg"
@@ -237,8 +257,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-
     </>
   );
 };
