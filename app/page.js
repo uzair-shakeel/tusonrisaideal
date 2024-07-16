@@ -16,7 +16,7 @@ export default function Home() {
     <main className="max-w-[1440px]  mx-auto">
       <Hero />
       <div className="flex gap-[8%] justify-between relative">
-        <div className="w-[70%]">
+        <div className="lg:w-[70%] px-4">
           <ClinicOverview />
           <ServicesDentalClinic />
           <InsuranceAssociated />
