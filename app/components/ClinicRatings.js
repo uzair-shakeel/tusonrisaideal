@@ -59,7 +59,7 @@ const ClinicRatings = () => {
   return (
     <div
       id="rating"
-      className="max-w-[1360px] w-[96%] lg:w-full mx-auto py-10 lg:pl-[40px] md:pb-[70px] px-3 sm:px-5"
+      className="max-w-[1360px] oveflow-hidden lg:w-full mx-auto py-10 lg:pl-[40px] md:pb-[70px] px-3 sm:px-5"
     >
       <div className="flex items-center justify-between w-full">
         <h2 className="text-[#181515] text-[22px] leading-[19px] font-semibold ">
@@ -77,15 +77,13 @@ const ClinicRatings = () => {
       </div>
       {/* Content */}
       <div className="my-[40px] pb-[25px] mdl:py-[25px] border-b border-[#D0D0D0] max-w-[926px] flex flex-col mdl:flex-row mdl:items-center items-start gap-5 mdl:gap-[83px]">
-        <div className="flex mdl:flex-col flex-row">
-          <Image
+        <div className="flex justify-between  mdl:flex-col flex-row">
+          <img
             src="/assets/ratingLogo.svg"
             alt="Logo"
-            width={150}
-            height={150}
-            className="mt-[13px]"
+            className="w-[120px] md:w-[150px] h-[120px] md:h-[150px] mt-[13px]"
           />
-          <div className="flex flex-col gap-2.5">
+          <div className="flex flex-col gap-2.5 w-[60%] md:w-full">
             <div className="flex items-center gap-2">
               <div className="w-[173px] bg-[#D9D9D9] h-[5px] relative rounded-full">
                 <span className="w-[164px] h-[5px] bg-[#263238] absolute z-10 rounded-full"></span>
