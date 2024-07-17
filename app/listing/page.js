@@ -901,7 +901,7 @@ const page = () => {
             </div>
           </div>
 
-          <div>
+          <div className="px-2">
             <h4 className="text-[22px] font-[600] pt-5">Associated dentist</h4>
             <div className="flex gap-5">
               {dentists.map((dentist) => (
@@ -955,7 +955,10 @@ const page = () => {
       <div className="px-2  py-10 max-w-[1440px] mx-auto">
         <div className="overflow-x-auto flex md:flex-row flex-col  justify-center items-center rounded-[20px] gap-2 p-4">
           {patientOpinions.map((opinion, index) => (
-            <div key={index} className="sm:px-4 min-w-[400px] rounded-[20px]">
+            <div
+              key={index}
+              className="sm:px-4 min-w-[320px] md:min-w-[360px] lg:min-w-[400px] rounded-[20px]"
+            >
               <div className="bg-white rounded-[20px] shadow-lg">
                 <div className="flex items-center justify-between mb-4 p-4 sm:p-6">
                   <Image

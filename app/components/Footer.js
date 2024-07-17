@@ -5,7 +5,7 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <div className="bg-[#263238] w-full px-3 mt-0 xl:mt-[16.8%]">
+      <div className="bg-[#263238] w-full px-3 mt-0 ">
         <div className="max-w-[1440px] w-full mx-auto py-[20px] md:py-[57px] md:px-12 flex lg:items-center items-start lg:flex-row flex-col justify-between gap-6 md:gap-14">
           <div>
             <Image

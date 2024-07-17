@@ -4,7 +4,7 @@ const RelatedArticles = () => {
   return (
     <div className="px-2 md:px-5 max-w-[1440px] mx-auto">
       <h4 className="text-[22px] font-[600] my-6 ">Related Articles</h4>
-      <div className="space-y-[40px] w-screen md:w-full">
+      <div className="space-y-[40px] w-[98%] mx-auto md:w-full">
         <div className="shadow-lg p-4 rounded-[20px] border border-[#DADADA] flex flex-col md:flex-row gap-[20px]">
           <div className="w-full rounded-[20px] h-full flex items-center justify-center overflow-hidden">
             <img
@@ -31,7 +31,7 @@ const RelatedArticles = () => {
           </div>
         </div>
 
-        <div className="md:grid md:grid-cols-3 md:gap-[40px] overflow-x-auto py-10 md:overflow-hidden flex md:flex-none space-x-4 md:space-x-0">
+        {/* <div className="md:grid md:grid-cols-3 md:gap-[40px] overflow-x-auto py-10 md:overflow-hidden flex md:flex-none space-x-4 md:space-x-0">
           <div className="w-[300px] md:w-auto rounded-[16px] shadow-lg flex-shrink-0 md:flex-shrink">
             <div className="h-[196px] w-full overflow-hidden">
               <img
@@ -76,7 +76,7 @@ const RelatedArticles = () => {
               <p className="text-[14px] mt-5">Dr Alex Carry</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ import { IoMdChatboxes } from "react-icons/io";
 
 const Dentist = () => {
   return (
-    <div className="max-w-[1440px]  mx-auto flex gap-[8%]">
+    <div className="max-w-[1440px] mx-auto flex gap-[8%]">
       <div className="w-full xl:w-[70%]">
         <Hero />
         <Qualifications />
@@ -29,12 +29,14 @@ const Dentist = () => {
         <FAQ />
         <FindDoctor />
         <RegisterNowBanner />
-        <div className="bg-[#D0D3D4] w-full py-[10px] mt-0 xl:mt-[14.8%] relative xl:absolute left-0 right-0 px-4">
-          <div className="max-w-[1360px] mx-auto w-full">
-            <h1 className="text-[#263238] text-[13px] sm:text-[16px] leading-[19px] font-normal flex items-center gap-1">
-              Inicio <RiArrowRightSLine /> Dentista <RiArrowRightSLine /> Madrid{" "}
-              <RiArrowRightSLine /> Dr Carlos Fernandez
-            </h1>
+        <div className=" relative  xl:w-full">
+          <div className="bg-[#D0D3D4] w-full  xl:w-screen py-[10px] bottom-0  relative xl:absolute">
+            <div className="max-w-[1360px] mx-auto w-full overflow-hidden">
+              <h1 className="text-[#263238] text-[13px] sm:text-[16px] leading-[19px] font-normal flex items-center gap-1">
+                Inicio <RiArrowRightSLine /> Dentista <RiArrowRightSLine />{" "}
+                Madrid <RiArrowRightSLine /> Dr Carlos Fernandez
+              </h1>
+            </div>
           </div>
         </div>
       </div>

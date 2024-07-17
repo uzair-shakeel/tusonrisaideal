@@ -126,7 +126,10 @@ const RecentPatientOpinions = () => {
         </h2>
         <div className="ml-8 overflow-x-auto flex gap-6 p-4 hide-scrollbar">
           {patientOpinions.map((opinion, index) => (
-            <div key={index} className="sm:px-4 w-[420px] flex-shrink-0">
+            <div
+              key={index}
+              className="sm:px-4 w-[320px] md:w-[380px] lg:w-[420px]  flex-shrink-0"
+            >
               <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6">
                 <div className="flex items-center justify-between mb-4">
                   <Image
@@ -186,7 +189,10 @@ const RecentPatientOpinions = () => {
 
         <div className="mr-8 overflow-x-auto flex gap-6 p-4 hide-scrollbar">
           {patientOpinions.map((opinion, index) => (
-            <div key={index} className="sm:px-4 w-[420px] flex-shrink-0">
+            <div
+              key={index}
+              className="sm:px-4 w-[320px] md:w-[380px] lg:w-[420px] flex-shrink-0"
+            >
               <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6">
                 <div className="flex items-center justify-between mb-4">
                   <Image
