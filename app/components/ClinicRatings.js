@@ -59,7 +59,7 @@ const ClinicRatings = () => {
   return (
     <div
       id="rating"
-      className="max-w-[1360px] w-full mx-auto py-10 lg:pl-[40px] md:pb-[70px] px-3 sm:px-5"
+      className="max-w-[1360px] w-[96%] lg:w-full mx-auto py-10 lg:pl-[40px] md:pb-[70px] px-3 sm:px-5"
     >
       <div className="flex items-center justify-between w-full">
         <h2 className="text-[#181515] text-[22px] leading-[19px] font-semibold ">
