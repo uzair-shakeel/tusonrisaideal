@@ -3,7 +3,7 @@ import React from "react";
 
 const RegisterNowBanner = () => {
   return (
-    <div className="absolute xl:w-full bottom-0 -z-10 max-md:bottom-12">
+    <div className=" xl:w-full bottom-0 -z-10 max-md:bottom-12">
       <div className="px-2 relative w-full">
         <div className="bg-[#FCFAEE] max-w-[1344px] w-full xl:w-full  overflow-hidden p-4 mt-[40px] md:mt-0 mx-auto rounded-t-[20px]">
           <div className="">
