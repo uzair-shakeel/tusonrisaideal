@@ -3,8 +3,8 @@ import React from "react";
 
 const RegisterNowBanner = () => {
   return (
-    <div className="w-[96%] px-2">
-      <div className="bg-[#FCFAEE] w-full overflow-hidden p-4 mt-[40px] md:mt-0 mx-auto rounded-t-[20px]">
+    <div className="px-2 relative xl:absolute lg:-mt-[5%] xxl:-mt-[2%] 2xl:-mt-[1%] 3xl:mt-0 left-0 w-full right-0">
+      <div className="bg-[#FCFAEE] max-w-[1344px] w-full  overflow-hidden p-4 mt-[40px] md:mt-0 mx-auto rounded-t-[20px]">
         <div className="">
           <div className="max-w-[831px] mx-auto flex items-center justify-between px-1 md:p-[18px]">
             <div className="max-w-[491px]">

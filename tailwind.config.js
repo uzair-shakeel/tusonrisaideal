@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const { nextui } = require("@nextui-org/react");
 
-
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -24,6 +23,7 @@ module.exports = {
         xl: "1280px",
         "1xl": "1400px",
         xxl: "1440px",
+        "2xl": "1700px",
         "3xl": "1800px",
       },
       backgroundImage: {

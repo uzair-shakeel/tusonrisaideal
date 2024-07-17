@@ -8,8 +8,8 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 const Hero = () => {
   const [showMore, setShowMore] = useState(false);
   return (
-    <>
-      <div className="bg-[#FCFAEE] w-full">
+    <section className="">
+      <div className="bg-[#FCFAEE] w-full relative xl:absolute left-0 right-0">
         <div className="max-w-[1440px] mx-auto pl-3 lg:pl-[40px] w-full flex">
           <div className="py-[40px] w-full" id="overview">
             <div className="flex items-center gap-3 border-b border-[#E0E0E0] max-w-[737px] pb-[20px]">
@@ -186,7 +186,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="border-y  border-[#D0D0D0] pt-2  lg:pl-[40px] pl-2 w-full">
+      <div className="border-y  border-[#D0D0D0] pt-3 xl:pt-[49%]  lg:pl-[40px] pl-2 w-full">
         <ul className="flex items-center gap-[40px] overflow-scroll">
           <li className="hover:text-[#2C64D8] text-[#6A6A6A] hover:border-b-2 border-[#2C64D8] pb-1 text-[16px] leading-[24px] hover:font-semibold">
             <Link href="/gallery">Photos</Link>
@@ -257,7 +257,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
